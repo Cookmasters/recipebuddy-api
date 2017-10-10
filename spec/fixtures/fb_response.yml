@@ -1,0 +1,357 @@
+---
+https://graph.facebook.com/v2.10/RecipesAndCookingGuide: !ruby/object:HTTP::Response
+  version: '1.1'
+  uri: !ruby/object:HTTP::URI
+    uri: !ruby/object:Addressable::URI
+      validation_deferred: false
+      scheme: https
+      host: graph.facebook.com
+      path: "/v2.10/RecipesAndCookingGuide"
+      authority: graph.facebook.com
+      uri_string: https://graph.facebook.com/v2.10/RecipesAndCookingGuide
+      password: 
+      user: 
+      port: 
+  status: !ruby/marshalable:HTTP::Response::Status
+    :__v2__:
+    - :@code
+    ? - 200
+    : 200
+  headers: !ruby/object:HTTP::Headers
+    pile:
+    - - Access-Control-Allow-Origin
+      - "*"
+    - - Etag
+      - '"e11c2d680629f370378e47ab318ef3da0b5644f1"'
+    - - Pragma
+      - no-cache
+    - - Cache-Control
+      - private, no-cache, no-store, must-revalidate
+    - - X-Fb-Rev
+      - '3359513'
+    - - Content-Type
+      - application/json
+    - - X-Fb-Trace-Id
+      - BzxLnqY/vij
+    - - Facebook-Api-Version
+      - v2.10
+    - - Expires
+      - Sat, 01 Jan 2000 00:00:00 GMT
+    - - X-Fb-Debug
+      - wx0iWmQtL9AKgCN83nGas8my7DKtNp34X+lqmYdpmxO+Y1vOGURhSQYbKchpEC9xc4q20YBjmQTOYNPWEnTJhA==
+    - - Date
+      - Tue, 10 Oct 2017 08:13:30 GMT
+    - - Connection
+      - close
+    - - Content-Length
+      - '59'
+  proxy_headers: !ruby/object:HTTP::Headers
+    pile: []
+  content_type: !ruby/struct:HTTP::ContentType
+    mime_type: application/json
+    charset: 
+  body: !ruby/object:HTTP::Response::Body
+    stream: &1 !ruby/object:HTTP::Connection
+      persistent: false
+      keep_alive_timeout: 5.0
+      pending_request: false
+      pending_response: false
+      failed_proxy_connect: false
+      parser: !ruby/object:HTTP::Response::Parser
+        parser: !ruby/object:HTTP::Parser {}
+        finished: false
+        headers: 
+        chunk: 
+      socket: !ruby/object:HTTP::Timeout::Null
+        options: &2 {}
+        socket: !ruby/object:OpenSSL::SSL::SSLSocket
+          context: !ruby/object:OpenSSL::SSL::SSLContext
+            verify_mode: 1
+            verify_hostname: true
+            cert_store: &3 !ruby/object:OpenSSL::X509::Store
+              verify_callback: 
+              error: 
+              error_string: 
+              chain: 
+              time: 
+          io: !ruby/object:TCPSocket {}
+          eof: false
+          rbuffer: ''
+          sync: true
+          hostname: graph.facebook.com
+          sync_close: true
+          wbuffer: ''
+      keep_alive: false
+    connection: *1
+    streaming: false
+    contents: '{"name":"Recipes And Cooking Guide","id":"236017159909583"}'
+    encoding: !ruby/encoding ASCII-8BIT
+https://graph.facebook.com/v2.10/236017159909583/posts: !ruby/object:HTTP::Response
+  version: '1.1'
+  uri: !ruby/object:HTTP::URI
+    uri: !ruby/object:Addressable::URI
+      validation_deferred: false
+      scheme: https
+      host: graph.facebook.com
+      path: "/v2.10/236017159909583/posts"
+      authority: graph.facebook.com
+      uri_string: https://graph.facebook.com/v2.10/236017159909583/posts
+      password: 
+      user: 
+      port: 
+  status: !ruby/marshalable:HTTP::Response::Status
+    :__v2__:
+    - :@code
+    ? - 200
+    : 200
+  headers: !ruby/object:HTTP::Headers
+    pile:
+    - - Access-Control-Allow-Origin
+      - "*"
+    - - Etag
+      - '"59dbdc0abda5b341cd143121f2aac227ab4fb3c4"'
+    - - Pragma
+      - no-cache
+    - - Cache-Control
+      - private, no-cache, no-store, must-revalidate
+    - - X-Fb-Rev
+      - '3359513'
+    - - Content-Type
+      - application/json
+    - - X-Fb-Trace-Id
+      - CCBwP1gikYI
+    - - Facebook-Api-Version
+      - v2.10
+    - - Expires
+      - Sat, 01 Jan 2000 00:00:00 GMT
+    - - Vary
+      - Accept-Encoding
+    - - X-Fb-Debug
+      - qli/ur7uGjj0p9vjsEdNq7SUq+DDkuq8G49GYV0KMp+KSJ6YBXEDH7tl/uVfSYYclJK4eBTG8FA6O/0KIIDCJQ==
+    - - Date
+      - Tue, 10 Oct 2017 08:13:30 GMT
+    - - Connection
+      - close
+  proxy_headers: !ruby/object:HTTP::Headers
+    pile: []
+  content_type: !ruby/struct:HTTP::ContentType
+    mime_type: application/json
+    charset: 
+  body: !ruby/object:HTTP::Response::Body
+    stream: &4 !ruby/object:HTTP::Connection
+      persistent: false
+      keep_alive_timeout: 5.0
+      pending_request: false
+      pending_response: false
+      failed_proxy_connect: false
+      parser: !ruby/object:HTTP::Response::Parser
+        parser: !ruby/object:HTTP::Parser {}
+        finished: false
+        headers: 
+        chunk: 
+      socket: !ruby/object:HTTP::Timeout::Null
+        options: *2
+        socket: !ruby/object:OpenSSL::SSL::SSLSocket
+          context: !ruby/object:OpenSSL::SSL::SSLContext
+            verify_mode: 1
+            verify_hostname: true
+            cert_store: *3
+          io: !ruby/object:TCPSocket {}
+          eof: false
+          rbuffer: ''
+          sync: true
+          hostname: graph.facebook.com
+          sync_close: true
+          wbuffer: ''
+      keep_alive: false
+    connection: *4
+    streaming: false
+    contents: '{"data":[{"created_time":"2017-10-10T04:41:00+0000","message":"Ecstasy
+      Cake\n\n1 box Dark Chocolate Fudge cake\n1 can sweetened condensed milk\n1 jar
+      caramel ice cream topping\n\nPlease say something when you see the recipe! Saying
+      ANYthing is good, it helps you continue seeing my posts! Thank you!\n\nFull
+      Recipe : http:\/\/www.usrecipe.com\/2016\/02\/ecstasy-cake.html","id":"236017159909583_833267116851248"},{"created_time":"2017-10-10T03:40:00+0000","message":"Famous
+      Crack Potatoes\n\n2 (16 oz) containers of sour cream\n8 oz bacon. cooked and
+      chopped\n2 cup shredded cheddar\n1 packages ranch dip mix\n1 30 oz bag shredded
+      hash browns\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/02\/famous-crack-potatoes.html","id":"236017159909583_833267003517926"},{"created_time":"2017-10-10T02:30:00+0000","message":"Chicken
+      and Broccoli Stir fry\n\n1 pound boneless skinless chicken breast, cut into
+      1-inch pieces\n2 garlic cloves, finely chopped\n2 teaspoons finely chopped ginger\n1
+      cup chicken broth\n3 tablespoons soy sauce\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/08\/chicken-and-broccoli-stir-fry.html","id":"236017159909583_833266823517944"},{"created_time":"2017-10-10T01:30:00+0000","message":"Strawberry
+      Poke Cake \nPlease say something when you see the recipe! Saying ANYthing is
+      good, it helps you continue seeing my posts! Thank you!\n\nIngredients:\nCake:\n1
+      (15.25 oz) boxed white cake mix\n1 cup boiling water\n1 (3 oz) box strawberry
+      flavored Jell-o\n1\/2 cup cold water\n...............\n\nFull recipe : \nhttp:\/\/cookingsalad4u.blogspot.com\/2015\/12\/strawberry-poke-cake.html","id":"236017159909583_833290020182291"},{"created_time":"2017-10-10T00:30:00+0000","message":"Hamburger
+      Steak with Creamy Onion Gravy\nFor the Patties:\n3 tablespoons of cooking oil
+      (canola, vegetable)\n1-1\/2 pounds of 80\/20 ground chuck\n3\/4 cup of onion,
+      finely chopped\n1 large egg\n\nPlease say something when you see the recipe!
+      Saying ANYthing is good, it helps you continue seeing my posts! Thank you!\n\nFull
+      Recipe : http:\/\/cookingsalad4u.blogspot.com\/2016\/08\/hamburger-steak-with-creamy-onion-gravy.html","id":"236017159909583_833289753515651"},{"created_time":"2017-10-09T23:37:46+0000","message":"Crockpot
+      Pecan Pie\nINGREDIENTS :\n1 uncooked piecrust\n3 eggs\n1 cup sugar\n2\/3 cup
+      dark Karo syrup\n1 cup pecans, broken up\n\nPlease say something when you see
+      the recipe! Saying ANYthing is good, it helps you continue seeing my posts!
+      Thank you!\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/08\/crockpot-pecan-pie.html","id":"236017159909583_833283316849628"},{"created_time":"2017-10-09T20:03:00+0000","message":"Please
+      say something when you see the recipe! Saying ANYthing is good, it helps you
+      continue seeing my posts! Thank you!\n\nOld-Fashioned Chocolate Fudge\n2 cups
+      white sugar\n1\/2 cup cocoa\n1 cup milk\n4 tablespoons butter\n1 teaspoon vanilla
+      extract\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/01\/old-fashioned-chocolate-fudge.html","id":"236017159909583_833114696866490"},{"created_time":"2017-10-09T19:00:00+0000","message":"Loaded
+      Potato Bites\n\n- 2 cups leftover mashed potatoes\n- 2 tablespoons of flour\n-
+      2\/3 cup of shredded cheddar cheese\n- 3 strips bacon\n- 1\/3 cup scallions,
+      chopped\n\nFull Recipe : http:\/\/www.usrecipe.com\/2015\/08\/loaded-potato-bites.html","id":"236017159909583_833098753534751"},{"created_time":"2017-10-09T17:00:00+0000","message":"Oh
+      my Goodness...I think I have finally made a corn casserole that tops all others.
+      Throw away the Jiffy box and try this, I could eat the whole thing! Love this
+      recipe!!!\n\n*To SAVE this recipe, be sure to click SHARE so it will store on
+      your personal page.*\n\nCorn Casserole \n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/07\/corn-casserole.html","id":"236017159909583_833098613534765"},{"created_time":"2017-10-09T16:05:00+0000","message":"You
+      may never fry chicken again after tasting this baked crispy chicken.\nIngredients\n\n2
+      lbs chicken tenders or 4 large chicken breasts\n2 sleeves Ritz crackers\n1\/4
+      teaspoons salt\n1\/8 teaspoon pepper\n\nPlease say something when you see the
+      recipe! Saying anything is good, it helps you continue seeing my posts! Thank
+      you!\n\nFull recipe ; http:\/\/cookingsalad4u.blogspot.com\/2016\/08\/baked-crispy-chicken.html","id":"236017159909583_833115270199766"},{"created_time":"2017-10-09T15:04:00+0000","message":"Honey
+      Buttermilk Bread Recipe\n1 envelope yeast\n1 teaspoon sugar\n1\/4 cup warm water\npinch
+      of ginger (helps activate the yeast)\n2 cups warm buttermilk\n\nFull Recipe
+      : http:\/\/cookingsalad4u.blogspot.com\/2016\/08\/honey-buttermilk-bread-recipe.html\n\nPlease
+      say something when you see the recipe! Saying ANYthing is good, it helps you
+      continue seeing my posts! Thank you!","id":"236017159909583_833115030199790"},{"created_time":"2017-10-09T14:04:21+0000","message":"Stuffed
+      Cabbage Rolls\n\n1 can (26 Oz. Size) Campbell''s Tomato Soup\n2 cans Water (use
+      The Soup Can)\n\u00bd cups White Rice\n1 pound Ground Beef\nSalt And Pepper,
+      to taste\n1 whole Medium Onion, Chopped\n1 whole Egg\n1 head Cabbage\n\nFull
+      recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/08\/stuffed-cabbage-rolls.html\n\nPlease
+      say something when you see the recipe! Saying ANYthing is good, it helps you
+      continue seeing my posts! Thank you!","id":"236017159909583_833094256868534"},{"created_time":"2017-10-09T13:00:01+0000","message":"Easy
+      Baked Meatballs\n\n1 lb lean ground beef\n2 eggs, beaten with 1\/2 cup milk\n1\/2
+      cup grated Parmesan\n1 cup panko or bread crumbs\n1 small onion, minced\n2 cloves
+      garlic, minced\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/02\/easy-baked-meatballs.html","id":"236017159909583_833025953542031"},{"created_time":"2017-10-09T10:39:01+0000","message":"Fresh
+      Strawberry Pie\n\n1 box Pillsbury\u2122 refrigerated pie crusts, softened as
+      directed on box\nFilling\n3 pints (6 cups) fresh strawberries\n1 cup sugar\n3
+      tablespoons cornstarch\n1\/2 cup water\n\nFull recipe : http:\/\/www.usrecipe.com\/2017\/08\/fresh-strawberry-pie.html","id":"236017159909583_833022703542356"},{"created_time":"2017-10-09T04:40:00+0000","message":"Pineapple
+      Delight Dessert\n\n1 14oz. can crushed pineapple\n1\/2 cup butter or margarine,
+      softened\n2 cups graham cracker crumbs\n1\/2 cup butter or margarine, melted\n1
+      egg\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/pineapple-delight-dessert.html","id":"236017159909583_832850390226254"},{"created_time":"2017-10-09T03:40:00+0000","message":"Pepperjack
+      Meatloaf\n\n1 egg\n1\/4 cup chopped onion\n1\/2 to 1 teaspoon salt\n1\/2 teaspoon
+      pepper\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/12\/pepperjack-meatloaf.html","id":"236017159909583_832851076892852"},{"created_time":"2017-10-09T02:30:00+0000","message":"Secret
+      Ingredient Meatloaf\n\n1 Pound Ground Meat (Beef or Turkey)\n1 Egg\n1 Box Stuffing
+      Mix\n1 Cup Water\n\nPlease say something when you see the recipe! Saying ANYthing\nis
+      good, it helps you continue seeing my posts! Thank you!\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/08\/secret-ingredient-meatloaf.html","id":"236017159909583_832850903559536"},{"created_time":"2017-10-09T01:45:00+0000","message":"\u2606
+      Thank you all for passing my things around and sharing \u2606\n\nCABBAGE SOUP
+      WITH HAMBURGER \n\n2-3 pounds of hamburger (can substitute ground turkey)\n1
+      head of cabbage, chopped\n2 cup celery, diced\n2 cup white or yellow onion,
+      diced\n\nPlease say something when you see the recipe! Saying ANYthing is good,
+      it helps you continue seeing my posts! Thank you!\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/08\/cabbage-soup-with-hamburger.html
+      :","id":"236017159909583_832857456892214"},{"created_time":"2017-10-09T00:50:00+0000","message":"FB
+      is saying it is changing who we see in our newsfeed, again!\nSo, my friends,
+      If you can see this recipe, PLEASE put a comment below. It doesn''t matter what
+      you comment with...anything will work, (Yes or a Smile Face or a heart emoticon
+      will do) just do SOMETHING to show Face Book that you DO want to see all the
+      posts, I am losing the people that click LIKE because of Facebook structure
+      - Thank You all so much!! ** Hugs\n\nCreamy Crock-pot Chicken and Broccoli Over
+      Rice\n\n3-4 boneless chicken breasts\n1 10oz can cream of chicken soup\n1 10
+      oz can cheddar soup\n\nFull recipe : http:\/\/cookingsalad4u.blogspot.com\/2016\/01\/creamy-crock-pot-chicken-and-broccoli.html","id":"236017159909583_832857166892243"},{"created_time":"2017-10-08T23:56:26+0000","message":"Best
+      Ever NO BAKE Cookies\n\nPlease say something when you see the recipe! Saying
+      anything is good, it helps you continue seeing my posts! Thank you!\n\nYIELD\n24
+      cookies\n1\u20442 cup butter or 1\u20442 cup margarine\n2 cups sugar\n1\u20442
+      cup milk\n\nHow to make it :  http:\/\/allneweasyrecipes.blogspot.com\/2016\/06\/best-ever-no-bake-cookies.html","id":"236017159909583_832849673559659"},{"created_time":"2017-10-08T23:03:02+0000","message":"I
+      made my favorite cake - Crack Cake. It is always requested because it is so
+      delicious, and it is the easiest cake in the world to make.\n1 box Duncan Hines
+      yellow cake mix\n1\/4 c brown sugar\n1\/4 c white sugar\n1 box vanilla pudding
+      instant mix\n\nPlease say something when you see the recipe! Saying ANYthing
+      is good, it helps you continue seeing my posts! Thank you!\n\nFull recipe :
+      http:\/\/cookingsalad4u.blogspot.com\/2016\/05\/the-best-crack-cake.html","id":"236017159909583_832834873561139"},{"created_time":"2017-10-08T22:21:27+0000","message":"FUDGE
+      BROWNIE PIE\n3\/4 cup flour\n1 cup of regular sugar\n1\/4 cup unsweetened cocoa
+      powder, sifted\n1 teaspoon baking powder\n1\/4 tsp salt\n\nPlease reviews is
+      important for my continuation , say something to get my new recipes Thank you\n\nFull
+      Recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/08\/fudge-brownie-pie.html","id":"236017159909583_832826986895261"},{"created_time":"2017-10-08T19:00:02+0000","message":"FROZEN
+      PEANUT BUTTER PIE\n\n1 chocolate cookie pie crust\n1 large box of instant chocolate
+      pudding\n1 1\/2 cups of milk\n1 8 oz tub of Cool Whip\nReese\u2019s Peanut Butter
+      Cups\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/frozen-peanut-butter-pie.html","id":"236017159909583_832737213570905"},{"created_time":"2017-10-08T17:04:28+0000","message":"Super
+      Easy Macaroni Salad\n2 cups macaroni (I use whatever is in my cupboard)\n1\u20442
+      cup cubed cheese (I prefer cheddar or co-jack)\n1\u20442 cup cubed ham\n1\u20442
+      cup Miracle Whip (can sub mayo your choice)\n\nPlease say something when you
+      see the recipe! Saying ANYthing is good, it helps you continue seeing my posts!
+      Thank you!\n\nFull recipe : http:\/\/www.usrecipe.com\/2016\/02\/super-easy-macaroni-salad.html","id":"236017159909583_832736723570954"},{"created_time":"2017-10-08T15:00:00+0000","message":"Cowboy
+      Cookies\n1 Cup butter\n1 Cup sugar\n1 Cup packed brown sugar\n\nPlease say something
+      when you see the recipe! Saying ANYthing is good, it helps you continue seeing
+      my posts! Thank you!\n\nFull recipe : http:\/\/cookingsalad4u.blogspot.com\/2016\/10\/cowboy-cookies.html","id":"236017159909583_832652233579403"}],"paging":{"cursors":{"before":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUUTJORE16Tmprd01UTXhOVFl3TkRreE56Y1BER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnek16STJOekV4TmpnMU1USTBPQThFZAEdsdFpRWlozRTljQVE9PQZDZD","after":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUSTBOVFF6TnpNME5UQXlNamMyTURZAMk16a1BER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnek1qWTFNakl6TXpVM09UUXdNdzhFZAEdsdFpRWloyajF3QVE9PQZDZD"},"next":"https:\/\/graph.facebook.com\/v2.10\/236017159909583\/posts?limit=25&after=Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUSTBOVFF6TnpNME5UQXlNamMyTURZAMk16a1BER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnek1qWTFNakl6TXpVM09UUXdNdzhFZAEdsdFpRWloyajF3QVE9PQZDZD"}}'
+    encoding: !ruby/encoding ASCII-8BIT
+https://graph.facebook.com/v2.10/olcooker: !ruby/object:HTTP::Response
+  version: '1.1'
+  uri: !ruby/object:HTTP::URI
+    uri: !ruby/object:Addressable::URI
+      validation_deferred: false
+      scheme: https
+      host: graph.facebook.com
+      path: "/v2.10/olcooker"
+      authority: graph.facebook.com
+      uri_string: https://graph.facebook.com/v2.10/olcooker
+      password: 
+      user: 
+      port: 
+  status: !ruby/marshalable:HTTP::Response::Status
+    :__v2__:
+    - :@code
+    ? - 404
+    : 404
+  headers: !ruby/object:HTTP::Headers
+    pile:
+    - - Access-Control-Allow-Origin
+      - "*"
+    - - Www-Authenticate
+      - 'OAuth "Facebook Platform" "not_found" "(#803) Some of the aliases you requested
+        do not exist: olcooker"'
+    - - Pragma
+      - no-cache
+    - - Cache-Control
+      - no-store
+    - - X-Fb-Rev
+      - '3359513'
+    - - Content-Type
+      - application/json
+    - - X-Fb-Trace-Id
+      - F1ks1rDIkCb
+    - - Facebook-Api-Version
+      - v2.10
+    - - Expires
+      - Sat, 01 Jan 2000 00:00:00 GMT
+    - - X-Fb-Debug
+      - 3ILtvtw2Iur7COcPZFfqmFQyjfAz/7LmPopG7tsMQdtqPMEaC1unq32uTATIFsnWNWNWv6gNawy7aNpa79FGqQ==
+    - - Date
+      - Tue, 10 Oct 2017 08:13:30 GMT
+    - - Connection
+      - close
+    - - Content-Length
+      - '149'
+  proxy_headers: !ruby/object:HTTP::Headers
+    pile: []
+  content_type: !ruby/struct:HTTP::ContentType
+    mime_type: application/json
+    charset: 
+  body: !ruby/object:HTTP::Response::Body
+    stream: &5 !ruby/object:HTTP::Connection
+      persistent: false
+      keep_alive_timeout: 5.0
+      pending_request: false
+      pending_response: false
+      failed_proxy_connect: false
+      parser: !ruby/object:HTTP::Response::Parser
+        parser: !ruby/object:HTTP::Parser {}
+        finished: false
+        headers: 
+        chunk: 
+      socket: !ruby/object:HTTP::Timeout::Null
+        options: *2
+        socket: !ruby/object:OpenSSL::SSL::SSLSocket
+          context: !ruby/object:OpenSSL::SSL::SSLContext
+            verify_mode: 1
+            verify_hostname: true
+            cert_store: *3
+          io: !ruby/object:TCPSocket {}
+          eof: false
+          rbuffer: ''
+          sync: true
+          hostname: graph.facebook.com
+          sync_close: true
+          wbuffer: ''
+      keep_alive: false
+    connection: *5
+    streaming: false
+    contents: '{"error":{"message":"(#803) Some of the aliases you requested do not
+      exist: olcooker","type":"OAuthException","code":803,"fbtrace_id":"F1ks1rDIkCb"}}'
+    encoding: !ruby/encoding ASCII-8BIT
