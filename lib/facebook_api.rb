@@ -4,17 +4,18 @@ require 'http'
 require_relative 'page.rb'
 require_relative 'recipe.rb'
 
-
 module RecipeBuddy
   # Library for Facebook Web API
-  class facebookAPI
+  class FacebookAPI
     module Errors
       class NotFound < StandardError; end
       class Unauthorized < StandardError; end
+      class FacebookOAuthException < StandardError; end
     end
     HTTP_ERROR = {
       401 => Errors::Unauthorized,
-      404 => Errors::NotFound
+      404 => Errors::NotFound,
+      190 => Errors::FacebookOAuthException
     }.freeze
 
     def initialize(token, cache: {})
@@ -28,9 +29,11 @@ module RecipeBuddy
       Page.new(page_data, self)
     end
 
-    def recipe(recipe_url)
-      recipe_data = call_fb_url(recipe_url).parse
-      recipe_data.map { |recipe| Recipe.new(recipe) }
+    def recipes(path)
+      recipes_url = fb_api_path(path)
+      receipes_response_parsed = call_fb_url(recipes_url).parse
+      recipes_data = receipes_response_parsed['data']
+      recipes_data.map { |recipe_data| Recipe.new(recipe_data) }
     end
 
     private
@@ -55,6 +58,5 @@ module RecipeBuddy
     def raise_error(result)
       raise(HTTP_ERROR[result.code])
     end
-
   end
 end

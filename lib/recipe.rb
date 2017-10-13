@@ -5,9 +5,8 @@ require_relative 'page.rb'
 module RecipeBuddy
   # Model for Recipe
   class Recipe
-    def initialize(recipe_data, data_source)
+    def initialize(recipe_data)
       @recipe = recipe_data
-      @data_source = data_source
     end
 
     def created_time
@@ -21,5 +20,9 @@ module RecipeBuddy
     def id
       @recipe['id']
     end
+
+    # def from
+    #   @from ||= Page.new(@repo['owner'])
+    # end
   end
 end
