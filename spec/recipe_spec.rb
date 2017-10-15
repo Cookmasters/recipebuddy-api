@@ -43,14 +43,16 @@ describe 'Tests Facebook API library' do
                                       .page(PAGE_NAME)
     end
 
-    # it 'HAPPY: should recognize owner' do
-    #   _(@recipe.owner).must_be_kind_of RecipeBuddy::Contributor
-    # end
-    #
-    # it 'HAPPY: should identify owner' do
-    #   _(@recipe.owner.username).wont_be_nil
-    #   _(@recipe.owner.username).must_equal CORRECT['owner']['login']
-    # end
+    it 'HAPPY: should recognize the from page' do
+      recipe = @page.recipes[0]
+      _(recipe.from).must_be_kind_of RecipeBuddy::Page
+    end
+
+    it 'HAPPY: should identify owner' do
+      recipe = @page.recipes[0]
+      _(recipe.from.id).wont_be_nil
+      _(recipe.from.name).must_equal CORRECT['name']
+    end
 
     it 'HAPPY: should check recipes' do
       recipes = @page.recipes

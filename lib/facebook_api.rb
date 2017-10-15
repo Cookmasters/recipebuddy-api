@@ -33,7 +33,7 @@ module RecipeBuddy
       recipes_url = fb_api_path(path)
       receipes_response_parsed = call_fb_url(recipes_url).parse
       recipes_data = receipes_response_parsed['data']
-      recipes_data.map { |recipe_data| Recipe.new(recipe_data) }
+      recipes_data.map { |recipe_data| Recipe.new(recipe_data, self) }
     end
 
     private
