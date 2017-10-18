@@ -21,7 +21,7 @@ module RecipeBuddy
     end
 
     def recipes
-      @recipes ||= @data_source.recipes(@page['id'] + '/posts')
+      @recipes ||= @data_source.recipes(recipes_url)
     end
   end
 end

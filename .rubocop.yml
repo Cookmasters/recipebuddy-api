@@ -1,0 +1,13 @@
+---
+AllCops:
+  TargetRubyVersion: 2.4
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*
+
+Security/YAMLLoad:
+  Enabled: true
+  Exclude:
+    - spec/**/*
