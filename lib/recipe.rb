@@ -22,6 +22,34 @@ module RecipeBuddy
       @recipe['id']
     end
 
+    def full_picture
+      @recipe['full_picture']
+    end
+
+    def reactions_like
+      @recipe['reactions_like']['summary']['total_count']
+    end
+
+    def reactions_love
+      @recipe['reactions_love']['summary']['total_count']
+    end
+
+    def reactions_wow
+      @recipe['reactions_wow']['summary']['total_count']
+    end
+
+    def reactions_haha
+      @recipe['reactions_haha']['summary']['total_count']
+    end
+
+    def reactions_sad
+      @recipe['reactions_sad']['summary']['total_count']
+    end
+
+    def reactions_angry
+      @recipe['reactions_angry']['summary']['total_count']
+    end
+
     def from
       @from ||= @data_source.page(@recipe['id'].split('_')[0])
     end
