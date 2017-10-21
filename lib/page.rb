@@ -17,7 +17,13 @@ module RecipeBuddy
     end
 
     def recipes_url
-      @page['id'] + '/posts?fields=full_picture,created_time,message,reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)'
+      @page['id'] + '/posts?fields=full_picture,created_time,message'\
+      ',reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like)'\
+      ',reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)'\
+      ',reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow)'\
+      ',reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha)'\
+      ',reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad)'\
+      ',reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)'
     end
 
     def recipes

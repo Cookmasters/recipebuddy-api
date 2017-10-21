@@ -52,8 +52,12 @@ module RecipeBuddy
 
     private
 
+    def headers
+      { 'Accept' => 'application/json' }
+    end
+
     def call_yt_url(url)
-      response = HTTP.headers('Accept' => 'application/json')
+      response = HTTP.headers(headers)
                      .get(url)
       Response.new(response).response_or_error
     end

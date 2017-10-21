@@ -53,9 +53,13 @@ module RecipeBuddy
 
     private
 
+    def headers
+      { 'Accept' => 'application/json',
+        'Authorization' => "OAuth #{@fb_token}" }
+    end
+
     def call_fb_url(url)
-      response = HTTP.headers('Accept' => 'application/json',
-                              'Authorization' => "OAuth #{@fb_token}")
+      response = HTTP.headers(headers)
                      .get(url)
       Response.new(response).response_or_error
     end
