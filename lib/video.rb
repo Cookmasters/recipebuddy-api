@@ -1,5 +1,7 @@
 # frozen_string_literal: false
 
+require 'date'
+
 module RecipeBuddy
   # Provides access to video data
   class Video
@@ -17,7 +19,7 @@ module RecipeBuddy
     end
 
     def published_at
-      @video['snippet']['publishedAt']
+      DateTime.parse(@video['snippet']['publishedAt'])
     end
 
     def description

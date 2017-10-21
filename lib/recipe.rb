@@ -1,5 +1,6 @@
 # frozen_string_literal: false
 
+require 'date'
 require_relative 'page.rb'
 
 module RecipeBuddy
@@ -11,11 +12,11 @@ module RecipeBuddy
     end
 
     def created_time
-      @recipe['created_time']
+      DateTime.parse(@recipe['created_time'])
     end
 
     def content
-      @recipe['content']
+      @recipe['message']
     end
 
     def id
