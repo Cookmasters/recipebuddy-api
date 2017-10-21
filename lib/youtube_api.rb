@@ -3,21 +3,17 @@
 require 'http'
 require 'cgi'
 require_relative 'video.rb'
+require_relative 'errors.rb'
 
 module RecipeBuddy
-  # module Errors
-  #   # Not allowed to access resource
-  #   Unauthorized = Class.new(StandardError)
-  #   # Requested resource not found
-  #   NotFound = Class.new(StandardError)
-  # end
   # Library for YouTube Web API
   class YoutubeApi
     # Encapsulates API response success and errors
     class Response
       HTTP_ERROR = {
         401 => Errors::Unauthorized,
-        404 => Errors::NotFound
+        404 => Errors::NotFound,
+        400 => Errors::BadRequest
       }.freeze
 
       def initialize(response)

@@ -3,14 +3,9 @@
 require 'http'
 require_relative 'page.rb'
 require_relative 'recipe.rb'
+require_relative 'errors.rb'
 
 module RecipeBuddy
-  module Errors
-    # Not allowed to access resource
-    Unauthorized = Class.new(StandardError)
-    # Requested resource not found
-    NotFound = Class.new(StandardError)
-  end
   # Library for Facebook Web API
   class FacebookApi
     # Encapsulates API response success and errors
@@ -25,7 +20,9 @@ module RecipeBuddy
       end
 
       def successful?
-        HTTP_ERROR.keys.include?(@response.code) ? false : true
+        return false if HTTP_ERROR.keys.include?(@response.code)
+        # return false unless @response['errors'].nil?
+        true
       end
 
       def response_or_error
