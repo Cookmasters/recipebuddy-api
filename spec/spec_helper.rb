@@ -27,3 +27,4 @@ CASSETTE_FACEBOOK_FILE = 'facebook_api'.freeze
 CASSETTE_YOUTUBE_FILE = 'youtube_api'.freeze
 
 RECIPE_TO_SEARCH = 'Chicken+and+Broccoli+Stir+fry'.freeze
+BAD_RECIPE_TO_SEARCH = 'Chicken and Broccoli Stir fry'.freeze
