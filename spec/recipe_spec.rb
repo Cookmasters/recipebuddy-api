@@ -23,8 +23,9 @@ describe 'Tests Facebook API library' do
 
   describe 'Page information' do
     it 'HAPPY: should provide correct page attributes' do
-      page = RecipeBuddy::FacebookApi.new(FB_TOKEN)
-                                     .page(PAGE_NAME)
+      api = RecipeBuddy::Facebook::FacebookApi.new(FB_TOKEN)
+      page_mapper = RecipeBuddy::Facebook::PageMapper.new(api)
+      page = page_mapper.load(PAGE_NAME)
       _(page.id).must_equal CORRECT['id']
       _(page.name).must_equal CORRECT['name']
     end

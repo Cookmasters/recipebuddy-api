@@ -12,7 +12,7 @@ module RecipeBuddy
       def load_several(url)
         pag = @gateway.page(url)
         pag.map do |page_data|
-        PageMapper.build_entity(page_data)
+          PageMapper.build_entity(page_data)
         end
       end
 
