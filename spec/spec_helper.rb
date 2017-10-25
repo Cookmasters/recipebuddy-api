@@ -12,6 +12,11 @@ require 'webmock'
 
 require_relative '../lib/facebook_api.rb'
 require_relative '../lib/youtube_api.rb'
+require_relative '../entities/page.rb'
+require_relative '../entities/recipe.rb'
+require_relative '../lib/mappers/page_mapper.rb'
+require_relative '../lib/mappers/recipe_mapper.rb'
+
 
 PAGE_NAME = 'RecipesAndCookingGuide'.freeze
 BAD_PAGE_NAME = 'olcooker'.freeze

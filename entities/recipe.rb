@@ -1,60 +1,25 @@
 # frozen_string_literal: false
 
 require 'date'
-require_relative 'page.rb'
 
 module RecipeBuddy
   # Module for Recipe
   module Entity
     # Domain entity object
     class Recipe
-      def initialize(recipe_data, data_source)
-        @recipe = recipe_data
-        @data_source = data_source
-      end
+      attr_accessor :created_time, :content, :id, :full_picture, :reactions_like, :reactions_love, :reactions_wow, :reactions_haha, :reactions_sad, :reactions_angry
 
-      def created_time
-        DateTime.parse(@recipe['created_time'])
-      end
-
-      def content
-        @recipe['message']
-      end
-
-      def id
-        @recipe['id']
-      end
-
-      def full_picture
-        @recipe['full_picture']
-      end
-
-      def reactions_like
-        @recipe['reactions_like']['summary']['total_count']
-      end
-
-      def reactions_love
-        @recipe['reactions_love']['summary']['total_count']
-      end
-
-      def reactions_wow
-        @recipe['reactions_wow']['summary']['total_count']
-      end
-
-      def reactions_haha
-        @recipe['reactions_haha']['summary']['total_count']
-      end
-
-      def reactions_sad
-        @recipe['reactions_sad']['summary']['total_count']
-      end
-
-      def reactions_angry
-        @recipe['reactions_angry']['summary']['total_count']
-      end
-
-      def from
-        @from ||= @data_source.page(@recipe['id'].split('_')[0])
+      def initialize(created_time: nil, content: nil, id: nil, full_picture: nil, reactions_like: nil, reactions_love: nil, reactions_wow: nil, reactions_haha: nil, reactions_sad: nil, reactions_angry: nil)
+        @created_time = created_time
+        @content = content
+        @id = id
+        @full_picture = full_picture
+        @reactions_like = reactions_like
+        @reactions_love = reactions_love
+        @reactions_wow = reactions_wow
+        @reactions_haha = reactions_haha
+        @reactions_sad = reactions_sad
+        @reactions_angry = reactions_angry
       end
     end
   end
