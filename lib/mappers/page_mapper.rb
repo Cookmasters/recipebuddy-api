@@ -27,11 +27,13 @@ module RecipeBuddy
         @page = page_data
       end
 
-      def build_entity
+      def build_entity(page_data)
+        mapper = DataMap.new(page_data)
+
         Entity::Contributor.new(
-          id: id,
-          name: name,
-          recipes_url: recipes_url
+          id: mapper.id,
+          name: mapper.name,
+          recipes_url: mapper.recipes_url
         )
       end
 

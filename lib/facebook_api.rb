@@ -45,18 +45,18 @@ module RecipeBuddy
         @fb_token = token
       end
 
-      def page(name)
+      def page_data(name)
         page_req_url = FacebookApi.path(name)
         page_data = call_fb_url(page_req_url).parse
       end
 
-      def recipes(path)
-        recipes_url = FacebookApi.path(path)
+      def recipe_data(path)
+        recipes_url = FacebookApi.recipes_path(path)
         receipes_response_parsed = call_fb_url(recipes_url).parse
         recipes_data = receipes_response_parsed['data']
       end
 
-      def self.path(path)
+      def self.recipes_path(path)
         'https://graph.facebook.com/v2.10/' + path
       end
 

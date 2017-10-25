@@ -10,8 +10,8 @@ module RecipeBuddy
         @data_source = data_source
       end
 
-      def load(page_id, recipe_id)
-        recipe_data = @data_source.recipe_data(page_id, recipe_id)
+      def load(page_id, recipe_id) #
+        recipe_data = @data_source.recipe_data(page_id, recipe_id)  # , recipe_id
         build_entity(recipe_data)
       end
 
@@ -35,50 +35,53 @@ module RecipeBuddy
       # Extracts entity specific elements from data structure
       class DataMap
         def initialize(recipe_data, data_source)
-          @recipe = recipe_data
+          @recipe_data = recipe_data
           @page_mapper = PageMapper.new(data_source)
         end
 
         def created_time
-          DateTime.parse(@recipe['created_time'])
+          DateTime.parse(@recipe_data['created_time'])
         end
 
         def content
-          @recipe['message']
+          @recipe_data['message']
         end
 
         def id
-          @recipe['id']
+          @recipe_data['id']
         end
 
         def full_picture
-          @recipe['full_picture']
+          @recipe_data['full_picture']
         end
 
         def reactions_like
-          @recipe['reactions_like']['summary']['total_count']
+          @recipe_data['reactions_like']['summary']['total_count']
         end
 
         def reactions_love
-          @recipe['reactions_love']['summary']['total_count']
+          @recipe_data['reactions_love']['summary']['total_count']
         end
 
         def reactions_wow
-          @recipe['reactions_wow']['summary']['total_count']
+          @recipe_data['reactions_wow']['summary']['total_count']
         end
 
         def reactions_haha
-          @recipe['reactions_haha']['summary']['total_count']
+          @recipe_data['reactions_haha']['summary']['total_count']
         end
 
         def reactions_sad
-          @recipe['reactions_sad']['summary']['total_count']
+          @recipe_data['reactions_sad']['summary']['total_count']
         end
 
         def reactions_angry
-          @recipe['reactions_angry']['summary']['total_count']
+          @recipe_data['reactions_angry']['summary']['total_count']
         end
 
+        def pages
+          @recipe_mapper.load_several(@page_data['pages_url'])
+        end
         # def from
         # @from ||= @data_source.page(@recipe['id'].split('_')[0])
         # end

@@ -32,28 +32,31 @@ describe 'Tests Facebook API library' do
 
     it 'SAD: should raise exception on incorrect page' do
       proc do
-        RecipeBuddy::FacebookApi.new(FB_TOKEN)
-                                .page(BAD_PAGE_NAME)
-      end.must_raise Errors::NotFound
+        api = RecipeBuddy::Facebook::FacebookApi.new(FB_TOKEN)
+        page_mapper = RecipeBuddy::Facebook::PageMapper.new(api)
+        sad_page = page_mapper.load(BAD_PAGE_NAME)
+      end.must_raise RecipeBuddy::Facebook::FacebookApi::Errors::NotFound
     end
 
     it 'SAD: should raise exception when unauthorized' do
       proc do
-        RecipeBuddy::FacebookApi.new(BAD_FB_TOKEN)
-                                .page(PAGE_NAME)
-      end.must_raise Errors::Unauthorized
+        api = RecipeBuddy::Facebook::FacebookApi.new(BAD_FB_TOKEN)
+        page_mapper = RecipeBuddy::Facebook::PageMapper.new(api)
+        sadpage = page_mapper.load(PAGE_NAME)
+      end.must_raise RecipeBuddy::Facebook::FacebookApi::Errors::Unauthorized
     end
   end
 
   describe 'Recipe information' do
     before do
-      @page = RecipeBuddy::FacebookApi.new(FB_TOKEN)
-                                      .page(PAGE_NAME)
+       api = RecipeBuddy::Facebook::FacebookApi.new(FB_TOKEN)
+       recipe_mapper = RecipeBuddy::Facebook::RecipeMapper.new(api)
+       @recipe = recipe_mapper.load(PAGE_NAME)
     end
 
     it 'HAPPY: should recognize the from page' do
       recipe = @page.recipes[0]
-      _(recipe.from).must_be_kind_of RecipeBuddy::Page
+      _(recipe.from).must_be_kind_of RecipeBuddy::Entity::Page
     end
 
     it 'HAPPY: should check that the recipe fields are valid' do
