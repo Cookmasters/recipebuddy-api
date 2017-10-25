@@ -1,7 +1,7 @@
 # frozen_string_literal: false
 
 module RecipeBuddy
-  # Provides access to page data
+  # Provides access to page dataAccess to FacebookApi
   module Errors
     # Not allowed to access resource
     Unauthorized = Class.new(StandardError)

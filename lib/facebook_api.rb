@@ -1,14 +1,24 @@
 # frozen_string_literal: false
 
 require 'http'
-#require_relative 'entities/page.rb'
-#require_relative 'entities/recipe.rb'
-require_relative 'errors.rb'
+# require_relative 'entities/page.rb'
+# require_relative 'entities/recipe.rb'
+# require_relative 'entities/errors.rb'
 
 module RecipeBuddy
-  # Library for Facebook Web API
+  # Talk to Facebook
   module Facebook
+    # Library for Facebook Web API
     class FacebookApi
+      # Encapsulates API response success and errors
+      module Errors
+        # Not allowed to access resource
+        Unauthorized = Class.new(StandardError)
+        # Requested resource not found
+        NotFound = Class.new(StandardError)
+        # Bad request
+        BadRequest = Class.new(StandardError)
+      end
       # Encapsulates API response success and errors
       class Response
         HTTP_ERROR = {
@@ -38,14 +48,12 @@ module RecipeBuddy
       def page(name)
         page_req_url = FacebookApi.path(name)
         page_data = call_fb_url(page_req_url).parse
-        Page.new(page_data, self)
       end
 
       def recipes(path)
         recipes_url = FacebookApi.path(path)
         receipes_response_parsed = call_fb_url(recipes_url).parse
         recipes_data = receipes_response_parsed['data']
-        recipes_data.map { |recipe_data| Recipe.new(recipe_data, self) }
       end
 
       def self.path(path)

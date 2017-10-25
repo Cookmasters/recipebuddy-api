@@ -1,0 +1,362 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.10/RecipesAndCookingGuide
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - OAuth <FACEBOOK_TOKEN>
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - '"e11c2d680629f370378e47ab318ef3da0b5644f1"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      X-Fb-Rev:
+      - '3395824'
+      Content-Type:
+      - application/json
+      X-Fb-Trace-Id:
+      - Clv3+KQVHk5
+      Facebook-Api-Version:
+      - v2.10
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - bEhJqLPf7j6IjjdKjlEL7LbO71tRFtj3895b2FKVOOuEIwE6zL8LzBbi+OVJ/qeenE1HS07RIqVDEZYN5rYiDg==
+      Date:
+      - Tue, 24 Oct 2017 13:07:39 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '59'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"Recipes And Cooking Guide","id":"236017159909583"}'
+    http_version: 
+  recorded_at: Tue, 24 Oct 2017 13:04:38 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.10/olcooker
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - OAuth <FACEBOOK_TOKEN>
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Www-Authenticate:
+      - 'OAuth "Facebook Platform" "not_found" "(#803) Some of the aliases you requested
+        do not exist: olcooker"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      X-Fb-Rev:
+      - '3395824'
+      Content-Type:
+      - application/json
+      X-Fb-Trace-Id:
+      - BmKKTV6mStn
+      Facebook-Api-Version:
+      - v2.10
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - lYJ/hiMrkYFhBLFMrm3kxf/sbRKcwS5Q4cM6nGVOTm2Apu7MW7TeNKHrgn2TJOs6y+n6QCobshVEIo3UAkBebw==
+      Date:
+      - Tue, 24 Oct 2017 13:07:40 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '149'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"message":"(#803) Some of the aliases you requested do not
+        exist: olcooker","type":"OAuthException","code":803,"fbtrace_id":"BmKKTV6mStn"}}'
+    http_version: 
+  recorded_at: Tue, 24 Oct 2017 13:04:38 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.10/RecipesAndCookingGuide
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - OAuth hastalavista
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "invalid_token" "Invalid OAuth access token."
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      X-Fb-Rev:
+      - '3395824'
+      Content-Type:
+      - application/json
+      X-Fb-Trace-Id:
+      - HZkGM3GxoT7
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - tzKkXNWAzk8bOslVNioxnK9BMc0Bfm+AUooqgJsNeHpUHGWGnBRJ8LqsKBkDq7v4repbFmgg37bywJWHVIA/vA==
+      Date:
+      - Tue, 24 Oct 2017 13:07:40 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '113'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"message":"Invalid OAuth access token.","type":"OAuthException","code":190,"fbtrace_id":"HZkGM3GxoT7"}}'
+    http_version: 
+  recorded_at: Tue, 24 Oct 2017 13:04:38 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.10/236017159909583/posts?fields=full_picture,created_time,message,reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - OAuth <FACEBOOK_TOKEN>
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - '"cd709de87164182410c6d5ce38f8863dcbf22924"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      X-Fb-Rev:
+      - '3395824'
+      Content-Type:
+      - application/json
+      X-Fb-Trace-Id:
+      - GvSf3k+6auv
+      Facebook-Api-Version:
+      - v2.10
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - 6X1O2e46xvcK8RPtVIpgTP8d8lVfQoK0vU4CBRSt2/UPEjXVUhgcCx0CcZFUgydxytk6GRUhATlZ1VwYPiPEaA==
+      Date:
+      - Tue, 24 Oct 2017 13:07:41 GMT
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/22549988_838682866309673_4515799997223981961_n.jpg?oh=a1b2b9e8d8a08d980ca7f370cae6df74&oe=5A81F09F","created_time":"2017-10-24T13:00:00+0000","message":"Made
+        these last night. My husband loved them!! He said he hoped we would be having
+        them again. :)\n\nWhite Chicken Enchiladas\n\n8-10 flour tortillas, soft taco
+        size\n2 cups cooked, shredded chicken (I used half of a rotisserie chicken)\n2
+        cups shredded Monterey Jack cheese\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/07\/white-chicken-enchiladas.html","reactions_like":{"data":[],"summary":{"total_count":4}},"reactions_love":{"data":[],"summary":{"total_count":0}},"reactions_wow":{"data":[],"summary":{"total_count":0}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838682916309668"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22554994_838682546309705_8711218499705060623_n.jpg?oh=f8af6ae174beabe9a91e6e5da11b0774&oe=5A61CFE7","created_time":"2017-10-24T11:00:00+0000","message":"Cheesecake
+        Crescent Rolls~YUM\n\n2 cans of Pillsbury Crescent rolls\n2 8oz packages cream
+        cheese, softened\n1 1\/2 tsp vanilla\n1\/4 cup butter, melted\nCinnamon\nSugar\n\nFull
+        Recipe : http:\/\/www.usrecipe.com\/2016\/05\/cheesecake-crescent-rollsyum.html","reactions_like":{"data":[],"summary":{"total_count":51}},"reactions_love":{"data":[],"summary":{"total_count":0}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838682596309700"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-0\/q87\/p180x540\/22519658_838680269643266_4290783262980173468_n.jpg?oh=c266629e62e8cc21795eb02ae246c198&oe=5A61D190","created_time":"2017-10-24T04:40:00+0000","message":"Strawberry
+        Cobbler\n\n2 cup milk\n2 cup sugar\n2 cup flour\n3 cup strawberries\n2 eggs\n\nFull
+        Recipe : http:\/\/www.usrecipe.com\/2016\/02\/strawberry-cobbler.html\n\nPlease
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!","reactions_like":{"data":[],"summary":{"total_count":104}},"reactions_love":{"data":[],"summary":{"total_count":9}},"reactions_wow":{"data":[],"summary":{"total_count":0}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838680316309928"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22552715_838680782976548_8899493298471689684_n.jpg?oh=f1db02047ecedea6cbca07757367a046&oe=5A7BF5AF","created_time":"2017-10-24T03:40:00+0000","message":"Funnel
+        Cake\n\n1 egg\n2\/3 cup milk\n2 Tablespoons sugar\n1 1\/4 cup flour\n1\/4
+        teaspoon salt\n1 teaspoon baking powder\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/funnel-cake.html\n\nPlease
+        like and share with your friends :)","reactions_like":{"data":[],"summary":{"total_count":206}},"reactions_love":{"data":[],"summary":{"total_count":11}},"reactions_wow":{"data":[],"summary":{"total_count":0}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838680816309878"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22554951_838680382976588_2242891098815347854_n.jpg?oh=36cfa0bb718823bcf71cf2012738a4f1&oe=5A6CBA34","created_time":"2017-10-24T02:30:00+0000","message":"Mamas
+        Chicken Roll Ups \n\n2 large chicken breast\n1 can crescent rolls\n1 10.5
+        oz. can cream of chicken soup\n1\/2 soup can of broth (use what the chicken
+        cooked in)\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/02\/mamas-chicken-roll-ups.html\n\nPlease
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!","reactions_like":{"data":[],"summary":{"total_count":168}},"reactions_love":{"data":[],"summary":{"total_count":4}},"reactions_wow":{"data":[],"summary":{"total_count":1}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838680436309916"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22780317_839634786214481_539257970821351424_n.jpg?oh=e05444d430b26a19f6f83cc15ede55fd&oe=5A69BB10","created_time":"2017-10-24T01:59:00+0000","message":"Stuffed
+        Meatloaf Roll\n2 pounds lean ground beef\n1 cup dry bread crumbs\n2 eggs beaten\n1
+        chopped onion\n1 chopped bell pepper\n1 cup chopped mushrooms\n\nFull recipe
+        : allneweasyrecipes.blogspot.com\/2016\/10\/stuffed-meatloaf-roll.html\n\nPlease
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!","reactions_like":{"data":[],"summary":{"total_count":169}},"reactions_love":{"data":[],"summary":{"total_count":14}},"reactions_wow":{"data":[],"summary":{"total_count":5}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839634879547805"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/22729020_839635772881049_2016934688036103376_n.jpg?oh=7518c27b43a2451e9df6d7869ec3ec68&oe=5A7885D1","created_time":"2017-10-24T01:00:00+0000","message":"30
+        MINUTE ROLLS\n1 cup plus 2 Tablespoons warm water\n\u2153 cup oil\n2 Tablespoons
+        active dry yeast\n\u00bc cup sugar\n\u00bd teaspoon salt\n\nPlease say something
+        when you see the recipe! Saying ANYthing is good, it helps you continue seeing
+        my posts! Thank you!\n\nFull Recipe : http:\/\/cookingsalad4u.blogspot.com\/2017\/06\/30-minute-rolls.html","reactions_like":{"data":[],"summary":{"total_count":241}},"reactions_love":{"data":[],"summary":{"total_count":9}},"reactions_wow":{"data":[],"summary":{"total_count":1}},"reactions_haha":{"data":[],"summary":{"total_count":1}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839635976214362"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/22555127_839635182881108_5047381914887740439_n.jpg?oh=65590a3b2499f0245e6215e882466002&oe=5AB03C36","created_time":"2017-10-23T23:59:00+0000","message":"Condensed
+        Milk Fudge recipe\n\n**Please - We need your help to stay in this social network.
+        Say something about our posts (yes, yum or smile emoticon will do) or we''ll
+        completely disappear from your news feed. Appreciate your help.\n\nFull recipe
+        : http:\/\/cookingsalad4u.blogspot.com\/2017\/01\/condensed-milk-fudge-recipe.html","reactions_like":{"data":[],"summary":{"total_count":537}},"reactions_love":{"data":[],"summary":{"total_count":48}},"reactions_wow":{"data":[],"summary":{"total_count":6}},"reactions_haha":{"data":[],"summary":{"total_count":2}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839635272881099"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22555136_839627432881883_6096084175026775940_n.jpg?oh=fb9dd6895fb1495f32c3a28fb96ed2dd&oe=5AAD9320","created_time":"2017-10-23T23:08:50+0000","message":"Pink
+        Cloud Salad\n\n20 ozs crushed pineapple\n3 ozs cherry (jello)\n1\/2 cup cold
+        water\n16 ozs cottage cheese\n9 ozs cool whip\n1\/2 cup chopped pecans\n\nPlease
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/02\/pink-cloud-salad.html","reactions_like":{"data":[],"summary":{"total_count":506}},"reactions_love":{"data":[],"summary":{"total_count":37}},"reactions_wow":{"data":[],"summary":{"total_count":4}},"reactions_haha":{"data":[],"summary":{"total_count":1}},"reactions_sad":{"data":[],"summary":{"total_count":1}},"reactions_angry":{"data":[],"summary":{"total_count":2}},"id":"236017159909583_839627466215213"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22687675_839397382904888_2569164996545688191_n.jpg?oh=190ba1757aa15fdf7a504fc0a3457c09&oe=5A750232","created_time":"2017-10-23T20:00:00+0000","message":"Slow-Cooker
+        Hamburger Hash\n\nIngredients:\n3 pounds lean ground beef\n1 can (15 ounces)
+        tomato puree\n1 can (10 3\/4 ounces) condensed cream of mushroom soup\n\nfull
+        Recipe: http:\/\/recipesovertheworld.blogspot.com\/2015\/10\/slow-cooker-hamburger-hash.html\n\nPlease
+        share& say ANYthing if you see the recipe! It helps you to continue seeing
+        my posts! Thank you!","reactions_like":{"data":[],"summary":{"total_count":499}},"reactions_love":{"data":[],"summary":{"total_count":25}},"reactions_wow":{"data":[],"summary":{"total_count":3}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839397462904880"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22554878_838679799643313_5479698490982085864_n.jpg?oh=e037bf87b5e49cd3fdef3655b7d9815e&oe=5A77C319","created_time":"2017-10-23T19:00:00+0000","message":"Deviled
+        Egg Spread\n\n1 dozen large eggs \n2 tablespoons white vinegar \n1 cup mayonnaise
+        \n\nPlease say something when you see the recipe! Saying ANYthing is good,
+        it helps you continue seeing my posts! Thank you!\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/deviled-egg-spread.html","reactions_like":{"data":[],"summary":{"total_count":433}},"reactions_love":{"data":[],"summary":{"total_count":19}},"reactions_wow":{"data":[],"summary":{"total_count":6}},"reactions_haha":{"data":[],"summary":{"total_count":1}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838679872976639"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/22554878_838679516310008_6459593737000930130_n.jpg?oh=6b5882f2a510d3ba3c150a4b804fd8e1&oe=5AADCEFA","created_time":"2017-10-23T17:00:00+0000","message":"Cinnamon
+        Sugar Pecans\n\n1 egg white\n2 teaspoons water\n2 teaspoons pure vanilla extract\n1lb
+        pecan halves (1 pound)\n1 cup sugar\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/11\/cinnamon-sugar-pecans.html","reactions_like":{"data":[],"summary":{"total_count":216}},"reactions_love":{"data":[],"summary":{"total_count":11}},"reactions_wow":{"data":[],"summary":{"total_count":0}},"reactions_haha":{"data":[],"summary":{"total_count":1}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838679559643337"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22728814_839396942904932_5090231803035899684_n.jpg?oh=db8a97e28ecb0b924dcbc71630a048d3&oe=5A7B7A32","created_time":"2017-10-23T16:00:00+0000","message":"Turkey
+        Ranch Club Wrap\nIngredients\n1 Trotilla Wrap (I used multi-grain, use what
+        ever you prefer)\n2 ounce of smoked turkey\n1\/2 slice sharp american cheese
+        (or cheese of your choice)\n2 slices cooked bacon**\n\nPlease say something
+        when you see the recipe! Saying ANYthing is good, it helps you continue seeing
+        my posts! Thank you!\n\nFull recipe : http:\/\/cookingsalad4u.blogspot.com\/2016\/11\/turkey-ranch-club-wrap.html","reactions_like":{"data":[],"summary":{"total_count":749}},"reactions_love":{"data":[],"summary":{"total_count":49}},"reactions_wow":{"data":[],"summary":{"total_count":7}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839397069571586"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22730448_839396519571641_8777281964440154730_n.jpg?oh=8e679c3bfcdc2dd7e047e9f0f9f9a48e&oe=5A658EB3","created_time":"2017-10-23T15:00:00+0000","message":"CHOCOLATE
+        PECAN TURTLE CLUSTERS!!! These are so easy to make and a great gift idea!!!\n\n2
+        1\/2 C pecans\n1\/2 C butter (I use salted)\n1 C brown sugar\n1\/2 C light
+        corn syrup\n7 ounces sweetened condensed milk (1\/2 of a 14 ounce can)\n1\/2
+        t vanilla\n\nPlease review is important for my contunuation , say something
+        to get my new posts Thank you !\n\nFull recipe : http:\/\/cookingsalad4u.blogspot.com\/2016\/10\/chocolate-pecan-turtle-clusters.html","reactions_like":{"data":[],"summary":{"total_count":349}},"reactions_love":{"data":[],"summary":{"total_count":22}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":1}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839396616238298"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22780324_839396172905009_5361081430519940106_n.jpg?oh=385da44a0ed0cb62bb98db707d07a510&oe=5A788B50","created_time":"2017-10-23T14:00:00+0000","message":"Loaded
+        Baked Potato Salad\n\n4 large russet potatoes\n1\/2 cup mayonnaise\n1\/2 cup
+        sour cream\n1\/2 cup shredded extra sharp cheddar\n4 tbsp stone ground or
+        yellow mustard (to taste)\n1\/4 cup chopped chives, divided\n\nPlease say
+        something when you see the recipe! Saying ANYthing is good, it helps you continue
+        seeing my posts! Thank you!\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/03\/loaded-baked-potato-salad.html","reactions_like":{"data":[],"summary":{"total_count":370}},"reactions_love":{"data":[],"summary":{"total_count":26}},"reactions_wow":{"data":[],"summary":{"total_count":4}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839396232905003"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/22687960_838678652976761_1869890832224506990_n.jpg?oh=4b0b6fd0a74b8dabd84913deff340f41&oe=5A73697E","created_time":"2017-10-23T13:00:00+0000","message":"Southern
+        Coconut Cake\n\n5 large egg whites\n\u00bd cup of milk\n2 teaspoons of vanilla
+        extract\n3 cups of cake flour\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/05\/southern-coconut-cake.html","reactions_like":{"data":[],"summary":{"total_count":270}},"reactions_love":{"data":[],"summary":{"total_count":14}},"reactions_wow":{"data":[],"summary":{"total_count":0}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838679252976701"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22728772_838677846310175_7989801039311577239_n.jpg?oh=5fc858936de948cc5f2b0257295c2c82&oe=5AAE821D","created_time":"2017-10-23T11:00:00+0000","message":"Corn
+        Casserole\n\n1 box Jiffy cornbread mix\n1 can cream corn\n1 can whole kernel
+        corn drained\n2 eggs\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/02\/corn-casserole.html\n\nPlease
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!","reactions_like":{"data":[],"summary":{"total_count":784}},"reactions_love":{"data":[],"summary":{"total_count":48}},"reactions_wow":{"data":[],"summary":{"total_count":6}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838678122976814"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/22549847_838676662976960_9049918745804284927_n.jpg?oh=b85d701a8cdfb1d814cf173958a6958b&oe=5A6EB705","created_time":"2017-10-23T04:40:00+0000","message":"HONEY
+        BUN COFFEE CAKE\n\n1 box yellow cake mix\n8 ounce tub sour cream\n4 eggs\n3\/4
+        c. vegetable oil\n\nFull Recipe : http:\/\/www.usrecipe.com\/2017\/05\/honey-bun-coffee-cake.html","reactions_like":{"data":[],"summary":{"total_count":254}},"reactions_love":{"data":[],"summary":{"total_count":11}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838676686310291"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/22729176_838676459643647_4771072245376044634_n.jpg?oh=3306e8217c381f4a100031773f978206&oe=5A62DF33","created_time":"2017-10-23T03:40:00+0000","message":"Greek
+        Steak Pitas with Caramelized Onions and Mushrooms\n\n1 to 1 1\/2 lb top sirloin
+        steak, cut in thin strips\n1 teaspoon dried oregano\n1 teaspoon Cavender\u2019s
+        All Purpose Greek Seasoning \n1\/2 teaspoon salt and pepper\n\nFull Recipe
+        : http:\/\/www.usrecipe.com\/2017\/01\/greek-steak-pitas-with-caramelized.html","reactions_like":{"data":[],"summary":{"total_count":671}},"reactions_love":{"data":[],"summary":{"total_count":44}},"reactions_wow":{"data":[],"summary":{"total_count":6}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838676489643644"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22552638_838676252977001_7868009050006959061_n.jpg?oh=3fc807d5cc1f024285548c45d28bfb8f&oe=5A691563","created_time":"2017-10-23T02:30:00+0000","message":"Peanut
+        Butter & Jelly Cake\n\n1 cups all-purpose flour, 125 grams\n1 cup granulated
+        sugar, 200 grams\n\u00bd teaspoon baking soda\n\u00bc cup milk, 60 ml\n\nFull
+        Recipe : http:\/\/www.usrecipe.com\/2017\/02\/peanut-butter-jelly-cake.html","reactions_like":{"data":[],"summary":{"total_count":219}},"reactions_love":{"data":[],"summary":{"total_count":18}},"reactions_wow":{"data":[],"summary":{"total_count":12}},"reactions_haha":{"data":[],"summary":{"total_count":2}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838676326310327"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22554880_839173489593944_6582800194043396744_n.jpg?oh=32e17025b0c1c831361acf5beda10529&oe=5A727970","created_time":"2017-10-23T01:31:00+0000","message":"CHICKEN
+        FRIED STEAK\n4 (1\/2 pound) beef cube steaks\n2 cups all-purpose flour\n2
+        teaspoons baking powder\n1 teaspoon baking soda\n1 teaspoon black pepper\n\nfull
+        recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/04\/chicken-fried-steak.html\n\nPlease
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!","reactions_like":{"data":[],"summary":{"total_count":537}},"reactions_love":{"data":[],"summary":{"total_count":39}},"reactions_wow":{"data":[],"summary":{"total_count":3}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839173532927273"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22780503_839173346260625_4291040189002236715_n.jpg?oh=d17bd5df91df3e417d31ffa2c1a17a0b&oe=5A76B605","created_time":"2017-10-23T00:30:00+0000","message":"Sex
+        in a Pan\n\n**Please - We need your help to stay in this social network. Say
+        something about our posts (yes, yum or smile emoticon will do) or we''ll completely
+        disappear from your news feed. Appreciate your help.\n\nRecipe : http:\/\/cookingsalad4u.blogspot.com\/2015\/10\/sex-in-pan.html","reactions_like":{"data":[],"summary":{"total_count":1104}},"reactions_love":{"data":[],"summary":{"total_count":109}},"reactions_wow":{"data":[],"summary":{"total_count":49}},"reactions_haha":{"data":[],"summary":{"total_count":5}},"reactions_sad":{"data":[],"summary":{"total_count":1}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839173382927288"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22555199_839170009594292_8844851300063985041_n.jpg?oh=cf7751d2f2ef257ac73137e8aa179391&oe=5A6FAC8A","created_time":"2017-10-22T23:38:06+0000","message":"Layered
+        taco salad {in a cake pan}\n\n1 lb. extra lean ground beef\n1 small can green
+        chilies, undrained\n1 head iceberg lettuce, outer leaves removed (all other
+        lettuces will wilt)\n1 packet taco seasoning mix (or a mixture of cumin, chili
+        powder and garlic powder)\n\nFull recipe ; http:\/\/allneweasyrecipes.blogspot.com\/2016\/07\/layered-taco-salad-in-cake-pan.html","reactions_like":{"data":[],"summary":{"total_count":302}},"reactions_love":{"data":[],"summary":{"total_count":21}},"reactions_wow":{"data":[],"summary":{"total_count":1}},"reactions_haha":{"data":[],"summary":{"total_count":1}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_839170039594289"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/22549526_838676082977018_6196646581807305513_n.jpg?oh=d2fcb327ae1e72a0e2e45124f545f0f2&oe=5A6EDC1E","created_time":"2017-10-22T19:00:00+0000","message":"CINNAMON
+        CREAM CHEESE ROLLUPS\n\n1 loaf of thin, white bread\n\u2154 bar of cream cheese
+        (8 oz. bar), softened\n\u00bd cup powdered sugar\n\u00be cups sugar\n\nFull
+        Recipe : http:\/\/www.usrecipe.com\/2016\/09\/cinnamon-cream-cheese-rollups.html","reactions_like":{"data":[],"summary":{"total_count":153}},"reactions_love":{"data":[],"summary":{"total_count":9}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838676129643680"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/22728882_838675872977039_6056277747530978647_n.jpg?oh=09b6b609300cd25ad082fc1179066e60&oe=5A804079","created_time":"2017-10-22T17:00:00+0000","message":"No
+        Peek Chicken\n\n1 box Uncle Ben\u2019s Long Grain Wild Rice (original recipe)\n1
+        can cream of mushroom soup\n1 can cream of celery soup\n1 can water\n\nFull
+        Recipe : http:\/\/www.usrecipe.com\/2016\/08\/no-peek-chicken.html","reactions_like":{"data":[],"summary":{"total_count":566}},"reactions_love":{"data":[],"summary":{"total_count":27}},"reactions_wow":{"data":[],"summary":{"total_count":4}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_838675976310362"}],"paging":{"cursors":{"before":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUTTBPVFl3TWpNM016WTRPRGcxTURBM05USVBER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnek9EWTRNamt4TmpNd09UWTJPQThFZAEdsdFpRWlo3emxRQVE9PQZDZD","after":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5TXlNell3TVRjeE5UazVNRGsxT0RNNk5UTTRNVFV3TlRBMU1EUXpOelkxTWpNME5nOE1ZAWEJwWDNOMGIzSjVYMmxrRHg4eU16WXdNVGN4TlRrNU1EazFPRE5mT0RNNE5qYzFPVGMyTXpFd016WXlEd1IwYVcxbEJsbnN6cEFC"},"next":"https:\/\/graph.facebook.com\/v2.10\/236017159909583\/posts?fields=full_picture\u00252Ccreated_time\u00252Cmessage\u00252Creactions.type\u002528LIKE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_like\u002529\u00252Creactions.type\u002528LOVE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_love\u002529\u00252Creactions.type\u002528WOW\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_wow\u002529\u00252Creactions.type\u002528HAHA\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_haha\u002529\u00252Creactions.type\u002528SAD\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_sad\u002529\u00252Creactions.type\u002528ANGRY\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_angry\u002529&limit=25&after=Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5TXlNell3TVRjeE5UazVNRGsxT0RNNk5UTTRNVFV3TlRBMU1EUXpOelkxTWpNME5nOE1ZAWEJwWDNOMGIzSjVYMmxrRHg4eU16WXdNVGN4TlRrNU1EazFPRE5mT0RNNE5qYzFPVGMyTXpFd016WXlEd1IwYVcxbEJsbnN6cEFC"}}'
+    http_version: 
+  recorded_at: Tue, 24 Oct 2017 13:04:39 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.10/236017159909583
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - OAuth <FACEBOOK_TOKEN>
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - '"e11c2d680629f370378e47ab318ef3da0b5644f1"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      X-Fb-Rev:
+      - '3395824'
+      Content-Type:
+      - application/json
+      X-Fb-Trace-Id:
+      - FD44EnpRvVH
+      Facebook-Api-Version:
+      - v2.10
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - X0WIgMR7VFUB+P/JE/W+Fn7BW+5DdQBoC7TG13sNKpE1qZmaqp514KstVOOLnlO2E3HJC32P0zNWTKWK7urFog==
+      Date:
+      - Tue, 24 Oct 2017 13:07:41 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '59'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"Recipes And Cooking Guide","id":"236017159909583"}'
+    http_version: 
+  recorded_at: Tue, 24 Oct 2017 13:04:39 GMT
+recorded_with: VCR 3.0.3
