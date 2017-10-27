@@ -1,42 +1,49 @@
 # frozen_string_literal: false
 
 require_relative 'page_mapper.rb'
+
 module RecipeBuddy
-  # Access for FB module to add Mapper
+  # Provides access to recipes data
   module Facebook
-    # Recipe Mapper Object for FB pages
+    # Data Mapper for Facebook recipes
     class RecipeMapper
-      def initialize(data_source)
-        @data_source = data_source
+      def initialize(gateway)
+        @gateway = gateway
       end
 
-      def load(page_id, recipe_id) #
-        recipe_data = @data_source.recipe_data(page_id, recipe_id)  # , recipe_id
-        build_entity(recipe_data)
+      def load_several(url)
+        recipes = @gateway.recipes_data(url)
+        recipes.map do |recipe_data|
+          RecipeMapper.build_entity(recipe_data)
+        end
       end
 
-      def build_entity(recipe_data)
-        mapper = DataMap.new(recipe_data, @data_source)
-
-        RepoPraise::Entity::Repo.new(
-          created_time: mapper.created_time,
-          content: mapper.content,
-          id: mapper.id,
-          full_picture: mapper.full_picture,
-          reactions_like: mapper.reactions_like,
-          reactions_love: mapper.reactions_love,
-          reactions_wow: mapper.reactions_wow,
-          reactions_haha: mapper.reactions_haha,
-          reactions_sad: mapper.reactions_sad,
-          reactions_angry: mapper.reactions_angry
-        )
+      def self.build_entity(recipe_data)
+        DataMapper.new(recipe_data, @gateway).build_entity
       end
 
       # Extracts entity specific elements from data structure
-      class DataMap
-        def initialize(recipe_data, data_source)
+      class DataMapper
+        def initialize(recipe_data, gateway)
           @recipe_data = recipe_data
-          @page_mapper = PageMapper.new(data_source)
+          @page_mapper = PageMapper.new(gateway)
+        end
+
+        def build_entity
+          RecipeBuddy::Entity::Recipe.new(
+            id: id, created_time: created_time,
+            content: content, full_picture: full_picture,
+            reactions_like: reactions_like,
+            reactions_love: reactions_love,
+            reactions_wow: reactions_wow,
+            reactions_haha: reactions_haha,
+            reactions_sad: reactions_sad,
+            reactions_angry: reactions_angry
+          )
+        end
+
+        def id
+          @recipe_data['id']
         end
 
         def created_time
@@ -45,10 +52,6 @@ module RecipeBuddy
 
         def content
           @recipe_data['message']
-        end
-
-        def id
-          @recipe_data['id']
         end
 
         def full_picture
@@ -78,13 +81,6 @@ module RecipeBuddy
         def reactions_angry
           @recipe_data['reactions_angry']['summary']['total_count']
         end
-
-        def pages
-          @recipe_mapper.load_several(@page_data['pages_url'])
-        end
-        # def from
-        # @from ||= @data_source.page(@recipe['id'].split('_')[0])
-        # end
       end
     end
   end
