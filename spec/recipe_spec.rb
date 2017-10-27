@@ -1,14 +1,23 @@
 # frozen_string_literal: false
 
 require_relative 'spec_helper.rb'
+require 'econfig'
 
 describe 'Tests Facebook API library' do
+  extend Econfig::Shortcut
+
+  Econfig.env = 'development'
+  Econfig.root = '.'
+
+  FB_TOKEN = config.fb_token
+
   VCR.configure do |c|
     c.cassette_library_dir = CASSETTES_FOLDER
     c.hook_into :webmock
 
-    c.filter_sensitive_data('<FACEBOOK_TOKEN>') { FB_TOKEN }
-    c.filter_sensitive_data('<FACEBOOK_TOKEN_ESC>') { CGI.escape(FB_TOKEN) }
+    fb_token = app.config.fb_token
+    c.filter_sensitive_data('<FACEBOOK_TOKEN>') { fb_token }
+    c.filter_sensitive_data('<FACEBOOK_TOKEN_ESC>') { CGI.escape(fb_token) }
   end
 
   before do
@@ -23,40 +32,40 @@ describe 'Tests Facebook API library' do
 
   describe 'Page information' do
     it 'HAPPY: should provide correct page attributes' do
-      api = RecipeBuddy::Facebook::FacebookApi.new(FB_TOKEN)
+      api = RecipeBuddy::Facebook::Api.new(FB_TOKEN)
       page_mapper = RecipeBuddy::Facebook::PageMapper.new(api)
       page = page_mapper.load(PAGE_NAME)
-      _(page.id).must_equal CORRECT['id']
-      _(page.name).must_equal CORRECT['name']
+      _(page.id).must_equal CORRECT_FACEBOOK['id']
+      _(page.name).must_equal CORRECT_FACEBOOK['name']
     end
 
     it 'SAD: should raise exception on incorrect page' do
       proc do
-        api = RecipeBuddy::Facebook::FacebookApi.new(FB_TOKEN)
+        api = RecipeBuddy::Facebook::Api.new(FB_TOKEN)
         page_mapper = RecipeBuddy::Facebook::PageMapper.new(api)
-        sad_page = page_mapper.load(BAD_PAGE_NAME)
-      end.must_raise RecipeBuddy::Facebook::FacebookApi::Errors::NotFound
+        page_mapper.load(BAD_PAGE_NAME)
+      end.must_raise Errors::NotFound
     end
 
     it 'SAD: should raise exception when unauthorized' do
       proc do
-        api = RecipeBuddy::Facebook::FacebookApi.new(BAD_FB_TOKEN)
+        api = RecipeBuddy::Facebook::Api.new(BAD_FB_TOKEN)
         page_mapper = RecipeBuddy::Facebook::PageMapper.new(api)
-        sadpage = page_mapper.load(PAGE_NAME)
-      end.must_raise RecipeBuddy::Facebook::FacebookApi::Errors::Unauthorized
+        page_mapper.load(PAGE_NAME)
+      end.must_raise Errors::Unauthorized
     end
   end
 
   describe 'Recipe information' do
     before do
-       api = RecipeBuddy::Facebook::FacebookApi.new(FB_TOKEN)
-       recipe_mapper = RecipeBuddy::Facebook::RecipeMapper.new(api)
-       @recipe = recipe_mapper.load(PAGE_NAME)
+      api = RecipeBuddy::Facebook::Api.new(FB_TOKEN)
+      page_mapper = RecipeBuddy::Facebook::PageMapper.new(api)
+      @page = page_mapper.load(PAGE_NAME)
     end
 
     it 'HAPPY: should recognize the from page' do
       recipe = @page.recipes[0]
-      _(recipe.from).must_be_kind_of RecipeBuddy::Entity::Page
+      _(recipe.id.split('_')[0]).must_equal @page.id
     end
 
     it 'HAPPY: should check that the recipe fields are valid' do
@@ -74,30 +83,34 @@ describe 'Tests Facebook API library' do
       _(recipe.full_picture).must_match %r{https?:\/\/[\S]+}
     end
 
-    it 'HAPPY: should identify owner' do
-      recipe = @page.recipes[0]
-      _(recipe.from.id).wont_be_nil
-      _(recipe.from.name).must_equal CORRECT['name']
-    end
+    # it 'HAPPY: should identify owner page' do
+    #   recipe = @page.recipes[0]
+    #   _(recipe.from.id).wont_be_nil
+    #   _(recipe.from.name).must_equal CORRECT['name']
+    # end
 
     it 'HAPPY: should check recipes' do
       recipes = @page.recipes
-      _(recipes.count).must_equal CORRECT['posts'].count
-
-      # ids = recipes.map(&:id)
-      # correct_ids = CORRECT['posts'].map { |c| c['id'] }
-      # _(ids).must_equal correct_ids
+      _(recipes.count).must_equal CORRECT_FACEBOOK['posts'].count
     end
   end
 end
 
 describe 'Tests YouTube API library' do
+  extend Econfig::Shortcut
+
+  Econfig.env = 'development'
+  Econfig.root = '.'
+
+  YT_TOKEN = config.yt_token
+
   VCR.configure do |c|
     c.cassette_library_dir = CASSETTES_FOLDER
     c.hook_into :webmock
 
-    c.filter_sensitive_data('<YOUTUBE_TOKEN>') { YT_TOKEN }
-    c.filter_sensitive_data('<YOUTUBE_TOKEN_ESC>') { CGI.escape(YT_TOKEN) }
+    yt_token = config.yt_token
+    c.filter_sensitive_data('<YOUTUBE_TOKEN>') { yt_token }
+    c.filter_sensitive_data('<YOUTUBE_TOKEN_ESC>') { CGI.escape(yt_token) }
   end
 
   before do
@@ -112,9 +125,9 @@ describe 'Tests YouTube API library' do
   describe 'Video information' do
     before do
       search_query = "search?q=#{RECIPE_TO_SEARCH}"
-      @videos = RecipeBuddy::YoutubeApi.new(YT_TOKEN)
-                                       .videos(search_query)
-      @videos.count
+      api = RecipeBuddy::Youtube::Api.new(YT_TOKEN)
+      video_mapper = RecipeBuddy::Youtube::VideoMapper.new(api)
+      @videos = video_mapper.load_several(search_query)
     end
 
     it 'HAPPY: should get the count' do
@@ -134,8 +147,9 @@ describe 'Tests YouTube API library' do
     it 'SAD: should raise exception when unauthorized' do
       proc do
         search_query = "search?q=#{RECIPE_TO_SEARCH}"
-        RecipeBuddy::YoutubeApi.new(BAD_FB_TOKEN)
-                               .videos(search_query)
+        api = RecipeBuddy::Youtube::Api.new(BAD_FB_TOKEN)
+        video_mapper = RecipeBuddy::Youtube::VideoMapper.new(api)
+        video_mapper.load_several(search_query)
       end.must_raise Errors::BadRequest
     end
   end
