@@ -1,24 +1,12 @@
 # frozen_string_literal: false
 
 require 'http'
-# require_relative 'entities/page.rb'
-# require_relative 'entities/recipe.rb'
-# require_relative 'entities/errors.rb'
+require_relative 'errors.rb'
 
 module RecipeBuddy
-  # Talk to Facebook
   module Facebook
-    # Library for Facebook Web API
-    class FacebookApi
-      # Encapsulates API response success and errors
-      module Errors
-        # Not allowed to access resource
-        Unauthorized = Class.new(StandardError)
-        # Requested resource not found
-        NotFound = Class.new(StandardError)
-        # Bad request
-        BadRequest = Class.new(StandardError)
-      end
+    # Gateway to talk to Facebook API
+    class Api
       # Encapsulates API response success and errors
       class Response
         HTTP_ERROR = {
@@ -31,9 +19,7 @@ module RecipeBuddy
         end
 
         def successful?
-          return false if HTTP_ERROR.keys.include?(@response.code)
-          # return false unless @response['errors'].nil?
-          true
+          HTTP_ERROR.keys.include?(@response.code) ? false : true
         end
 
         def response_or_error
@@ -46,17 +32,17 @@ module RecipeBuddy
       end
 
       def page_data(name)
-        page_req_url = FacebookApi.path(name)
-        page_data = call_fb_url(page_req_url).parse
+        page_req_url = Api.path(name)
+        call_fb_url(page_req_url).parse
       end
 
-      def recipe_data(path)
-        recipes_url = FacebookApi.recipes_path(path)
-        receipes_response_parsed = call_fb_url(recipes_url).parse
-        recipes_data = receipes_response_parsed['data']
+      def recipes_data(path)
+        recipes_url = Api.path(path)
+        recipes_response_parsed = call_fb_url(recipes_url).parse
+        recipes_response_parsed['data']
       end
 
-      def self.recipes_path(path)
+      def self.path(path)
         'https://graph.facebook.com/v2.10/' + path
       end
 
