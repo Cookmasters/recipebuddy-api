@@ -3,18 +3,14 @@
 require 'roda'
 require 'econfig'
 require_relative 'lib/init.rb'
+require_relative 'config/environment.rb'
 
 module RecipeBuddy
   # Web API
   class Api < Roda
-    plugin :environments
     plugin :json
     plugin :halt
     plugin :multi_route
-
-    extend Econfig::Shortcut
-    Econfig.env = environment.to_s
-    Econfig.root = '.'
 
     route do |routing|
       app = Api
