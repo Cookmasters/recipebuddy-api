@@ -7,7 +7,8 @@ module RecipeBuddy
   module Entity
     # Domain entity object
     class Video < Dry::Struct
-      attribute :id, Types::Strict::String
+      attribute :id, Types::Int.optional
+      attribute :origin_id, Types::Strict::String
       attribute :title, Types::Strict::String
       attribute :published_at, Types::Strict::DateTime
       attribute :description, Types::Strict::String

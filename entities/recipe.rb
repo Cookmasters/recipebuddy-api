@@ -8,7 +8,8 @@ module RecipeBuddy
   module Entity
     # Domain entity object
     class Recipe < Dry::Struct
-      attribute :id, Types::Strict::String
+      attribute :id, Types::Int.optional
+      attribute :origin_id, Types::Strict::String
       attribute :created_time, Types::Strict::DateTime
       attribute :content, Types::Strict::String
       attribute :full_picture, Types::Strict::String

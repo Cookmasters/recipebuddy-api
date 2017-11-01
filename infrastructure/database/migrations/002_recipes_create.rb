@@ -6,10 +6,12 @@ Sequel.migration do
   change do
     create_table(:recipes) do
       primary_key :id
+      String :origin_id, unique: true
+      foreign_key :page_id, :pages
 
-      Integer :created_time
-      Integer :content
-      Integer :full_picture
+      DateTime :created_time
+      String :content
+      String :full_picture
       Integer :reactions_like
       Integer :reactions_love
       Integer :reactions_wow

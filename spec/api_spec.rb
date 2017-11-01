@@ -21,7 +21,7 @@ describe 'Tests Facebook API' do
       get "#{API_VER}/page/#{PAGE_NAME}"
       _(last_response.status).must_equal 200
       page_data = JSON.parse last_response.body
-      _(page_data['page']['id']).must_be_instance_of String
+      _(page_data['page']['origin_id']).must_be_instance_of String
       _(page_data['page']['name']).must_be_instance_of String
     end
 
