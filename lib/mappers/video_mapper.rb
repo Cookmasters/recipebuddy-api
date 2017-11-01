@@ -31,7 +31,7 @@ module RecipeBuddy
 
         def build_entity
           RecipeBuddy::Entity::Video.new(
-            id: id, title: title,
+            id: id, origin_id: origin_id, title: title,
             published_at: published_at, description: description,
             channel_id: channel_id,
             channel_title: channel_title
@@ -39,6 +39,9 @@ module RecipeBuddy
         end
 
         def id
+          @video_data['snippet']['id']
+        end
+        def origin_id
           @video_data['id']['videoId']
         end
 

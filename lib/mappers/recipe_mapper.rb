@@ -31,7 +31,7 @@ module RecipeBuddy
 
         def build_entity
           RecipeBuddy::Entity::Recipe.new(
-            id: id, created_time: created_time,
+            id: id, origin_id: origin_id, created_time: created_time,
             content: content, full_picture: full_picture,
             reactions_like: reactions_like,
             reactions_love: reactions_love,
@@ -43,6 +43,10 @@ module RecipeBuddy
         end
 
         def id
+          # optional
+        end
+
+        def origin_id
           @recipe_data['id']
         end
 

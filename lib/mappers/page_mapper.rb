@@ -31,6 +31,7 @@ module RecipeBuddy
       def build_entity
         RecipeBuddy::Entity::Page.new(
           id: id,
+          origin_id: origin_id,
           name: name,
           recipes: recipes
         )
@@ -39,6 +40,10 @@ module RecipeBuddy
       private
 
       def id
+        @page_data['id']
+      end
+
+      def origin_id
         @page_data['id']
       end
 

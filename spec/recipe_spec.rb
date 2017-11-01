@@ -35,7 +35,7 @@ describe 'Tests Facebook API library' do
       api = RecipeBuddy::Facebook::Api.new(FB_TOKEN)
       page_mapper = RecipeBuddy::Facebook::PageMapper.new(api)
       page = page_mapper.load(PAGE_NAME)
-      _(page.id).must_equal CORRECT_FACEBOOK['id']
+      _(page.origin_id).must_equal CORRECT_FACEBOOK['id']
       _(page.name).must_equal CORRECT_FACEBOOK['name']
     end
 
@@ -65,15 +65,15 @@ describe 'Tests Facebook API library' do
 
     it 'HAPPY: should recognize the from page' do
       recipe = @page.recipes[0]
-      _(recipe.id.split('_')[0]).must_equal @page.id
+      _(recipe.origin_id.split('_')[0]).must_equal @page.origin_id
     end
 
     it 'HAPPY: should check that the recipe fields are valid' do
       recipe = @page.recipes[0]
       _(recipe.created_time).must_be_instance_of DateTime
       _(recipe.content).must_be_instance_of String
-      _(recipe.id).must_be_instance_of String
-      _(recipe.id.split('_')[0]).must_equal @page.id
+      _(recipe.origin_id).must_be_instance_of String
+      _(recipe.origin_id.split('_')[0]).must_equal @page.origin_id
       _(recipe.reactions_like).must_be :>=, 0
       _(recipe.reactions_love).must_be :>=, 0
       _(recipe.reactions_wow).must_be :>=, 0
@@ -136,7 +136,7 @@ describe 'Tests YouTube API library' do
 
     it 'HAPPY: should check that the video fields are valid' do
       video = @videos[0]
-      _(video.id).must_be_instance_of String
+      _(video.origin_id).must_be_instance_of String
       _(video.title).must_be_instance_of String
       _(video.published_at).must_be_instance_of DateTime
       _(video.description).must_be_instance_of String
