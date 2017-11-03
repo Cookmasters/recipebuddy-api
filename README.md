@@ -1,6 +1,6 @@
 # RecipeBuddy API
 
-This is our Service Oriented Architecture project API and aims to aggregate recipes for Facebook pubic pages/groups.
+This is our Service Oriented Architecture project API and aims to aggregate recipes for Facebook public pages/groups and find the relevant videos of the recipes from Youtube.
 
 ## Routes
 
