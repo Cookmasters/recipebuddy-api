@@ -24,7 +24,8 @@ task :rmvcr do
 end
 
 namespace :quality do
-  CODE = 'lib/'.freeze
+  CODE = 'infrastructure/'.freeze
+  folders = %i[domain infrastructure]
 
   desc 'run all quality checks'
   task all: %i[rubocop reek flog]
@@ -34,49 +35,50 @@ namespace :quality do
   end
 
   task :reek do
-    sh "reek #{CODE}"
+    folders.each do |folder|
+      sh "reek #{folder}"
+    end
   end
 
   task :flog do
-    sh "flog #{CODE}"
+    folders.each do |folder|
+      sh "flog #{folder}"
+    end
+  end
+end
+
+# Database tasks
+namespace :db do
+  require_relative 'config/environment.rb' # load config info
+  require 'sequel' # TODO: remove after create orm
+
+  Sequel.extension :migration
+  app = RecipeBuddy::Api
+
+  desc 'Run migrations'
+  task :migrate do
+    puts "Migrating #{app.environment} database to latest"
+    Sequel::Migrator.run(app.db, 'infrastructure/database/migrations')
   end
 
-  # Database tasks
-  namespace :db do
-    require_relative 'config/environment.rb' # load config info
-    require 'sequel' # TODO: remove after create orm
+  desc 'Drop all tables'
+  task :drop do
+    require_relative 'config/environment.rb'
+    # drop according to dependencies
+    app.db.drop_table :videos
+    app.db.drop_table :recipes
+    app.db.drop_table :pages
+    app.db.drop_table :schema_info
+  end
 
-    Sequel.extension :migration
-    app = RecipeBuddy::Api
+  desc 'Reset all database tables'
+  task reset: %i[drop migrate]
 
-    desc 'Run migrations'
-    task :migrate do
-      puts "Migrating #{app.environment} database to latest"
-      Sequel::Migrator.run(app.DB, 'infrastructure/database/migrations')
-    end
+  desc 'Delete dev or test database file'
+  task :wipe do
+    return nil unless app.environment != :production
 
-    desc 'Drop all tables'
-    task :drop do
-      require_relative 'config/environment.rb'
-      # drop according to dependencies
-      app.DB.drop_table :pages
-      app.DB.drop_table :recipes
-      app.DB.drop_table :videos
-      app.DB.drop_table :schema_info
-    end
-
-    desc 'Reset all database tables'
-    task reset: [:drop, :migrate]
-
-    desc 'Delete dev or test database file'
-    task :wipe do
-      if app.environment == :production
-        puts 'Cannot wipe production database!'
-        return
-      end
-
-      FileUtils.rm(app.config.db_filename)
-      puts "Deleted #{app.config.db_filename}"
-    end
+    FileUtils.rm(app.config.db_filename)
+    puts "Deleted #{app.config.db_filename}"
   end
 end
