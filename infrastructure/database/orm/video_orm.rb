@@ -4,7 +4,7 @@ module RecipeBuddy
   module Database
     # Object Relational Mapper for Videos Entities
     class VideoOrm < Sequel::Model(:videos)
-      many_to_one :video,
+      many_to_one :recipe,
                   class: :'RecipeBuddy::Database::RecipeOrm'
 
       plugin :timestamps, update_on_create: true
