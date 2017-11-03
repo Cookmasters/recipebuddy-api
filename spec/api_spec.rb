@@ -17,35 +17,54 @@ describe 'Tests Facebook API' do
   end
 
   describe 'Page information' do
-    it 'HAPPY: should provide correct page attributes' do
-      get "#{API_VER}/page/#{PAGE_NAME}"
-      _(last_response.status).must_equal 200
-      page_data = JSON.parse last_response.body
-      _(page_data['page']['id']).must_be_instance_of String
-      _(page_data['page']['name']).must_be_instance_of String
+    before do
+      # DatabaseCleaner.clean
+      Rake::Task['db:reset'].invoke
     end
 
-    it 'SAD: should raise exception on incorrect page' do
-      get "#{API_VER}/page/#{BAD_PAGE_NAME}"
-      _(last_response.status).must_equal 404
-      body = JSON.parse last_response.body
-      _(body.keys).must_include 'error'
+    describe 'POSTting to create entities from Facebook' do
+      it 'HAPPY: should retrieve and store page and recipes' do
+        post "#{API_VER}/page/#{PAGE_NAME}"
+        _(last_response.status).must_equal 201
+        _(last_response.header['Location'].size).must_be :>, 0
+        page_data = JSON.parse last_response.body
+        _(page_data['id']).must_be_instance_of Integer
+        _(page_data['origin_id']).must_be_instance_of String
+        _(page_data['name']).must_be_instance_of String
+      end
+
+      it 'SAD: should report error if no page found' do
+        post "#{API_VER}/page/#{BAD_PAGE_NAME}"
+        _(last_response.status).must_equal 404
+      end
     end
 
-    it 'HAPPY: should get the recipes from the page' do
-      get "#{API_VER}/page/#{PAGE_NAME}/recipes"
-      _(last_response.status).must_equal 200
-      page_data = JSON.parse last_response.body
-      _(page_data['recipes'].count).must_equal 25
+    describe 'GETing database entities' do
+      before do
+        post "#{API_VER}/page/#{PAGE_NAME}"
+      end
+      it 'HAPPY: should find stored page and recipes' do
+        get "#{API_VER}/page/#{PAGE_NAME}"
+        _(last_response.status).must_equal 200
+        page_data = JSON.parse last_response.body
+        _(page_data['id']).must_be_instance_of Integer
+        _(page_data['origin_id']).must_be_instance_of String
+        _(page_data['name']).must_be_instance_of String
+      end
+
+      it 'SAD: should report error if no database page entity found' do
+        get "#{API_VER}/page/#{BAD_PAGE_NAME}"
+        _(last_response.status).must_equal 404
+      end
     end
   end
-
-  describe 'Recipe videos' do
-    it 'HAPPY: should get a recipe videos' do
-      get "#{API_VER}/recipe/#{RECIPE_TO_SEARCH}"
-      _(last_response.status).must_equal 200
-      recipe_data = JSON.parse last_response.body
-      _(recipe_data['videos'].count).must_equal 5
-    end
-  end
+  #
+  # describe 'Recipe videos' do
+  #   it 'HAPPY: should get a recipe videos' do
+  #     get "#{API_VER}/recipe/#{RECIPE_TO_SEARCH}"
+  #     _(last_response.status).must_equal 200
+  #     recipe_data = JSON.parse last_response.body
+  #     _(recipe_data['videos'].count).must_equal 5
+  #   end
+  # end
 end
