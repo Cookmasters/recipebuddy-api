@@ -1,1 +1,40 @@
-# facebook-graph-api
+# RecipeBuddy API
+
+This is our Service Oriented Architecture project API and aims to aggregate recipes for Facebook pubic pages/groups.
+
+## Routes
+
+### Application Routes
+
+- GET `/`: main route
+
+### Page Routes
+
+- GET `api/v0.1/page/[pagename]`: returns a json of the page information
+- POST `api/v0.1/page/[pagename]`: gets the page information along with the recipes from Facebook and saves it in the database
+
+
+## Install
+
+Install this API by cloning the *relevant branch* and installing required gems:
+
+    $ bundle install
+
+
+## Testing
+
+Test this API by running:
+
+    $ RACK_ENV=test rake db:migrate
+    $ bundle exec rake spec
+
+## Develop
+
+Run this API during development:
+
+    $ rake db:migrate
+    $ bundle exec rackup
+
+or use autoloading during development:
+
+    $ bundle exec rerun rackup
