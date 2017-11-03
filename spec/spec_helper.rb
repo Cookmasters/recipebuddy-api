@@ -14,10 +14,13 @@ require 'webmock'
 
 require_relative 'test_load_all'
 
+load 'Rakefile'
+Rake::Task['db:reset'].invoke
+
 PAGE_NAME = 'RecipesAndCookingGuide'.freeze
 BAD_PAGE_NAME = 'olcooker'.freeze
 
-BAD_FB_TOKEN = 'hastalavista'.freeze
+BAD_TOKEN = 'hastalavista'.freeze
 
 CORRECT_FACEBOOK = YAML.safe_load(File.read('spec/fixtures/fb_results.yml'))
 
