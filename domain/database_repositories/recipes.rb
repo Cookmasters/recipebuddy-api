@@ -18,6 +18,16 @@ module RecipeBuddy
         find_origin_id(entity.origin_id) || create_from(entity)
       end
 
+      def self.add_stored_id(entity_data, db)
+        entity_data.videos.each do |video|
+          stored_video = Videos.find_or_create(video)
+          video = Database::VideoOrm.first(id: stored_video.id)
+          db.add_video(video)
+        end
+
+        rebuild_entity(db)
+      end
+
       # rubocop:disable MethodLength
       # rubocop:disable Metrics/AbcSize
       def self.create_from(entity)
@@ -31,14 +41,7 @@ module RecipeBuddy
           reactions_sad: entity.reactions_sad,
           reactions_angry: entity.reactions_angry
         )
-
-        entity.videos.each do |video|
-          stored_video = Videos.find_or_create(video)
-          video = Database::VideoOrm.first(id: stored_video.id)
-          db_recipe.add_video(video)
-        end
-
-        rebuild_entity(db_recipe)
+        add_stored_id(entity, db_recipe)
       end
 
       def self.rebuild_entity(db_record)
