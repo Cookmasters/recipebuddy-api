@@ -1,0 +1,295 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&part=snippet&q=Chicken%20and%20Broccoli%20Stir%20fry
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 09 Nov 2017 03:00:15 GMT
+      Date:
+      - Thu, 09 Nov 2017 03:00:15 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"ld9biNPKjAjgjV7EZ4EKeEGrhao/bB2oHQm1pS1EXOevIpkBE_z-6VI"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5498'
+      Server:
+      - GSE
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/bB2oHQm1pS1EXOevIpkBE_z-6VI\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 1000000,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/qT0HbdwTs5sTKlfIIzNsq5WdItw\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "tRadAJLsrmc"
+           },
+           "snippet": {
+            "publishedAt": "2016-03-16T16:14:57.000Z",
+            "channelId": "UClcWrXNVItYUqoExg_Y86AA",
+            "title": "How to Make the Best Chicken and Broccoli Chinese Stir Fry Recipe ~ Healthy Chinese Cooking",
+            "description": "We just love Chinese chicken and broccoli and this is a Classic Chinese meal. In this recipe video I will show you how to make easy and HEALTHY chicken and ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/tRadAJLsrmc/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/tRadAJLsrmc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/tRadAJLsrmc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Tess Cooks 4u",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/lwhL5gUUIUZLmRsmJuIYwWx0_E4\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "_md2Hp1UCeo"
+           },
+           "snippet": {
+            "publishedAt": "2012-12-05T22:57:14.000Z",
+            "channelId": "UCtjlTbeLELCuJU0o8AF2qtA",
+            "title": "Wok Cooking Stir-fry Chicken with Broccoli Recipe / World of Flavor",
+            "description": "Simple Chicken with Broccoli Recipe cooked in a cast iron wok. The Broccoli gets steamed and the chicken get velveted ahead of time so this is a dish that can ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/_md2Hp1UCeo/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/_md2Hp1UCeo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/_md2Hp1UCeo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "James Strange",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/uKHA28qViuqaxQ_ukXhHbPPCoU8\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "0UE8fLUV9VI"
+           },
+           "snippet": {
+            "publishedAt": "2015-08-09T13:50:54.000Z",
+            "channelId": "UCGKAhUMPWsdLT1vb3hl1Dtg",
+            "title": "Chicken and Broccoli Stir Fry - in the Kitchen With Jonny Episode 84",
+            "description": "Easy chicken and broccoli stir fry recipe. SUBSCRIBE HERE : http://m.youtube.com/channel/UCGKAhUMPWsdLT1vb3hl1Dtg SWEET AND SOUR CHICKEN: ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/0UE8fLUV9VI/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/0UE8fLUV9VI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/0UE8fLUV9VI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "In The Kitchen With Jonny",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/9XOWcZ1E-MfXdA7rZvQVRNDogWc\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "Wno3isc5O14"
+           },
+           "snippet": {
+            "publishedAt": "2015-01-04T22:08:38.000Z",
+            "channelId": "UCaUR4ViaAVLLzKQ2ex6u1Sg",
+            "title": "蠔油西蘭花雞  Chicken Broccoli in Oyster Sauce : One pan method.",
+            "description": "Retired Chef Cook, Mr. Fai . show you how to make this delicious crunchy Broccoli with chicken. One pan method. No need to para-boiled / blanching the veggie ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/Wno3isc5O14/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/Wno3isc5O14/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/Wno3isc5O14/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "HAPPY WOK",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/zRMIhwzeBwUUob-eIjB8bMRQ1XU\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "BQa1wMo2_-8"
+           },
+           "snippet": {
+            "publishedAt": "2016-09-20T21:00:00.000Z",
+            "channelId": "UCJFp8uSYCjXOMnkUyb3CQ3Q",
+            "title": "Chicken & Veggie Stir-Fry",
+            "description": "Here is what you'll need! Chicken & Veggie Stir-Fry Servings: 6 INGREDIENTS 1 pound chicken breast, cubed Salt, to taste Pepper, to taste 1 pound broccoli ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/BQa1wMo2_-8/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/BQa1wMo2_-8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/BQa1wMo2_-8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Tasty",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Thu, 09 Nov 2017 03:00:15 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=sad_token&part=snippet&q=Chicken%20and%20Broccoli%20Stir%20fry
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin,Accept-Encoding
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 09 Nov 2017 03:00:15 GMT
+      Expires:
+      - Thu, 09 Nov 2017 03:00:15 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Accept-Ranges:
+      - none
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "error": {
+          "errors": [
+           {
+            "domain": "usageLimits",
+            "reason": "keyInvalid",
+            "message": "Bad Request"
+           }
+          ],
+          "code": 400,
+          "message": "Bad Request"
+         }
+        }
+    http_version: 
+  recorded_at: Thu, 09 Nov 2017 03:00:15 GMT
+recorded_with: VCR 3.0.3

@@ -55,8 +55,7 @@ module RecipeBuddy
         end
 
         def content
-          return @data['message'] unless @data['message'].nil?
-          'Bad'
+          @data['message'] || 'Bad'
         end
 
         def full_picture
