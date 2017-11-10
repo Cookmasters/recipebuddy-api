@@ -4,6 +4,7 @@ module RecipeBuddy
   module Repository
     # Repository for Recipes
     class Recipes
+
       def self.find_id(id)
         db_record = Database::RecipeOrm.first(id: id)
         rebuild_entity(db_record)
@@ -15,7 +16,7 @@ module RecipeBuddy
       end
 
       def self.find_or_create(entity)
-        find_origin_id(entity.origin_id) || create_from(entity)
+        find_origin_id(entity.origin_id) || create(entity)
       end
 
       def self.add_stored_id(entity_data, db)
@@ -30,7 +31,7 @@ module RecipeBuddy
 
       # rubocop:disable MethodLength
       # rubocop:disable Metrics/AbcSize
-      def self.create_from(entity)
+      def self.create(entity)
         db_recipe = Database::RecipeOrm.create(
           origin_id: entity.origin_id, created_time: entity.created_time,
           content: entity.content, full_picture: entity.full_picture,

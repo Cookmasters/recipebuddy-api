@@ -4,6 +4,10 @@ module RecipeBuddy
   module Repository
     # Repository for Page Entities
     class Pages
+      def self.find(entity)
+        find_origin_id(entity.origin_id)
+      end
+
       def self.find_name(pagename)
         # SELECT * FROM `pages`
         # WHERE (`name` = 'pagename')
@@ -20,10 +24,6 @@ module RecipeBuddy
         rebuild_entity(db_record)
       end
 
-      def self.find_or_create(entity)
-        find_origin_id(entity.origin_id) || create_from(entity)
-      end
-
       def self.add_stored_id(entity_data, db)
         entity_data.recipes.each do |recipe|
           stored_recipe = Recipes.find_or_create(recipe)
@@ -33,7 +33,9 @@ module RecipeBuddy
         rebuild_entity(db)
       end
 
-      def self.create_from(entity)
+      def self.create(entity)
+        raise 'Facebook page already exists' if find(entity)
+
         db_page = Database::PageOrm.create(
           origin_id: entity.origin_id,
           name: entity.name

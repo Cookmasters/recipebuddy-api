@@ -5,7 +5,6 @@ require 'roda'
 module RecipeBuddy
   # Web API
   class Api < Roda
-    plugin :json
     plugin :halt
 
     route do |routing|
@@ -21,9 +20,16 @@ module RecipeBuddy
           routing.on 'page', String do |pagename|
             # GET /api/v0.1/page/:pagename request
             routing.get do
-              page = Repository::For[Entity::Page].find_name(pagename)
-              routing.halt(404, error: 'Facebook page not found') unless page
-              page.to_h
+              begin
+                page = Repository::For[Entity::Page].find_name(pagename)
+              rescue StandardError
+                error = { error: 'Facebook page not found' }
+                routing.halt(500, error.to_json)
+              end
+
+              error = { error: 'Facebook page not found' }
+              routing.halt(404, error.to_json) unless page
+              page.to_h.to_json
             end
 
             # POST '/api/v0.1/page/:pagename request
@@ -31,12 +37,25 @@ module RecipeBuddy
               begin
                 page = Facebook::PageMapper.new(app.config).load(pagename)
               rescue StandardError
-                routing.halt(404, error: 'Facebook page not found')
+                error = { error: 'Facebook page not found' }
+                routing.halt(404, error.to_json)
               end
-              stored_page = Repository::For[page.class].find_or_create(page)
+
+              if Repository::For[page.class].find(page)
+                error = { error: 'Facebook page not found' }
+                routing.halt(409, error.to_json)
+              end
+
+              begin
+                stored_page = Repository::For[page.class].create(page)
+              rescue StandardError
+                error = { error: 'Facebook page not found' }
+                routing.halt(500, error.to_json)
+              end
+
               response.status = 201
               response['Location'] = "/api/v0.1/page/#{pagename}"
-              stored_page.to_h
+              stored_page.to_h.to_json
             end
           end
         end

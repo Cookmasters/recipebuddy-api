@@ -37,6 +37,12 @@ describe 'Tests Facebook API' do
         post "#{API_VER}/page/#{BAD_PAGE_NAME}"
         _(last_response.status).must_equal 404
       end
+      it 'BAD: should report error if duplicate facebook page found' do
+        post "#{API_VER}/page/#{PAGE_NAME}"
+        _(last_response.status).must_equal 201
+        post "#{API_VER}/page/#{PAGE_NAME}"
+        _(last_response.status).must_equal 409
+      end
     end
 
     describe 'GETing database entities' do
