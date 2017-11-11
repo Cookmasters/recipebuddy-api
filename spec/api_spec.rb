@@ -29,14 +29,13 @@ describe 'Tests Facebook API' do
         _(last_response.status).must_equal 201
         _(last_response.header['Location'].size).must_be :>, 0
         page_data = JSON.parse last_response.body
-        _(page_data['id']).must_be_instance_of Integer
         _(page_data['origin_id']).must_be_instance_of String
         _(page_data['name']).must_be_instance_of String
       end
 
       it 'SAD: should report error if no page found' do
         post "#{API_VER}/page/#{BAD_PAGE_NAME}"
-        _(last_response.status).must_equal 404
+        _(last_response.status).must_equal 400
       end
       it 'BAD: should report error if duplicate facebook page found' do
         post "#{API_VER}/page/#{PAGE_NAME}"
@@ -54,7 +53,6 @@ describe 'Tests Facebook API' do
         get "#{API_VER}/page/#{PAGE_NAME}"
         _(last_response.status).must_equal 200
         page_data = JSON.parse last_response.body
-        _(page_data['id']).must_be_instance_of Integer
         _(page_data['origin_id']).must_be_instance_of String
         _(page_data['name']).must_be_instance_of String
       end

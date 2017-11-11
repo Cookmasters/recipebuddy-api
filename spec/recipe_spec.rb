@@ -31,7 +31,7 @@ describe 'Tests Facebook API library' do
   describe 'Page information' do
     it 'HAPPY: should provide correct page attributes' do
       page_mapper = RecipeBuddy::Facebook::PageMapper.new(app.config)
-      page = page_mapper.load(PAGE_NAME)
+      page = page_mapper.find(PAGE_NAME)
       _(page.origin_id).must_equal CORRECT_FACEBOOK['id']
       # _(page.name).must_equal CORRECT_FACEBOOK['name']
     end
@@ -39,7 +39,7 @@ describe 'Tests Facebook API library' do
     it 'SAD: should raise exception on incorrect page' do
       proc do
         page_mapper = RecipeBuddy::Facebook::PageMapper.new(app.config)
-        page_mapper.load(BAD_PAGE_NAME)
+        page_mapper.find(BAD_PAGE_NAME)
       end.must_raise Errors::NotFound
     end
 
@@ -48,7 +48,7 @@ describe 'Tests Facebook API library' do
         require 'ostruct'
         sad_config = OpenStruct.new(fb_token: 'sad_token')
         page_mapper = RecipeBuddy::Facebook::PageMapper.new(sad_config)
-        page_mapper.load(PAGE_NAME)
+        page_mapper.find(PAGE_NAME)
       end.must_raise Errors::Unauthorized
     end
   end
@@ -56,7 +56,7 @@ describe 'Tests Facebook API library' do
   describe 'Recipe information' do
     before do
       page_mapper = RecipeBuddy::Facebook::PageMapper.new(app.config)
-      @page = page_mapper.load(PAGE_NAME)
+      @page = page_mapper.find(PAGE_NAME)
     end
 
     it 'HAPPY: should recognize the from page' do
