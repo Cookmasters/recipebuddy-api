@@ -7,6 +7,7 @@ module RecipeBuddy
   # Represents essential Recipe information for API output
   class RecipeRepresenter < Roar::Decorator
     include Roar::JSON
+
     property :origin_id
     property :created_time
     property :content
@@ -17,6 +18,6 @@ module RecipeBuddy
     property :reactions_haha
     property :reactions_sad
     property :reactions_angry
-    collection :videos, extend: Video_Representer
+    collection :videos, extend: VideoRepresenter
   end
 end

@@ -7,8 +7,9 @@ module RecipeBuddy
   # Represents essential Page information for API output
   class PageRepresenter < Roar::Decorator
     include Roar::JSON
+
     property :origin_id
     property :name
-    collection :recipes, extend: ReciepeRepresenter
+    collection :recipes, extend: RecipeRepresenter
   end
 end

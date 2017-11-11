@@ -4,6 +4,7 @@ module RecipeBuddy
   # Representer for HTTP response
   class HttpResponseRepresenter < Roar::Decorator
     include Roar::JSON
+
     property :code
     property :message
 

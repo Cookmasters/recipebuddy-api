@@ -4,6 +4,8 @@
 module RecipeBuddy
   # Represents essential Video information for API output
   class VideoRepresenter < Roar::Decorator
+    include Roar::JSON
+
     property :origin_id
     property :title
     property :published_at
