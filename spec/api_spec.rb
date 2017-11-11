@@ -18,8 +18,9 @@ describe 'Tests Facebook API' do
 
   describe 'Page information' do
     before do
-      # DatabaseCleaner.clean
-      Rake::Task['db:reset'].invoke
+      app.db[:videos].delete
+      app.db[:recipes].delete
+      app.db[:pages].delete
     end
 
     describe 'POSTting to create entities from Facebook' do
