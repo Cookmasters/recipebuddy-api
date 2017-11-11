@@ -4,7 +4,6 @@ module RecipeBuddy
   module Repository
     # Repository for Recipes
     class Recipes
-
       def self.find_id(id)
         db_record = Database::RecipeOrm.first(id: id)
         rebuild_entity(db_record)
