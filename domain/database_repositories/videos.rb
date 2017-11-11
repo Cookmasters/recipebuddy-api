@@ -18,6 +18,10 @@ module RecipeBuddy
         find_origin_id(entity.origin_id) || create_from(entity)
       end
 
+      def self.all
+        Database::VideoOrm.all.map { |db_video| rebuild_entity(db_video) }
+      end
+
       def self.create_from(entity)
         db_recipe = Database::VideoOrm.create(
           origin_id: entity.origin_id, title: entity.title,

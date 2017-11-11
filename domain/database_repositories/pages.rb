@@ -33,6 +33,10 @@ module RecipeBuddy
         rebuild_entity(db)
       end
 
+      def self.all
+        Database::PageOrm.all.map { |db_page| rebuild_entity(db_page) }
+      end
+
       def self.create(entity)
         raise 'Facebook page already exists' if find(entity)
 

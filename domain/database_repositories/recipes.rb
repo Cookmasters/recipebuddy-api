@@ -4,7 +4,6 @@ module RecipeBuddy
   module Repository
     # Repository for Recipes
     class Recipes
-
       def self.find_id(id)
         db_record = Database::RecipeOrm.first(id: id)
         rebuild_entity(db_record)
@@ -27,6 +26,10 @@ module RecipeBuddy
         end
 
         rebuild_entity(db)
+      end
+
+      def self.all
+        Database::RecipeOrm.all.map { |db_recipe| rebuild_entity(db_recipe) }
       end
 
       # rubocop:disable MethodLength
