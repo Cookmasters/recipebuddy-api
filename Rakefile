@@ -30,7 +30,7 @@ end
 
 namespace :quality do
   CODE = 'infrastructure/'.freeze
-  folders = %i[domain infrastructure]
+  folders = %i[app domain infrastructure]
 
   desc 'run all quality checks'
   task all: %i[rubocop reek flog]
