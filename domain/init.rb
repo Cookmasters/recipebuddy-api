@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-folders = %w[entities database_repositories youtube_mappers facebook_mappers]
+folders = %w[values entities database_repositories youtube_mappers
+             facebook_mappers]
 folders.each do |folder|
   require_relative "#{folder}/init.rb"
 end
