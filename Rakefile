@@ -12,6 +12,11 @@ Rake::TestTask.new(:spec) do |t|
   t.warning = false
 end
 
+desc 'rerun tests'
+task :respec do
+  sh "rerun -c 'rake spec' --ignore 'coverage/*'"
+end
+
 task :console do
   sh 'pry -r ./spec/test_load_all'
 end
