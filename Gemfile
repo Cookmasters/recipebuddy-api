@@ -7,7 +7,9 @@ gem 'http'
 
 # Web app related
 gem 'econfig'
+gem 'pry' # to run migrations in production
 gem 'puma'
+gem 'rake' # to run migrations in production
 gem 'roda'
 
 # Database related
@@ -30,7 +32,6 @@ group :test do
   gem 'minitest'
   gem 'minitest-rg'
   gem 'rack-test'
-  gem 'rake'
   gem 'simplecov'
   gem 'vcr'
   gem 'webmock'
@@ -42,11 +43,14 @@ group :development, :test do
 
   gem 'database_cleaner'
 
-  gem 'pry'
   gem 'rerun'
 
   # Quality testing gems
   gem 'flog'
   gem 'reek'
   gem 'rubocop'
+end
+
+group :production do
+  gem 'pg'
 end

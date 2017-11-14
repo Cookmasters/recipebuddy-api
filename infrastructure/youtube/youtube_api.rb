@@ -31,7 +31,7 @@ module RecipeBuddy
       end
 
       def initialize(token)
-        @YT_TOKEN = token
+        @yt_token = token
       end
 
       def videos_data(path)
@@ -41,7 +41,7 @@ module RecipeBuddy
       end
 
       def videos_path(path)
-        search_default_param = "key=#{@YT_TOKEN}&part=snippet&chart=mostPopular"
+        search_default_param = "key=#{@yt_token}&part=snippet&chart=mostPopular"
         path = if path.include?('?')
                  "#{path}&#{search_default_param}"
                else
