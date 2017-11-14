@@ -1,5 +1,5 @@
 ---
 development:
-  db_filename: infrastructure/database/dev.db
+  DB_FILENAME: infrastructure/database/dev.db
 test:
-  db_filename: infrastructure/database/test.db
+  DB_FILENAME: infrastructure/database/test.db

@@ -18,7 +18,7 @@ module RecipeBuddy
       end
     end
     configure :development, :test do
-      ENV['DATABASE_URL'] = 'sqlite://' + config.db_filename
+      ENV['DATABASE_URL'] = 'sqlite://' + config.DB_FILENAME
     end
     configure :production do
       # Use Heroku's DATABASE_URL environment variable
