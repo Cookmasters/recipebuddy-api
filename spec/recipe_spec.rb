@@ -13,9 +13,9 @@ describe 'Tests Facebook API library' do
     c.cassette_library_dir = CASSETTES_FOLDER
     c.hook_into :webmock
 
-    fb_token = app.config.fb_token
-    c.filter_sensitive_data('<FACEBOOK_TOKEN>') { fb_token }
-    c.filter_sensitive_data('<FACEBOOK_TOKEN_ESC>') { CGI.escape(fb_token) }
+    FB_TOKEN = app.config.FB_TOKEN
+    c.filter_sensitive_data('<FACEBOOK_TOKEN>') { FB_TOKEN }
+    c.filter_sensitive_data('<FACEBOOK_TOKEN_ESC>') { CGI.escape(FB_TOKEN) }
   end
 
   before do
@@ -46,7 +46,7 @@ describe 'Tests Facebook API library' do
     it 'SAD: should raise exception when unauthorized' do
       proc do
         require 'ostruct'
-        sad_config = OpenStruct.new(fb_token: 'sad_token')
+        sad_config = OpenStruct.new(FB_TOKEN: 'sad_token')
         page_mapper = RecipeBuddy::Facebook::PageMapper.new(sad_config)
         page_mapper.find(PAGE_NAME)
       end.must_raise Errors::Unauthorized
@@ -102,9 +102,9 @@ describe 'Tests YouTube API library' do
     c.cassette_library_dir = CASSETTES_FOLDER
     c.hook_into :webmock
 
-    yt_token = app.config.yt_token
-    c.filter_sensitive_data('<YOUTUBE_TOKEN>') { yt_token }
-    c.filter_sensitive_data('<YOUTUBE_TOKEN_ESC>') { CGI.escape(yt_token) }
+    YT_TOKEN = app.config.YT_TOKEN
+    c.filter_sensitive_data('<YOUTUBE_TOKEN>') { YT_TOKEN }
+    c.filter_sensitive_data('<YOUTUBE_TOKEN_ESC>') { CGI.escape(YT_TOKEN) }
   end
 
   before do
@@ -140,7 +140,7 @@ describe 'Tests YouTube API library' do
     it 'SAD: should raise exception when unauthorized' do
       proc do
         search_query = "search?q=#{RECIPE_TO_SEARCH}"
-        sad_config = OpenStruct.new(yt_token: 'sad_token')
+        sad_config = OpenStruct.new(YT_TOKEN: 'sad_token')
         video_mapper = RecipeBuddy::Youtube::VideoMapper.new(sad_config)
         video_mapper.load_several(search_query)
       end.must_raise Errors::BadRequest

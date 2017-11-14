@@ -28,7 +28,7 @@ module RecipeBuddy
       end
 
       def initialize(token)
-        @fb_token = token
+        @FB_TOKEN = token
       end
 
       def page_data(name)
@@ -50,7 +50,7 @@ module RecipeBuddy
 
       def headers
         { 'Accept' => 'application/json',
-          'Authorization' => "OAuth #{@fb_token}" }
+          'Authorization' => "OAuth #{@FB_TOKEN}" }
       end
 
       def call_fb_url(url)

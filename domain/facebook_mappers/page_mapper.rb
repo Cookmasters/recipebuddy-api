@@ -8,7 +8,7 @@ module RecipeBuddy
       def initialize(config, gateway_class = Facebook::Api)
         @config = config
         @gateway_class = gateway_class
-        @gateway = @gateway_class.new(@config.fb_token)
+        @gateway = @gateway_class.new(@config.FB_TOKEN)
       end
 
       def find(page_name)

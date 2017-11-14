@@ -11,7 +11,7 @@ module RecipeBuddy
       def initialize(config, gateway_class = Youtube::Api)
         @config = config
         @gateway_class = gateway_class
-        @gateway = @gateway_class.new(@config.yt_token)
+        @gateway = @gateway_class.new(@config.YT_TOKEN)
       end
 
       def load_several(url)
