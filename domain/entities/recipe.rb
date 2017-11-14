@@ -1,7 +1,7 @@
 # frozen_string_literal: false
 
 require 'dry-struct'
-require_relative 'page.rb'
+
 require_relative 'video.rb'
 
 module RecipeBuddy
