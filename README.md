@@ -2,7 +2,7 @@
 
 [ ![Codeship Status for Cookmasters/facebook-graph-api](https://app.codeship.com/projects/e01798b0-ab6c-0135-227f-46ac882f0537/status?branch=master)](https://app.codeship.com/projects/256729)
 
-This is our Service Oriented Architecture project API and aims to aggregate recipes for Facebook public pages/groups and find the relevant videos of the recipes from Youtube.
+This is our Service Oriented Architecture project API and aims to aggregate recipes for Facebook public pages/groups and find the relevant videos of the recipes from YouTube.
 
 ## Routes
 
