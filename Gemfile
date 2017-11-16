@@ -25,7 +25,8 @@ gem 'dry-types'
 gem 'multi_json'
 gem 'roar'
 
-# Transactions
+# Services
+gem 'dry-monads'
 gem 'dry-transaction'
 
 # Testing gems

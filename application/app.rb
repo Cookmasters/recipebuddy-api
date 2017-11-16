@@ -5,14 +5,14 @@ require 'roda'
 module RecipeBuddy
   # Web API
   class Api < Roda
-    plugin :halt
-
     route do |routing|
       app = Api
+      response['Content-Type'] = 'application/json'
 
       # GET / request
       routing.root do
-        { 'message' => "Recipe API v0.1 up in #{app.environment} mode" }
+        message = "Recipe API v0.1 up in #{app.environment} mode"
+        HttpResponseRepresenter.new(Result.new(:ok, message)).to_json
       end
 
       routing.on 'api' do
@@ -22,7 +22,7 @@ module RecipeBuddy
           routing.on 'page', String do |pagename|
             # GET /api/v0.1/page/:pagename request
             routing.get do
-              find_result = FindDatabasePage.new.call(pagename: pagename)
+              find_result = FindDatabasePage.call(pagename: pagename)
 
               http_response = HttpResponseRepresenter.new(find_result.value)
               response.status = http_response.http_code

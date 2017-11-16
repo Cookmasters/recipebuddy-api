@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 module RecipeBuddy
-  # Representer for HTTP response
+  # Representer for HTTP response information
+  # Usage:
+  #   result = Result.new(:not_found, 'resource not found')
+  #   HttpResponseRepresenter.new(result).to_json
+  #   HttpResponseRepresenter.new(result).http_code
   class HttpResponseRepresenter < Roar::Decorator
     include Roar::JSON
 
@@ -9,7 +13,7 @@ module RecipeBuddy
     property :message
 
     HTTP_CODE = {
-      success: 200,
+      ok: 200,
       created: 201,
       processing: 202,
 
@@ -20,10 +24,6 @@ module RecipeBuddy
 
       internal_error: 500
     }.freeze
-
-    def to_json
-      http_message.to_json
-    end
 
     def http_code
       HTTP_CODE[@represented.code]
@@ -36,7 +36,7 @@ module RecipeBuddy
     end
 
     def http_message
-      { msg_or_error => [@represented.message] }.to_json
+      { msg_or_error => @represented.message }
     end
 
     def msg_or_error
