@@ -1,7 +1,7 @@
 # frozen_string_literal: false
 
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '2.4.2'
 
 # Networking gems
 gem 'http'
