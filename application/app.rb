@@ -18,6 +18,12 @@ module RecipeBuddy
       routing.on 'api' do
         # /api/v0.1 branch
         routing.on 'v0.1' do
+          routing.on 'recipe' do
+            routing.get do
+              recipes = Repository::For[Entity::Recipe].all
+              RecipesRepresenter.new(Recipes.new(recipes)).to_json
+            end
+          end
           # /api/v0.1/page branch
           routing.on 'page', String do |pagename|
             # GET /api/v0.1/page/:pagename request
