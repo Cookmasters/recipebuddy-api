@@ -21,6 +21,16 @@ task :console do
   sh 'pry -r ./spec/test_load_all'
 end
 
+namespace :run do
+  task :dev do
+    sh 'rerun -c "rackup -p 3030"'
+  end
+
+  task :app_test do
+    sh 'RACK_ENV=test rackup -p 3000'
+  end
+end
+
 desc 'delete cassette fixtures'
 task :rmvcr do
   sh 'rm spec/fixtures/cassettes/*.yml' do |ok, _|

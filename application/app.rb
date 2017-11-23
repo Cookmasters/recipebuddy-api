@@ -5,6 +5,7 @@ require 'roda'
 module RecipeBuddy
   # Web API
   class Api < Roda
+    plugin :all_verbs
     route do |routing|
       app = Api
       response['Content-Type'] = 'application/json'
@@ -23,7 +24,24 @@ module RecipeBuddy
               recipes = Repository::For[Entity::Recipe].all
               RecipesRepresenter.new(Recipes.new(recipes)).to_json
             end
+
+            routing.delete do
+              case app.environment
+              when :development, :test
+                %i[videos recipes pages].each do |table|
+                  app.DB[table].delete
+                end
+                result = Result.new(:ok, 'deleted')
+              when :production
+                result = Result.new(:forbidden, 'not allowed')
+              end
+
+              http_response = HttpResponseRepresenter.new(result)
+              response.status = http_response.http_code
+              http_response.to_json
+            end
           end
+
           # /api/v0.1/page branch
           routing.on 'page', String do |pagename|
             # GET /api/v0.1/page/:pagename request
