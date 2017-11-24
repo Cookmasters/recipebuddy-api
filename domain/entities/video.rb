@@ -14,6 +14,7 @@ module RecipeBuddy
       attribute :description, Types::Strict::String
       attribute :channel_id, Types::Strict::String
       attribute :channel_title, Types::Strict::String
+      attribute :full_description, Types::Strict::String
     end
   end
 end

@@ -3,7 +3,7 @@
 require_relative 'spec_helper.rb'
 require 'econfig'
 
-describe 'Tests Facebook API library' do
+describe 'Tests YUMMLY API library' do
   extend Econfig::Shortcut
 
   Econfig.env = 'development'
@@ -13,13 +13,16 @@ describe 'Tests Facebook API library' do
     c.cassette_library_dir = CASSETTES_FOLDER
     c.hook_into :webmock
 
-    FB_TOKEN = app.config.FB_TOKEN
-    c.filter_sensitive_data('<FACEBOOK_TOKEN>') { FB_TOKEN }
-    c.filter_sensitive_data('<FACEBOOK_TOKEN_ESC>') { CGI.escape(FB_TOKEN) }
+    YUMMLY_ID = app.config.YUMMLY_ID
+    YUMMLY_KEY = app.config.YUMMLY_KEY
+    c.filter_sensitive_data('<YUMMLY_ID>') { YUMMLY_ID }
+    c.filter_sensitive_data('<YUMMLY_ID_ESC>') { CGI.escape(YUMMLY_ID) }
+    c.filter_sensitive_data('<YUMMLY_KEY>') { YUMMLY_KEY }
+    c.filter_sensitive_data('<YUMMLY_KEY_ESC>') { CGI.escape(YUMMLY_KEY) }
   end
 
   before do
-    VCR.insert_cassette CASSETTE_FACEBOOK_FILE,
+    VCR.insert_cassette CASSETTE_YUMMLY_FILE,
                         record: :new_episodes,
                         match_requests_on: %i[method uri headers]
   end
@@ -28,66 +31,47 @@ describe 'Tests Facebook API library' do
     VCR.eject_cassette
   end
 
-  describe 'Page information' do
-    it 'HAPPY: should provide correct page attributes' do
-      page_mapper = RecipeBuddy::Facebook::PageMapper.new(app.config)
-      page = page_mapper.find(PAGE_NAME)
-      _(page.origin_id).must_equal CORRECT_FACEBOOK['id']
-      # _(page.name).must_equal CORRECT_FACEBOOK['name']
+  describe 'Recipe information' do
+    before do
+      recipe_mapper = RecipeBuddy::Yummly::RecipeMapper.new(app.config)
+      @recipes = recipe_mapper.load_several(ROUTE_RECIPES)
     end
 
-    it 'SAD: should raise exception on incorrect page' do
+    it 'HAPPY: should provide correct recipe attributes' do
+      recipe = @recipes[0]
+      _(recipe.origin_id).must_be_instance_of String
+      _(recipe.name).must_be_instance_of String
+      _(recipe.rating).must_be_instance_of Integer
+      _(recipe.rating).must_be :>=, 0
+      _(recipe.total_time_in_seconds).must_be_instance_of Integer
+      _(recipe.total_time_in_seconds).must_be :>, 0
+      _(recipe.flavors).must_be_instance_of Hash
+      _(recipe.categories).must_be_instance_of Array
+      _(recipe.likes).must_be :>=, 0
+      _(recipe.dislikes).must_be :>=, 0
+      _(recipe.number_of_servings).must_be :>=, 0
+      _(recipe.ingredients).must_be_instance_of Array
+      _(recipe.images).must_be_instance_of Array
+    end
+
+    it 'HAPPY: should check recipes' do
+      _(@recipes.count).must_equal CORRECT_YUMMLY_RECIPES.count
+    end
+
+    it 'SAD: should raise exception on incorrect recipe id' do
       proc do
-        page_mapper = RecipeBuddy::Facebook::PageMapper.new(app.config)
-        page_mapper.find(BAD_PAGE_NAME)
+        recipe_mapper = RecipeBuddy::Yummly::RecipeMapper.new(app.config)
+        recipe_mapper.load_several(BAD_ROUTE_RECIPES)
       end.must_raise Errors::NotFound
     end
 
     it 'SAD: should raise exception when unauthorized' do
       proc do
         require 'ostruct'
-        sad_config = OpenStruct.new(FB_TOKEN: 'sad_token')
-        page_mapper = RecipeBuddy::Facebook::PageMapper.new(sad_config)
-        page_mapper.find(PAGE_NAME)
-      end.must_raise Errors::Unauthorized
-    end
-  end
-
-  describe 'Recipe information' do
-    before do
-      page_mapper = RecipeBuddy::Facebook::PageMapper.new(app.config)
-      @page = page_mapper.find(PAGE_NAME)
-    end
-
-    it 'HAPPY: should recognize the from page' do
-      recipe = @page.recipes[0]
-      _(recipe.origin_id.split('_')[0]).must_equal @page.origin_id
-    end
-
-    it 'HAPPY: should check that the recipe fields are valid' do
-      recipe = @page.recipes[0]
-      _(recipe.created_time).must_be_instance_of DateTime
-      _(recipe.content).must_be_instance_of String
-      _(recipe.origin_id).must_be_instance_of String
-      _(recipe.origin_id.split('_')[0]).must_equal @page.origin_id
-      _(recipe.reactions_like).must_be :>=, 0
-      _(recipe.reactions_love).must_be :>=, 0
-      _(recipe.reactions_wow).must_be :>=, 0
-      _(recipe.reactions_haha).must_be :>=, 0
-      _(recipe.reactions_angry).must_be :>=, 0
-      _(recipe.reactions_sad).must_be :>=, 0
-      _(recipe.full_picture).must_match %r{https?:\/\/[\S]+}
-    end
-
-    # it 'HAPPY: should identify owner page' do
-    #   recipe = @page.recipes[0]
-    #   _(recipe.from.id).wont_be_nil
-    #   _(recipe.from.name).must_equal CORRECT['name']
-    # end
-
-    it 'HAPPY: should check recipes' do
-      recipes = @page.recipes
-      _(recipes.count).must_equal CORRECT_FACEBOOK['posts'].count
+        sad_config = OpenStruct.new(YUMMLY_KEY: 'sad_key')
+        recipe_mapper = RecipeBuddy::Yummly::RecipeMapper.new(sad_config)
+        recipe_mapper.load_several(ROUTE_RECIPES)
+      end.must_raise Errors::BadRequest
     end
   end
 end
@@ -124,7 +108,7 @@ describe 'Tests YouTube API library' do
     end
 
     it 'HAPPY: should get the count' do
-      _(@videos.count).must_equal 5
+      _(@videos.count).must_be :<=, 10
     end
 
     it 'HAPPY: should check that the video fields are valid' do

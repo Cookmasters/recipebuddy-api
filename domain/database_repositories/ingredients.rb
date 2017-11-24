@@ -2,25 +2,25 @@
 
 module RecipeBuddy
   module Repository
-    # Repository for Page Entities
-    class Pages
+    # Repository for Ingredient Entities
+    class Ingredients
       def self.find(entity)
         find_origin_id(entity.origin_id)
       end
 
-      def self.find_name(pagename)
-        # SELECT * FROM `pages`
+      def self.find_name(name)
+        # SELECT * FROM `ingredients`
         # WHERE (`name` = 'pagename')
-        db_page = Database::PageOrm.first(name: pagename)
+        db_page = Database::IngredientOrm.first(name: pagename)
         rebuild_entity(db_page)
       end
 
       def self.find_id(id)
-        Database::PageOrm.first(id: id).try(rebuild_entity)
+        Database::IngredientOrm.first(id: id).try(rebuild_entity)
       end
 
       def self.find_origin_id(origin_id)
-        db_record = Database::PageOrm.first(origin_id: origin_id)
+        db_record = Database::IngredientOrm.first(origin_id: origin_id)
         rebuild_entity(db_record)
       end
 
@@ -34,13 +34,13 @@ module RecipeBuddy
       end
 
       def self.all
-        Database::PageOrm.all.map { |db_page| rebuild_entity(db_page) }
+        Database::IngredientOrm.all.map { |db_page| rebuild_entity(db_page) }
       end
 
       def self.create(entity)
         raise 'Facebook page already exists' if find(entity)
 
-        db_page = Database::PageOrm.create(
+        db_page = Database::IngredientOrm.create(
           origin_id: entity.origin_id,
           name: entity.name
         )
@@ -54,7 +54,7 @@ module RecipeBuddy
           Recipes.rebuild_entity(db_recipe)
         end
 
-        Entity::Page.new(
+        Entity::Ingredient.new(
           id: db_record.id,
           origin_id: db_record.origin_id,
           name: db_record.name,

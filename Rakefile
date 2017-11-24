@@ -8,7 +8,7 @@ end
 
 desc 'run tests'
 Rake::TestTask.new(:spec) do |t|
-  t.pattern = 'spec/*_spec.rb'
+  t.pattern = 'spec/recipe_spec.rb'
   t.warning = false
 end
 
@@ -71,8 +71,10 @@ namespace :db do
     require_relative 'config/environment.rb'
     # drop according to dependencies
     app.db.drop_table :videos
+    app.db.drop_table :recipes_ingredients
     app.db.drop_table :recipes
-    app.db.drop_table :pages
+    app.db.drop_table :ingredients
+    app.db.drop_table :images
     app.db.drop_table :schema_info
   end
 

@@ -29,6 +29,12 @@ module RecipeBuddy
           db.add_video(video)
         end
 
+        entity_data.ingredients.each do |ingredient|
+          stored_ingredient = Ingredients.find_or_create(ingredient)
+          ingredient = Database::IngredientOrm.first(id: stored_ingredient.id)
+          db.add_ingredient(ingredient)
+        end
+
         rebuild_entity(db)
       end
 
@@ -36,14 +42,15 @@ module RecipeBuddy
       # rubocop:disable Metrics/AbcSize
       def self.create(entity)
         db_recipe = Database::RecipeOrm.create(
-          origin_id: entity.origin_id, created_time: entity.created_time,
-          content: entity.content, full_picture: entity.full_picture,
-          reactions_like: entity.reactions_like,
-          reactions_love: entity.reactions_love,
-          reactions_wow: entity.reactions_wow,
-          reactions_haha: entity.reactions_haha,
-          reactions_sad: entity.reactions_sad,
-          reactions_angry: entity.reactions_angry
+          origin_id: entity.origin_id, name: entity.name,
+          rating: entity.rating,
+          total_time_in_seconds: entity.total_time_in_seconds,
+          number_of_servings: entity.number_of_servings,
+          flavors: entity.flavors,
+          categories: entity.categories,
+          ingredient_lines: entity.ingredient_lines,
+          likes: entity.likes,
+          dislikes: entity.dislikes
         )
         add_stored_id(entity, db_recipe)
       end
@@ -55,18 +62,27 @@ module RecipeBuddy
           Videos.rebuild_entity(db_video)
         end
 
+        ingredients = db_record.ingredients.map do |db_ingredient|
+          Ingredients.rebuild_entity(db_ingredient)
+        end
+
+        images = db_record.images.map do |db_image|
+          Images.rebuild_entity(db_image)
+        end
+
         Entity::Recipe.new(
           id: db_record.id, origin_id: db_record.origin_id,
-          created_time: db_record.created_time.to_datetime,
-          content: db_record.content,
-          full_picture: db_record.full_picture,
-          reactions_like: db_record.reactions_like,
-          reactions_love: db_record.reactions_love,
-          reactions_wow: db_record.reactions_wow,
-          reactions_haha: db_record.reactions_haha,
-          reactions_sad: db_record.reactions_sad,
-          reactions_angry: db_record.reactions_angry,
-          videos: videos
+          name: db_record.name,
+          rating: db_record.rating,
+          total_time_in_seconds: db_record.total_time_in_seconds,
+          number_of_servings: db_record.number_of_servings,
+          flavors: db_record.flavors,
+          categories: db_record.categories,
+          ingredient_lines: db_record.ingredient_lines,
+          likes: db_record.likes,
+          dislikes: db_record.dislikes,
+          videos: videos, ingredients: ingredients,
+          images: images
         )
       end
     end

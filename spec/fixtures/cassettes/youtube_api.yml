@@ -292,4 +292,493 @@ http_interactions:
         }
     http_version: 
   recorded_at: Thu, 09 Nov 2017 03:00:15 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?channelId=UCsWpnu6EwIYDvlHoOESpwYg&chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=10&part=snippet&q=Cranberry%20Orange%20Sauce&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 23 Nov 2017 13:28:52 GMT
+      Date:
+      - Thu, 23 Nov 2017 13:28:52 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"ld9biNPKjAjgjV7EZ4EKeEGrhao/XaNmHk1e-iQRRYEry5CYtvm8jMI"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '2271'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/XaNmHk1e-iQRRYEry5CYtvm8jMI\"",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 2,
+          "resultsPerPage": 10
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/DIlQhet-g-nVRkBJHobvRpgbQWs\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "dWe6Sm6ej3Y"
+           },
+           "snippet": {
+            "publishedAt": "2014-10-02T22:19:51.000Z",
+            "channelId": "UCsWpnu6EwIYDvlHoOESpwYg",
+            "title": "SUCCULENT CRANBERRY CHICKEN RECIPE",
+            "description": "Welcome to the SimpleCookingChannel. Things might get pretty simple sometimes but sometimes that's just what a person needs. I hope you like my recipe for a ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/dWe6Sm6ej3Y/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/dWe6Sm6ej3Y/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/dWe6Sm6ej3Y/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "SimpleCookingChannel",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/gQ4Ra7zdY3XKlmemhRqOLFyeFxY\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "pbopU1m8E_M"
+           },
+           "snippet": {
+            "publishedAt": "2014-01-09T23:21:05.000Z",
+            "channelId": "UCsWpnu6EwIYDvlHoOESpwYg",
+            "title": "HOW TO MAKE A CRANBERRY COOLER",
+            "description": "Welcome to the SimpleCookingChannel. Things might get pretty simple sometimes but sometimes that's just what a person needs. I hope you like my recipe for a ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/pbopU1m8E_M/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/pbopU1m8E_M/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/pbopU1m8E_M/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "SimpleCookingChannel",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Thu, 23 Nov 2017 13:28:52 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=dWe6Sm6ej3Y&key=<YOUTUBE_TOKEN>&part=snippet
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 23 Nov 2017 13:28:52 GMT
+      Date:
+      - Thu, 23 Nov 2017 13:28:52 GMT
+      Cache-Control:
+      - private, max-age=300, must-revalidate, no-transform
+      Etag:
+      - '"ld9biNPKjAjgjV7EZ4EKeEGrhao/vQlUqEn-IZn0PTeEeEDszkIiyXg"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '4477'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#videoListResponse",
+         "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/vQlUqEn-IZn0PTeEeEDszkIiyXg\"",
+         "pageInfo": {
+          "totalResults": 1,
+          "resultsPerPage": 1
+         },
+         "items": [
+          {
+           "kind": "youtube#video",
+           "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/l0Da-jUgusgaNCShP8M6S0kQFwY\"",
+           "id": "dWe6Sm6ej3Y",
+           "snippet": {
+            "publishedAt": "2014-10-02T22:19:51.000Z",
+            "channelId": "UCsWpnu6EwIYDvlHoOESpwYg",
+            "title": "SUCCULENT CRANBERRY CHICKEN RECIPE",
+            "description": "Welcome to the SimpleCookingChannel. Things might get pretty simple sometimes but sometimes that's just what a person needs. I hope you like my recipe for a succulent cranberry chicken meal dinner.\n\nSUBSCRIBE: http://www.youtube.com/subscription_center?add_user=simplecookingchannel\nFACEBOOK https://www.facebook.com/pages/The-Simple-Cooking-Channel/205871066123327?sk=... \nTWITTER http://twitter.com/#!/SimpleCookingCh\n\nSimple Cooking Channel Merchandise!!\nhttp://www.cafepress.com.au/thesimplecookingchannelonlinestore \n \nShare my channel. http://www.youtube.com/share?u=simplecookingchannel \n\nIngredients\n\n2 Tablespoons of butter\n1 Medium onion\n600-700 Grams of chicken breast\n1 Cup of tomato sauce or ketchup\n1/2 Cup of cranberry sauce\n2 Tablespoons of brown sugar\n3 Tablespoons of white vinegar\n1 Tablespoon of worcestershire sauce\n1 Tablespoon of wholegrain mustard Get Instant Access to my FREE ebook Right Now Just Visit http://simplecookingclub.com where you can see our 20 most popular recipes that is sure to impress :D Get Instant Access to my FREE ebook Right Now Just Visit http://simplecookingclub.com where you can see our 20 most popular recipes that is sure to impress :D",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/dWe6Sm6ej3Y/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/dWe6Sm6ej3Y/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/dWe6Sm6ej3Y/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             },
+             "standard": {
+              "url": "https://i.ytimg.com/vi/dWe6Sm6ej3Y/sddefault.jpg",
+              "width": 640,
+              "height": 480
+             },
+             "maxres": {
+              "url": "https://i.ytimg.com/vi/dWe6Sm6ej3Y/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+             }
+            },
+            "channelTitle": "SimpleCookingChannel",
+            "tags": [
+             "Cooking show",
+             "kitchen treats",
+             "recipe",
+             "how to",
+             "food",
+             "cook",
+             "recipes",
+             "instructional video",
+             "cuisine",
+             "eating",
+             "homemade",
+             "chef",
+             "candy",
+             "instructions",
+             "educational video",
+             "video recipe",
+             "chocolate",
+             "dessert",
+             "shopping",
+             "online",
+             "ingredients",
+             "learn",
+             "basic",
+             "simple",
+             "tasty",
+             "main meal",
+             "dinner",
+             "lunch",
+             "breakfast",
+             "side dish",
+             "accompaniment",
+             "tutorial",
+             "help",
+             "Restaurant",
+             "tips",
+             "simplecookingchannel",
+             "Kitchen"
+            ],
+            "categoryId": "26",
+            "liveBroadcastContent": "none",
+            "localized": {
+             "title": "SUCCULENT CRANBERRY CHICKEN RECIPE",
+             "description": "Welcome to the SimpleCookingChannel. Things might get pretty simple sometimes but sometimes that's just what a person needs. I hope you like my recipe for a succulent cranberry chicken meal dinner.\n\nSUBSCRIBE: http://www.youtube.com/subscription_center?add_user=simplecookingchannel\nFACEBOOK https://www.facebook.com/pages/The-Simple-Cooking-Channel/205871066123327?sk=... \nTWITTER http://twitter.com/#!/SimpleCookingCh\n\nSimple Cooking Channel Merchandise!!\nhttp://www.cafepress.com.au/thesimplecookingchannelonlinestore \n \nShare my channel. http://www.youtube.com/share?u=simplecookingchannel \n\nIngredients\n\n2 Tablespoons of butter\n1 Medium onion\n600-700 Grams of chicken breast\n1 Cup of tomato sauce or ketchup\n1/2 Cup of cranberry sauce\n2 Tablespoons of brown sugar\n3 Tablespoons of white vinegar\n1 Tablespoon of worcestershire sauce\n1 Tablespoon of wholegrain mustard Get Instant Access to my FREE ebook Right Now Just Visit http://simplecookingclub.com where you can see our 20 most popular recipes that is sure to impress :D Get Instant Access to my FREE ebook Right Now Just Visit http://simplecookingclub.com where you can see our 20 most popular recipes that is sure to impress :D"
+            }
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Thu, 23 Nov 2017 13:28:52 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=pbopU1m8E_M&key=<YOUTUBE_TOKEN>&part=snippet
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 23 Nov 2017 13:28:52 GMT
+      Date:
+      - Thu, 23 Nov 2017 13:28:52 GMT
+      Cache-Control:
+      - private, max-age=300, must-revalidate, no-transform
+      Etag:
+      - '"ld9biNPKjAjgjV7EZ4EKeEGrhao/RGBE6AWV250v382eU1uwEwCzcHg"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '4018'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#videoListResponse",
+         "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/RGBE6AWV250v382eU1uwEwCzcHg\"",
+         "pageInfo": {
+          "totalResults": 1,
+          "resultsPerPage": 1
+         },
+         "items": [
+          {
+           "kind": "youtube#video",
+           "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/pcptWChwbxpcTvxIvlhQHrGnKGc\"",
+           "id": "pbopU1m8E_M",
+           "snippet": {
+            "publishedAt": "2014-01-09T23:21:05.000Z",
+            "channelId": "UCsWpnu6EwIYDvlHoOESpwYg",
+            "title": "HOW TO MAKE A CRANBERRY COOLER",
+            "description": "Welcome to the SimpleCookingChannel. Things might get pretty simple sometimes but sometimes that's just what a person needs. I hope you like my recipe for a Cranberry Cooler.\n\nSimple Cooking Channel Merchandise!!\nhttp://www.cafepress.com.au/thesimplecookingchannelonlinestore \n \nShare my channel. http://www.youtube.com/share?u=simplecookingchannel \n\nSUBSCRIBE: http://www.youtube.com/subscription_center?add_user=simplecookingchannel \n\nFacebook https://www.facebook.com/pages/The-Simple-Cooking-Channel/205871066123327?sk=... \n\nTwitter http://twitter.com/#!/SimpleCookingCh \n\nIngredients\n\n3 Cups of cranberry juice\n350ml Vodka\n80ml Lime juice Get Instant Access to my FREE ebook Right Now Just Visit http://simplecookingclub.com where you can see our 20 most popular recipes that is sure to impress :D Get Instant Access to my FREE ebook Right Now Just Visit http://simplecookingclub.com where you can see our 20 most popular recipes that is sure to impress :D",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/pbopU1m8E_M/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/pbopU1m8E_M/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/pbopU1m8E_M/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             },
+             "standard": {
+              "url": "https://i.ytimg.com/vi/pbopU1m8E_M/sddefault.jpg",
+              "width": 640,
+              "height": 480
+             },
+             "maxres": {
+              "url": "https://i.ytimg.com/vi/pbopU1m8E_M/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+             }
+            },
+            "channelTitle": "SimpleCookingChannel",
+            "tags": [
+             "Cooking show",
+             "kitchen treats",
+             "recipe",
+             "how to",
+             "food",
+             "cook",
+             "recipes",
+             "instructional video",
+             "cuisine",
+             "eating",
+             "homemade",
+             "chef",
+             "candy",
+             "instructions",
+             "educational video",
+             "video recipe",
+             "chocolate",
+             "dessert",
+             "shopping",
+             "online",
+             "ingredients",
+             "learn",
+             "basic",
+             "simple",
+             "tasty",
+             "main meal",
+             "dinner",
+             "lunch",
+             "breakfast",
+             "side dish",
+             "accompaniment",
+             "tutorial",
+             "help",
+             "Restaurant",
+             "tips",
+             "simplecookingchannel",
+             "Easy",
+             "Kitchen"
+            ],
+            "categoryId": "26",
+            "liveBroadcastContent": "none",
+            "localized": {
+             "title": "HOW TO MAKE A CRANBERRY COOLER",
+             "description": "Welcome to the SimpleCookingChannel. Things might get pretty simple sometimes but sometimes that's just what a person needs. I hope you like my recipe for a Cranberry Cooler.\n\nSimple Cooking Channel Merchandise!!\nhttp://www.cafepress.com.au/thesimplecookingchannelonlinestore \n \nShare my channel. http://www.youtube.com/share?u=simplecookingchannel \n\nSUBSCRIBE: http://www.youtube.com/subscription_center?add_user=simplecookingchannel \n\nFacebook https://www.facebook.com/pages/The-Simple-Cooking-Channel/205871066123327?sk=... \n\nTwitter http://twitter.com/#!/SimpleCookingCh \n\nIngredients\n\n3 Cups of cranberry juice\n350ml Vodka\n80ml Lime juice Get Instant Access to my FREE ebook Right Now Just Visit http://simplecookingclub.com where you can see our 20 most popular recipes that is sure to impress :D Get Instant Access to my FREE ebook Right Now Just Visit http://simplecookingclub.com where you can see our 20 most popular recipes that is sure to impress :D"
+            }
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Thu, 23 Nov 2017 13:28:52 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?channelId=UCsWpnu6EwIYDvlHoOESpwYg&chart=mostPopular&key=sad_token&maxResults=10&part=snippet&q=Cranberry%20Orange%20Sauce&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin,Accept-Encoding
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 23 Nov 2017 13:28:53 GMT
+      Expires:
+      - Thu, 23 Nov 2017 13:28:53 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Accept-Ranges:
+      - none
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "error": {
+          "errors": [
+           {
+            "domain": "usageLimits",
+            "reason": "keyInvalid",
+            "message": "Bad Request"
+           }
+          ],
+          "code": 400,
+          "message": "Bad Request"
+         }
+        }
+    http_version: 
+  recorded_at: Thu, 23 Nov 2017 13:28:53 GMT
 recorded_with: VCR 3.0.3

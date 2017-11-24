@@ -17,18 +17,21 @@ module RecipeBuddy
       def load_several(url)
         videos = @gateway.videos_data(url)
         videos.map do |data|
-          VideoMapper.build_entity(data)
+          video_url = "videos?part=snippet&id=#{data['id']['videoId']}"
+          video = @gateway.video_data(video_url)
+          VideoMapper.build_entity(data, video)
         end
       end
 
-      def self.build_entity(data)
-        DataMapper.new(data).build_entity
+      def self.build_entity(data, video)
+        DataMapper.new(data, video).build_entity
       end
 
       # Extracts entity specific elements from data structure
       class DataMapper
-        def initialize(data)
+        def initialize(data, video)
           @data = data
+          @video = video
         end
 
         def build_entity
@@ -36,7 +39,8 @@ module RecipeBuddy
             id: nil, origin_id: origin_id, title: title,
             published_at: published_at, description: description,
             channel_id: channel_id,
-            channel_title: channel_title
+            channel_title: channel_title,
+            full_description: full_description
           )
         end
 
@@ -54,6 +58,10 @@ module RecipeBuddy
 
         def description
           @data['snippet']['description']
+        end
+
+        def full_description
+          @video['items'][0]['snippet']['description']
         end
 
         def channel_id

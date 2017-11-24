@@ -40,8 +40,23 @@ module RecipeBuddy
         videos_response_parsed['items']
       end
 
+      def video_data(path)
+        recipe_video_url = video_path(path)
+        call_yt_url(recipe_video_url).parse
+      end
+
       def videos_path(path)
-        search_default_param = "key=#{@yt_token}&part=snippet&chart=mostPopular"
+        search_default_param = "key=#{@yt_token}&type=video&channelId=UCsWpnu6EwIYDvlHoOESpwYg&maxResults=10&part=snippet&chart=mostPopular"
+        path = if path.include?('?')
+                 "#{path}&#{search_default_param}"
+               else
+                 "?#{path}&#{search_default_param}"
+               end
+        'https://www.googleapis.com/youtube/v3/' + path
+      end
+
+      def video_path(path)
+        search_default_param = "key=#{@yt_token}"
         path = if path.include?('?')
                  "#{path}&#{search_default_param}"
                else

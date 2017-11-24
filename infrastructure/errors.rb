@@ -7,4 +7,6 @@ module Errors
   NotFound = Class.new(StandardError)
   # Bad request
   BadRequest = Class.new(StandardError)
+  # Not allowed YUMMLY
+  NotAllowed = Class.new(StandardError)
 end
