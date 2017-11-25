@@ -29,7 +29,7 @@ module RecipeBuddy
               case app.environment
               when :development, :test
                 %i[videos recipes pages].each do |table|
-                  app.DB[table].delete
+                  app.db[table].delete
                 end
                 result = Result.new(:ok, 'deleted')
               when :production
