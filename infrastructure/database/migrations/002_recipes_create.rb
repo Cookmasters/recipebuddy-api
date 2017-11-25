@@ -10,6 +10,7 @@ Sequel.migration do
       foreign_key :page_id, :pages
 
       DateTime :created_time
+      String :title
       String :content
       String :full_picture
       Integer :reactions_like
