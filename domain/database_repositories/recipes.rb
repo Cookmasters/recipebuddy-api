@@ -36,7 +36,8 @@ module RecipeBuddy
       # rubocop:disable Metrics/AbcSize
       def self.create(entity)
         db_recipe = Database::RecipeOrm.create(
-          origin_id: entity.origin_id, created_time: entity.created_time,
+          origin_id: entity.origin_id, title: entity.title,
+          created_time: entity.created_time,
           content: entity.content, full_picture: entity.full_picture,
           reactions_like: entity.reactions_like,
           reactions_love: entity.reactions_love,
@@ -57,6 +58,7 @@ module RecipeBuddy
 
         Entity::Recipe.new(
           id: db_record.id, origin_id: db_record.origin_id,
+          title: db_record.title,
           created_time: db_record.created_time.to_datetime,
           content: db_record.content,
           full_picture: db_record.full_picture,

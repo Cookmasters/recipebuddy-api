@@ -35,13 +35,13 @@ module RecipeBuddy
 
         def build_entity
           RecipeBuddy::Entity::Recipe.new(
-            id: nil, origin_id: origin_id, created_time: created_time,
+            id: nil, origin_id: origin_id, title: title,
+            created_time: created_time,
             content: content, full_picture: full_picture,
             reactions_like: reactions_like,
             reactions_love: reactions_love,
             reactions_wow: reactions_wow,
-            reactions_haha: reactions_haha,
-            reactions_sad: reactions_sad,
+            reactions_haha: reactions_haha, reactions_sad: reactions_sad,
             reactions_angry: reactions_angry, videos: videos
           )
         end
@@ -55,7 +55,8 @@ module RecipeBuddy
         end
 
         def content
-          @data['message'] || 'Bad'
+          # Remove all the special characters and keep only letters and numbers
+          @data['message'].gsub(%r{[^0-9A-Za-z\n\. \/-]}, '')
         end
 
         def full_picture
@@ -87,13 +88,11 @@ module RecipeBuddy
         end
 
         def title
-          'Chicken+and+Broccoli+Stir+fry'
+          content.split("\n")[0]
         end
 
         def videos
-          recipe_title = title
-          videos_url = "search?q=#{recipe_title}"
-          @video_mapper.load_several(videos_url)
+          []
         end
       end
     end
