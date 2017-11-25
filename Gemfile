@@ -27,6 +27,7 @@ gem 'roar'
 
 # Services
 gem 'dry-monads'
+gem 'dry-struct-setters'
 gem 'dry-transaction'
 
 # Testing gems
