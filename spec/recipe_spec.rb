@@ -124,7 +124,7 @@ describe 'Tests YouTube API library' do
     end
 
     it 'HAPPY: should get the count' do
-      _(@videos.count).must_equal 5
+      _(@videos.count).must_be :<=, 10
     end
 
     it 'HAPPY: should check that the video fields are valid' do
