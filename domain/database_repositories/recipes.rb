@@ -1,11 +1,24 @@
 # frozen_string_literal: true
 
+require 'sequel'
+
 module RecipeBuddy
   module Repository
     # Repository for Recipes
     class Recipes
       def self.all
         Database::RecipeOrm.all.map { |db_recipe| rebuild_entity(db_recipe) }
+      end
+
+      def self.best
+        best_recipes = Database::RecipeOrm.order(Sequel.desc(:reactions_like),
+                                                 Sequel.desc(:reactions_love),
+                                                 Sequel.desc(:reactions_wow),
+                                                 Sequel.desc(:reactions_haha),
+                                                 Sequel.asc(:reactions_angry),
+                                                 Sequel.asc(:reactions_sad))
+                                          .limit(50)
+        best_recipes.map { |db_recipe| rebuild_entity(db_recipe) }
       end
 
       def self.find_id(id)

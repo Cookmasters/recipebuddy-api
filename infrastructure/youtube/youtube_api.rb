@@ -41,7 +41,7 @@ module RecipeBuddy
       end
 
       def videos_path(path)
-        search_default_param = "key=#{@yt_token}&part=snippet&chart=mostPopular"
+        search_default_param = "key=#{@yt_token}&type=video&maxResults=10&part=snippet&chart=mostPopular"
         path = if path.include?('?')
                  "#{path}&#{search_default_param}"
                else

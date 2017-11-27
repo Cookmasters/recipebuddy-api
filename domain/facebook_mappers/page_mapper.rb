@@ -11,8 +11,8 @@ module RecipeBuddy
         @gateway = @gateway_class.new(@config.FB_TOKEN)
       end
 
-      def find(page_name)
-        data = @gateway.page_data(page_name)
+      def find(page_url)
+        data = @gateway.page_data(page_url)
         build_entity(data)
       end
 

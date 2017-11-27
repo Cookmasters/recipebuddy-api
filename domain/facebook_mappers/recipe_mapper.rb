@@ -88,7 +88,9 @@ module RecipeBuddy
         end
 
         def title
-          content.split("\n")[0]
+          parsed_str = content.split("\n")[0]
+          return parsed_str if parsed_str
+          'Undefined'
         end
 
         def videos

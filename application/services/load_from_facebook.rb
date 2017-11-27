@@ -10,14 +10,16 @@ module RecipeBuddy
 
     step :get_page_from_facebook
     step :check_if_page_already_loaded
-    step :check_if_is_recipes_page_group
+    step :check_if_is_recipes_page
     step :store_page_in_repository
 
     def get_page_from_facebook(input)
+      page_url = input[:config].FACEBOOK_URL + input[:pagename]
       page = Facebook::PageMapper.new(input[:config])
-                                 .find(input[:pagename])
+                                 .find(page_url)
       Right(page: page, config: input[:config])
     rescue StandardError => e
+      puts e
       Left(Result.new(:bad_request, 'Facebook page not found'))
     end
 
@@ -30,7 +32,7 @@ module RecipeBuddy
       end
     end
 
-    def check_if_is_recipes_page_group(input)
+    def check_if_is_recipes_page(input)
       page = input[:page]
       posts_count = page.recipes.count
       recipes_count = 0.0

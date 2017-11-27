@@ -20,11 +20,18 @@ module RecipeBuddy
         # /api/v0.1 branch
         routing.on 'v0.1' do
           routing.on 'recipe' do
-            routing.get do
-              recipes = Repository::For[Entity::Recipe].all
-              RecipesRepresenter.new(Recipes.new(recipes)).to_json
+            routing.on 'best' do
+              routing.get do
+                recipes = Repository::For[Entity::Recipe].best
+                RecipesRepresenter.new(Recipes.new(recipes)).to_json
+              end
             end
-
+            routing.on 'all' do
+              routing.get do
+                recipes = Repository::For[Entity::Recipe].all
+                RecipesRepresenter.new(Recipes.new(recipes)).to_json
+              end
+            end
             routing.delete do
               case app.environment
               when :development, :test
