@@ -63,13 +63,4 @@ describe 'Tests Facebook API' do
       end
     end
   end
-  #
-  # describe 'Recipe videos' do
-  #   it 'HAPPY: should get a recipe videos' do
-  #     get "#{API_VER}/recipe/#{RECIPE_TO_SEARCH}"
-  #     _(last_response.status).must_equal 200
-  #     recipe_data = JSON.parse last_response.body
-  #     _(recipe_data['videos'].count).must_equal 5
-  #   end
-  # end
 end
