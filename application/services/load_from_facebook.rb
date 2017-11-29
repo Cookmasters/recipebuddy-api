@@ -18,8 +18,7 @@ module RecipeBuddy
       page = Facebook::PageMapper.new(input[:config])
                                  .find(page_url)
       Right(page: page, config: input[:config])
-    rescue StandardError => e
-      puts e
+    rescue StandardError
       Left(Result.new(:bad_request, 'Facebook page not found'))
     end
 
