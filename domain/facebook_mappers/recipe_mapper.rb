@@ -42,7 +42,7 @@ module RecipeBuddy
             reactions_love: reactions_love,
             reactions_wow: reactions_wow,
             reactions_haha: reactions_haha, reactions_sad: reactions_sad,
-            reactions_angry: reactions_angry, videos: videos
+            reactions_angry: reactions_angry, videos: []
           )
         end
 
@@ -56,6 +56,7 @@ module RecipeBuddy
 
         def content
           # Remove all the special characters and keep only letters and numbers
+          return '' unless @data['message']
           @data['message'].gsub(%r{[^0-9A-Za-z\n\. \/-]}, '')
         end
 
@@ -91,10 +92,6 @@ module RecipeBuddy
           parsed_str = content.split("\n")[0]
           return parsed_str if parsed_str
           'Undefined'
-        end
-
-        def videos
-          []
         end
       end
     end
