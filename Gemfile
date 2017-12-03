@@ -6,6 +6,9 @@ ruby '2.4.2'
 # Networking gems
 gem 'http'
 
+# Asynchronicity gems
+gem 'concurrent-ruby'
+
 # Web app related
 gem 'econfig'
 gem 'pry' # to run migrations in production
