@@ -12,11 +12,15 @@ describe 'Tests Facebook API library' do
   VCR.configure do |c|
     c.cassette_library_dir = CASSETTES_FOLDER
     c.hook_into :webmock
+    c.ignore_hosts 'sqs.us-east-1.amazonaws.com'
 
     FB_TOKEN = app.config.FB_TOKEN
     c.filter_sensitive_data('<FACEBOOK_TOKEN>') { FB_TOKEN }
     c.filter_sensitive_data('<FACEBOOK_TOKEN_ESC>') { CGI.escape(FB_TOKEN) }
   end
+
+  # To flush dots and output during testing
+  STDOUT.sync
 
   before do
     VCR.insert_cassette CASSETTE_FACEBOOK_FILE,

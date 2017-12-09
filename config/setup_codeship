@@ -1,0 +1,4 @@
+rvm use 2.4.2 --install
+bundle install --without production
+RACK_ENV=test bundle exec rake db:migrate
+bundle exec rake run:worker:test &
