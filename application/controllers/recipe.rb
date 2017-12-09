@@ -25,6 +25,14 @@ module RecipeBuddy
         end
       end
 
+      routing.on Integer do |id|
+        # GET #{API_ROOT}/recipe/:id request
+        routing.get do
+          recipe = Repository::For[Entity::Recipe].find_id(id)
+          RecipeRepresenter.new(recipe).to_json
+        end
+      end
+
       # DELETE #{API_ROOT}/recipe request
       Api.configure :development, :test do
         routing.delete do
