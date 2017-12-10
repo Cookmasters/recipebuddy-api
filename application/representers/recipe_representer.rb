@@ -20,6 +20,6 @@ module RecipeBuddy
     property :reactions_haha
     property :reactions_sad
     property :reactions_angry
-    collection :videos, extend: VideoRepresenter
+    collection :videos, extend: VideoRepresenter, class: OpenStruct
   end
 end

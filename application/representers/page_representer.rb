@@ -13,6 +13,7 @@ module RecipeBuddy
 
     property :origin_id
     property :name
-    collection :recipes, extend: RecipeRepresenter
+    property :next
+    collection :recipes, extend: RecipeRepresenter, class: OpenStruct
   end
 end

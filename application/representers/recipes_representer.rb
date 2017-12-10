@@ -8,6 +8,6 @@ module RecipeBuddy
   class RecipesRepresenter < Roar::Decorator
     include Roar::JSON
 
-    collection :recipes, extend: RecipeRepresenter
+    collection :recipes, extend: RecipeRepresenter, class: OpenStruct
   end
 end
