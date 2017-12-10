@@ -2,7 +2,9 @@
 
 require 'dry/transaction'
 require 'uri'
+require 'concurrent'
 
+# Main module
 module RecipeBuddy
   # Transaction to load page from Facebook and save to database
   class LoadFromFacebook
@@ -47,16 +49,18 @@ module RecipeBuddy
       end
       if percentage <= 0.5
         Left(Result.new(:bad_request,
-                        'This Facebook page does not contain enough recipes \
+                        'This Facebook page does not contain enough recipes
                         to be added in our system! Please try another one.'))
       else
         page.recipes.map do |recipe|
-          recipe_title = URI.encode_www_form([['q', recipe.title]])
-          videos_url = "search?#{recipe_title}"
-          videos = Youtube::VideoMapper.new(input[:config])
-                                       .load_several(videos_url)
-          recipe.videos = videos
-        end
+          Concurrent::Promise.execute do
+            recipe_title = URI.encode_www_form([['q', recipe.title]])
+            videos_url = "search?#{recipe_title}"
+            videos = Youtube::VideoMapper.new(input[:config])
+                                         .load_several(videos_url)
+            recipe.videos = videos
+          end
+        end.map(&:value)
         Right(input)
       end
     end
@@ -64,6 +68,8 @@ module RecipeBuddy
     def store_page_in_repository(input)
       input_page = input[:page]
       stored_page = Repository::For[input_page.class].create(input_page)
+      page_json = PageRepresenter.new(input_page).to_json
+      LoadRecipesWorker.perform_async(page_json)
       Right(Result.new(:created, stored_page))
     rescue StandardError
       Left(Result.new(:internal_error,
