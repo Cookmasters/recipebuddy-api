@@ -42,8 +42,15 @@ module RecipeBuddy
 
         db_page = Database::PageOrm.create(
           origin_id: entity.origin_id,
-          name: entity.name
+          name: entity.name,
+          next: entity.next
         )
+        add_stored_id(entity, db_page)
+      end
+
+      def self.update(entity)
+        db_page = Database::PageOrm.first(origin_id: entity.origin_id)
+        raise "This Facebook page doesn't exist" unless db_page
         add_stored_id(entity, db_page)
       end
 
@@ -57,7 +64,7 @@ module RecipeBuddy
         Entity::Page.new(
           id: db_record.id,
           origin_id: db_record.origin_id,
-          name: db_record.name,
+          name: db_record.name, next: db_record.next,
           recipes: recipes
         )
       end

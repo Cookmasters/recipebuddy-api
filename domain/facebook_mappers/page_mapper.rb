@@ -35,7 +35,8 @@ module RecipeBuddy
           id: nil,
           origin_id: origin_id,
           name: name,
-          recipes: recipes
+          next: recipes[1],
+          recipes: recipes[0]
         )
       end
 

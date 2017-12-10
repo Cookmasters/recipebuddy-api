@@ -36,8 +36,7 @@ module RecipeBuddy
 
       def videos_data(path)
         recipe_videos_url = videos_path(path)
-        videos_response_parsed = call_yt_url(recipe_videos_url).parse
-        videos_response_parsed['items']
+        call_yt_url(recipe_videos_url).parse
       end
 
       def videos_path(path)

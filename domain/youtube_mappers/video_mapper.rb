@@ -15,7 +15,7 @@ module RecipeBuddy
       end
 
       def load_several(url)
-        videos = @gateway.videos_data(url)
+        videos = @gateway.videos_data(url)['items']
         return [] unless videos
         videos.map do |data|
           VideoMapper.build_entity(data)

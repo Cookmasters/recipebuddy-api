@@ -14,10 +14,13 @@ module RecipeBuddy
       end
 
       def load_several(url)
-        recipes = @gateway.recipes_data(url)
-        recipes.map do |data|
+        result = @gateway.recipes_data(url)
+        recipes = result['data']
+        next_page = result['paging']['cursors']['after']
+        recipes.map! do |data|
           build_entity(data)
         end
+        [recipes, next_page]
       end
 
       def build_entity(data)
@@ -28,6 +31,7 @@ module RecipeBuddy
       class DataMapper
         def initialize(data, config)
           @data = data
+          @config = config
           @video_mapper = RecipeBuddy::Youtube::VideoMapper.new(
             config
           )
@@ -61,6 +65,7 @@ module RecipeBuddy
         end
 
         def full_picture
+          return @config.DEFAULT_RECIPE_IMAGE_URL unless @data['full_picture']
           @data['full_picture']
         end
 

@@ -38,8 +38,7 @@ module RecipeBuddy
 
       def recipes_data(path)
         recipes_url = Api.path(path)
-        recipes_response_parsed = call_fb_url(recipes_url).parse
-        recipes_response_parsed['data']
+        call_fb_url(recipes_url).parse
       end
 
       def self.path(path)

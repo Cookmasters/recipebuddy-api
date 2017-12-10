@@ -10,6 +10,7 @@ module RecipeBuddy
       attribute :id, Types::Int.optional
       attribute :origin_id, Types::Strict::String
       attribute :name, Types::Strict::String
+      attribute :next, Types::String.optional
       attribute :recipes, Types::Strict::Array.member(Recipe)
     end
   end

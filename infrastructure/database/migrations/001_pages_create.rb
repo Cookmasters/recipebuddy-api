@@ -8,6 +8,7 @@ Sequel.migration do
       primary_key :id
       String :origin_id, unique: true
       String :name, unique: false
+      String :next, unique: true
     end
   end
 end
