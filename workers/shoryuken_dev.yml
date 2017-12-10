@@ -1,2 +1,0 @@
-queues:
-  - https://sqs.us-east-1.amazonaws.com/486776562256/Cookmasters-load.fifo
