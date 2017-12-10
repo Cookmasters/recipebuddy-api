@@ -105,6 +105,7 @@ describe 'Tests YouTube API library' do
   VCR.configure do |c|
     c.cassette_library_dir = CASSETTES_FOLDER
     c.hook_into :webmock
+    c.ignore_hosts 'sqs.us-east-1.amazonaws.com'
 
     YT_TOKEN = app.config.YT_TOKEN
     c.filter_sensitive_data('<YOUTUBE_TOKEN>') { YT_TOKEN }
