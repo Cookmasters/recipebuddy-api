@@ -14,6 +14,7 @@ end
 
 desc 'rerun tests'
 task :respec do
+  puts 'REMEMBER: need to run `rake run:[dev|test]:worker` in another process'
   sh "rerun -c 'rake spec' --ignore 'coverage/*'"
 end
 
@@ -23,13 +24,24 @@ end
 
 namespace :run do
   task :dev do
+    puts 'REMEMBER: need to run `rake run:[dev|test]:worker` in another process'
     sh 'rerun -c "rackup -p 3030"'
   end
 
   task :app_test do
+    puts 'REMEMBER: need to run `rake run:[dev|test]:worker` in another process'
     sh 'RACK_ENV=test rackup -p 3000'
   end
 end
+
+  namespace :worker do
+    task :dev => :config do
+      sh 'bundle exec shoryuken -r ./workers/load_recipes_worker.rb -C ./workers/shoryuken.yml'
+    end
+
+    task :test => :config do
+      sh 'RACK_ENV=test bundle exec shoryuken -r ./workers/load_recipes_worker.rb -C ./workers/shoryuken_test.yml'
+    end
 
 desc 'delete cassette fixtures'
 task :rmvcr do
@@ -95,5 +107,44 @@ namespace :db do
 
     FileUtils.rm(app.config.DB_FILENAME)
     puts "Deleted #{app.config.DB_FILENAME}"
+  end
+end
+
+namespace :queue do
+  require 'aws-sdk-sqs'
+
+  desc "Create SQS queue for Shoryuken"
+  task :create => :config do
+    sqs = Aws::SQS::Client.new(region: @config.AWS_REGION)
+
+    begin
+      queue = sqs.create_queue(
+        queue_name: @config.CLONE_QUEUE,
+        attributes: {
+          FifoQueue: 'true',
+          ContentBasedDeduplication: 'true'
+        }
+      )
+
+      q_url = sqs.get_queue_url(queue_name: @config.CLONE_QUEUE)
+      puts "Queue created:"
+      puts "Name: #{@config.CLONE_QUEUE}"
+      puts "Region: #{@config.AWS_REGION}"
+      puts "URL: #{q_url.queue_url}"
+      puts "Environment: #{@app.environment}"
+    rescue => e
+      puts "Error creating queue: #{e}"
+    end
+  end
+
+  task :purge => :config do
+    sqs = Aws::SQS::Client.new(region: @config.AWS_REGION)
+
+    begin
+      queue = sqs.purge_queue(queue_url: @config.CLONE_QUEUE_URL)
+      puts "Queue #{@config.CLONE_QUEUE} purged"
+    rescue => e
+      puts "Error purging queue: #{e}"
+    end
   end
 end

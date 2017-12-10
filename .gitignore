@@ -2,3 +2,4 @@ config/secrets.yml
 coverage/
 infrastructure/database/*.db
 .bundle/
+_*
