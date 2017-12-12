@@ -28,6 +28,7 @@ module RecipeBuddy
         @recipe_mapper = RecipeMapper.new(
           config, gateway_class
         )
+        @query = RecipeBuddy::Facebook::Api::Query.new(origin_id)
       end
 
       def build_entity
@@ -49,32 +50,7 @@ module RecipeBuddy
       end
 
       def recipes
-        recipes_url = recipes_base_url + \
-                      recipes_reactions_positive_url + \
-                      recipes_reactions_negative_url
-        @recipe_mapper.load_several(recipes_url)
-      end
-
-      def recipes_base_url
-        @data['id'] + '/posts?fields=full_picture,created_time,message'
-      end
-
-      def recipes_reactions_positive_url
-        ',reactions.type(LIKE).limit(0).summary(total_count)'\
-        '.as(reactions_like)'\
-        ',reactions.type(LOVE).limit(0).summary(total_count)'\
-        '.as(reactions_love)'\
-        ',reactions.type(WOW).limit(0).summary(total_count)'\
-        '.as(reactions_wow)'\
-        ',reactions.type(HAHA).limit(0).summary(total_count)'\
-        '.as(reactions_haha)'
-      end
-
-      def recipes_reactions_negative_url
-        ',reactions.type(SAD).limit(0).summary(total_count)'\
-        '.as(reactions_sad)'\
-        ',reactions.type(ANGRY).limit(0).summary(total_count)'\
-        '.as(reactions_angry)'
+        @recipe_mapper.load_several(@query.recipes_url)
       end
     end
   end

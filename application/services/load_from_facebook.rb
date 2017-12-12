@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require 'dry/transaction'
-require 'uri'
-require 'concurrent'
 
 # Main module
 module RecipeBuddy
@@ -35,33 +33,14 @@ module RecipeBuddy
 
     def check_if_is_recipes_page(input)
       page = input[:page]
-      posts_count = page.recipes.count
-      recipes_count = 0.0
-      not_recipes_list = []
-      page.recipes.each do |post|
-        is_recipe = recipe?(post)
-        recipes_count += 1 if is_recipe
-        not_recipes_list << post.origin_id unless is_recipe
-      end
-      percentage = recipes_count / posts_count
-      page.recipes.delete_if do |item|
-        true if not_recipes_list.include?(item.origin_id)
-      end
-      if percentage <= 0.5
+      page_validator = Entity::PageValidator.new(page)
+      if page_validator.recipes_page?
         Left(Result.new(:bad_request,
                         'This Facebook page does not contain enough recipes
                         to be added in our system! Please try another one.'))
       else
-        page.recipes.map do |recipe|
-          Concurrent::Promise.execute do
-            recipe_title = URI.encode_www_form([['q', recipe.title]])
-            videos_url = "search?#{recipe_title}"
-            videos = Youtube::VideoMapper.new(input[:config])
-                                         .load_several(videos_url)
-            recipe.videos = videos
-          end
-        end.map(&:value)
-        Right(input)
+        page = page_validator.load_videos(input[:config])
+        Right(page: page)
       end
     end
 
@@ -74,25 +53,6 @@ module RecipeBuddy
     rescue StandardError
       Left(Result.new(:internal_error,
                       'Could not store page fetched from Facebook'))
-    end
-
-    def recipe?(post)
-      content = post.content
-      return false unless content
-      count_is_recipe = 0
-      content.each_line do |line|
-        count_is_recipe = 0 unless numeric?(line[0])
-        count_is_recipe += 1 if numeric?(line[0])
-        break if count_is_recipe >= 3
-      end
-      count_is_recipe >= 3
-    end
-
-    def numeric?(str)
-      Integer(str)
-      true
-    rescue StandardError
-      false
     end
   end
 end

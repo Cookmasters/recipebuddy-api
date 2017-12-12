@@ -27,6 +27,49 @@ module RecipeBuddy
         end
       end
 
+      # Contains all the Query details
+      class Query
+        def initialize(page_id, token = nil)
+          @page_id = page_id
+          @token = token
+        end
+
+        def recipes_base_url
+          '/posts?fields=full_picture,created_time,message'
+        end
+
+        def recipes_reactions_positive_url
+          ',reactions.type(LIKE).limit(0).summary(total_count)'\
+          '.as(reactions_like)'\
+          ',reactions.type(LOVE).limit(0).summary(total_count)'\
+          '.as(reactions_love)'\
+          ',reactions.type(WOW).limit(0).summary(total_count)'\
+          '.as(reactions_wow)'\
+          ',reactions.type(HAHA).limit(0).summary(total_count)'\
+          '.as(reactions_haha)'
+        end
+
+        def recipes_reactions_negative_url
+          ',reactions.type(SAD).limit(0).summary(total_count)'\
+          '.as(reactions_sad)'\
+          ',reactions.type(ANGRY).limit(0).summary(total_count)'\
+          '.as(reactions_angry)'
+        end
+
+        def recipes_next_url
+          "&limit=100&after=#{@token}"
+        end
+
+        def recipes_url
+          @page_id + recipes_base_url + recipes_reactions_positive_url + \
+            recipes_reactions_negative_url
+        end
+
+        def recipes_next_page
+          recipes_url + recipes_next_url
+        end
+      end
+
       def initialize(token)
         @fb_token = token
       end
