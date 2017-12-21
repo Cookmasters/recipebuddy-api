@@ -3,3 +3,5 @@ coverage/
 infrastructure/database/*.db
 .bundle/
 _*
+workers/shoryuken.yml
+workers/shoryuken_test.yml
