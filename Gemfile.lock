@@ -23,6 +23,7 @@ GEM
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.0.5)
+    cookiejar (0.3.3)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.6.2)
@@ -70,7 +71,27 @@ GEM
       dry-logic (~> 0.4, >= 0.4.2)
       inflecto (~> 0.0.0, >= 0.0.2)
     econfig (2.0.0)
+    em-http-request (1.1.5)
+      addressable (>= 2.3.4)
+      cookiejar (!= 0.3.1)
+      em-socksify (>= 0.3)
+      eventmachine (>= 1.0.3)
+      http_parser.rb (>= 0.6.0)
+    em-socksify (0.3.1)
+      eventmachine (>= 1.0.0.beta.4)
     equalizer (0.0.11)
+    eventmachine (1.2.5)
+    faye (1.2.4)
+      cookiejar (>= 0.3.0)
+      em-http-request (>= 0.3.0)
+      eventmachine (>= 0.12.0)
+      faye-websocket (>= 0.9.1)
+      multi_json (>= 1.0.0)
+      rack (>= 1.0.0)
+      websocket-driver (>= 0.5.1)
+    faye-websocket (0.10.7)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.5.1)
     ffi (1.9.18)
     flog (4.6.1)
       path_expander (~> 1.0)
@@ -175,6 +196,9 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
+    websocket-driver (0.7.0)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.3)
     wisper (2.0.0)
 
 PLATFORMS
@@ -190,6 +214,7 @@ DEPENDENCIES
   dry-transaction
   dry-types
   econfig
+  faye (~> 1)
   flog
   hirb
   http
