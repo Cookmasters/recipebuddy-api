@@ -9,6 +9,7 @@ Sequel.migration do
       String :origin_id, unique: true
       String :name, unique: false
       String :next, unique: true
+      String :request_id, unique: true, null: true
     end
   end
 end

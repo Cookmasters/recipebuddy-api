@@ -65,6 +65,11 @@ module RecipeBuddy
             recipes_reactions_negative_url
         end
 
+        def recipes_with_limit_url(limit = 10)
+          @page_id + recipes_base_url + recipes_reactions_positive_url + \
+            recipes_reactions_negative_url + "&limit=#{limit}"
+        end
+
         def recipes_next_page
           recipes_url + recipes_next_url
         end
