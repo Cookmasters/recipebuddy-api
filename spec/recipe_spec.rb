@@ -91,7 +91,7 @@ describe 'Tests Facebook API library' do
 
     it 'HAPPY: should check recipes' do
       recipes = @page.recipes
-      _(recipes.count).must_equal CORRECT_FACEBOOK['posts'].count
+      _(recipes.count).must_equal 10
     end
   end
 end
@@ -129,7 +129,7 @@ describe 'Tests YouTube API library' do
     end
 
     it 'HAPPY: should get the count' do
-      _(@videos.count).must_be :<=, 10
+      _(@videos.count).must_be :<=, 5
     end
 
     it 'HAPPY: should check that the video fields are valid' do
