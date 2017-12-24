@@ -17,7 +17,7 @@ module RecipeBuddy
       page_url = input[:config].FACEBOOK_URL + input[:pagename]
       page = Facebook::PageMapper.new(input[:config])
                                  .find(page_url)
-      Right(page: page, config: input[:config])
+      Right(page: page, config: input[:config], id: input[:id])
     rescue StandardError
       Left(Result.new(:bad_request, 'Facebook page not found'))
     end
@@ -40,15 +40,16 @@ module RecipeBuddy
                         to be added in our system! Please try another one.'))
       else
         page = page_validator.load_videos(input[:config])
-        Right(page: page)
+        Right(page: page, id: input[:id])
       end
     end
 
     def store_page_in_repository(input)
       input_page = input[:page]
+      input_page.request_id = input[:id]
       stored_page = Repository::For[input_page.class].create(input_page)
-      page_json = PageRepresenter.new(input_page).to_json
-      LoadRecipesWorker.perform_async(page_json)
+      load_page_request = PageRepresenter.new(stored_page)
+      LoadRecipesWorker.perform_async(load_page_request.to_json)
       Right(Result.new(:created, stored_page))
     rescue StandardError
       Left(Result.new(:internal_error,
