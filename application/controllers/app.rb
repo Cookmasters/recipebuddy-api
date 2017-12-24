@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'roda'
+require_relative 'route_helpers'
 
 module RecipeBuddy
   # Web API
@@ -8,19 +9,8 @@ module RecipeBuddy
     plugin :all_verbs
     plugin :multi_route
 
-    require_relative 'recipe'
-    require_relative 'page'
-
-    def represent_response(result, representer_class)
-      http_response = HttpResponseRepresenter.new(result.value)
-      response.status = http_response.http_code
-      if result.success?
-        yield if block_given?
-        representer_class.new(result.value.message).to_json
-      else
-        http_response.to_json
-      end
-    end
+    require_relative 'recipe_controller'
+    require_relative 'page_controller'
 
     route do |routing|
       response['Content-Type'] = 'application/json'

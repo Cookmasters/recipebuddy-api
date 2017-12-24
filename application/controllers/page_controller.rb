@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'roda'
+require 'json'
 
 module RecipeBuddy
   # Web API
@@ -18,11 +19,12 @@ module RecipeBuddy
 
         # POST #{API_ROOT}/page/:pagename request
         routing.post do
+          request_id = [request.env, request.path, Time.now.to_f].hash
           load_result = LoadFromFacebook.new.call(
             config: Api.config,
-            pagename: pagename
+            pagename: pagename,
+            id: request_id
           )
-
           represent_response(load_result, PageRepresenter) do
             response['Location'] = "#{@api_root}/page/#{pagename}"
           end
