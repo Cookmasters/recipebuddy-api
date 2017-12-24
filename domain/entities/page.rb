@@ -7,11 +7,13 @@ module RecipeBuddy
   module Entity
     # Domain entity object
     class Page < Dry::Struct
+      include Dry::Struct::Setters
       attribute :id, Types::Int.optional
       attribute :origin_id, Types::Strict::String
       attribute :name, Types::Strict::String
       attribute :next, Types::String.optional
       attribute :recipes, Types::Strict::Array.member(Recipe)
+      attribute :request_id, Types::String.optional
     end
   end
 end

@@ -31,8 +31,8 @@ module RecipeBuddy
         rebuild_entity(db_record)
       end
 
-      def self.find_or_create(entity)
-        find_origin_id(entity.origin_id) || create(entity)
+      def self.find_or_create(entity, page_id = nil)
+        find_origin_id(entity.origin_id) || create(entity, page_id)
       end
 
       def self.add_stored_id(entity_data, db)
@@ -45,10 +45,15 @@ module RecipeBuddy
         rebuild_entity(db)
       end
 
+      def self.create(entity, page_id = nil)
+        db_recipe = create_helper(entity, page_id)
+        add_stored_id(entity, db_recipe)
+      end
+
       # rubocop:disable MethodLength
       # rubocop:disable Metrics/AbcSize
-      def self.create(entity)
-        db_recipe = Database::RecipeOrm.create(
+      def self.create_helper(entity, page_id)
+        Database::RecipeOrm.create(
           origin_id: entity.origin_id, title: entity.title,
           created_time: entity.created_time,
           content: entity.content, full_picture: entity.full_picture,
@@ -57,9 +62,9 @@ module RecipeBuddy
           reactions_wow: entity.reactions_wow,
           reactions_haha: entity.reactions_haha,
           reactions_sad: entity.reactions_sad,
-          reactions_angry: entity.reactions_angry
+          reactions_angry: entity.reactions_angry,
+          page_id: page_id
         )
-        add_stored_id(entity, db_recipe)
       end
 
       def self.rebuild_entity(db_record)

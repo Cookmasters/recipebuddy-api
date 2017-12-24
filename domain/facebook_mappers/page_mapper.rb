@@ -37,7 +37,8 @@ module RecipeBuddy
           origin_id: origin_id,
           name: name,
           next: recipes[1],
-          recipes: recipes[0]
+          recipes: recipes[0],
+          request_id: nil
         )
       end
 
@@ -50,7 +51,7 @@ module RecipeBuddy
       end
 
       def recipes
-        @recipe_mapper.load_several(@query.recipes_url)
+        @recipe_mapper.load_several(@query.recipes_with_limit_url)
       end
     end
   end

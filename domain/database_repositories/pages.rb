@@ -43,7 +43,8 @@ module RecipeBuddy
         db_page = Database::PageOrm.create(
           origin_id: entity.origin_id,
           name: entity.name,
-          next: entity.next
+          next: entity.next,
+          request_id: entity.request_id
         )
         add_stored_id(entity, db_page)
       end
@@ -65,8 +66,12 @@ module RecipeBuddy
           id: db_record.id,
           origin_id: db_record.origin_id,
           name: db_record.name, next: db_record.next,
-          recipes: recipes
+          recipes: recipes, request_id: db_record.request_id
         )
+      end
+
+      def self.reset_request(page_id)
+        Database::PageOrm.where(id: page_id).update(request_id: nil)
       end
     end
   end

@@ -22,14 +22,16 @@ module RecipeBuddy
       def load_videos(config)
         @page.recipes.map do |recipe|
           Concurrent::Promise.execute do
-            recipe_title = URI.encode_www_form([['q', recipe.title]])
-            videos_url = "search?#{recipe_title}"
-            videos = Youtube::VideoMapper.new(config)
-                                         .load_several(videos_url)
-            recipe.videos = videos
+            recipe.videos = recipe_video_loader(recipe, config)
           end
         end.map(&:value)
         @page
+      end
+
+      def recipe_video_loader(recipe, config)
+        recipe_title = URI.encode_www_form([['q', recipe.title]])
+        videos_url = "search?#{recipe_title}"
+        Youtube::VideoMapper.new(config).load_several(videos_url)
       end
     end
   end
