@@ -9,7 +9,7 @@ gem 'http'
 # Asynchronicity gems
 gem 'concurrent-ruby'
 
-# Worker gems
+# Parallel worker
 gem 'aws-sdk-sqs', '~> 1'
 gem 'faye', '~> 1'
 gem 'shoryuken', '~> 3'

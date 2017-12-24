@@ -21,7 +21,7 @@ end
 
 desc 'rerun tests'
 task :respec do
-  puts 'REMEMBER: need to run `rake run:[dev|test]:worker` in another process'
+  puts 'REMEMBER: need to run `rake worker:run:[dev|test]` in another process'
   sh "rerun -c 'rake spec' --ignore 'coverage/*'"
 end
 
@@ -30,25 +30,48 @@ task :console do
   sh 'pry -r ./spec/test_load_all'
 end
 
-namespace :run do
-  namespace :api do
+namespace :api do
+  namespace :run do
+    desc 'Rerun the API server in development mode'
     task :dev => :config do
-      puts 'REMEMBER: need to run `rake run:dev:worker` in another process'
+      puts 'REMEMBER: need to run `rake worker:run:dev` in another process'
       sh "rerun -c 'rackup -p 3030' --ignore 'coverage/*'"
     end
 
+    desc 'Rerun the API server in test mode'
     task :test => :config do
-      puts 'REMEMBER: need to run `rake run:test:worker` in another process'
+      puts 'REMEMBER: need to run `rake worker:run:test` in another process'
       sh "rerun -c 'RACK_ENV=test rackup -p 3000' --ignore 'coverage/*'"
     end
+
+    desc 'Run the API server to test the client app'
+    task :app_test => :config do
+      puts 'REMEMBER: need to run `rake worker:run:app_test` in another process'
+      sh 'RACK_ENV=test rackup -p 3000'
+    end
   end
-  namespace :worker do
+end
+
+namespace :worker do
+  namespace :run do
+    desc 'Run the background recipes loader worker in development mode'
     task :dev => :config do
-      sh 'bundle exec shoryuken -r ./workers/load_recipes_worker.rb -C ./workers/shoryuken.yml'
+      sh 'RACK_ENV=development bundle exec shoryuken -r ./workers/load_recipes_worker.rb -C ./workers/shoryuken_dev.yml'
     end
 
+    desc 'Run the background recipes loader worker in testing mode'
     task :test => :config do
       sh 'RACK_ENV=test bundle exec shoryuken -r ./workers/load_recipes_worker.rb -C ./workers/shoryuken_test.yml'
+    end
+
+    desc 'Run the background recipes loader worker in testing mode'
+    task :app_test => :config do
+      sh 'RACK_ENV=app_test bundle exec shoryuken -r ./workers/load_recipes_worker.rb -C ./workers/shoryuken_test.yml'
+    end
+
+    desc 'Run the background recipes loader worker in production mode'
+    task :production => :config do
+      sh 'RACK_ENV=production bundle exec shoryuken -r ./workers/load_recipes_worker.rb -C ./workers/shoryuken.yml'
     end
   end
 end

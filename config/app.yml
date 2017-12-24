@@ -1,12 +1,23 @@
 ---
 development:
+  API_URL: 'http://localhost:3030'
   DB_FILENAME: infrastructure/database/dev.db
   FACEBOOK_URL: https://www.facebook.com/
   DEFAULT_RECIPE_IMAGE_URL: https://clubreduva.com/wp-content/uploads/2015/12/default-recipe.png
+
 test:
+  API_URL: 'http://localhost:3000'
   DB_FILENAME: infrastructure/database/test.db
   FACEBOOK_URL: https://www.facebook.com/
   DEFAULT_RECIPE_IMAGE_URL: https://clubreduva.com/wp-content/uploads/2015/12/default-recipe.png
+
+app_test:
+  API_URL: 'http://localhost:3000'
+  DB_FILENAME: infrastructure/database/test.db
+  FACEBOOK_URL: https://www.facebook.com/
+  DEFAULT_RECIPE_IMAGE_URL: https://clubreduva.com/wp-content/uploads/2015/12/default-recipe.png
+
 production:
+  API_URL: 'https://cookmasters-api.herokuapp.com'
   FACEBOOK_URL: https://www.facebook.com/
   DEFAULT_RECIPE_IMAGE_URL: https://clubreduva.com/wp-content/uploads/2015/12/default-recipe.png
