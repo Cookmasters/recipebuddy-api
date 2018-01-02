@@ -13,10 +13,14 @@ module RecipeBuddy
 
       def recipes_page?
         posts_count = @page.recipes.count
+        filter_recipes
+        ((@page.recipes.count * 1.0) / posts_count) <= 0.5
+      end
+
+      def filter_recipes
         @page.recipes.delete_if do |post|
           true unless RecipeChecker.new(post).recipe?
         end
-        ((@page.recipes.count * 1.0) / posts_count) <= 0.5
       end
 
       def load_videos(config)

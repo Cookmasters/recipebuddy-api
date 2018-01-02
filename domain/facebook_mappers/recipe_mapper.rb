@@ -61,7 +61,7 @@ module RecipeBuddy
         def content
           # Remove all the special characters and keep only letters and numbers
           return '' unless @data['message']
-          @data['message'].gsub(%r{[^0-9A-Za-z\n\. \/-]}, '')
+          @data['message'].gsub(%r{[^0-9A-Za-z\n:\. \/-]}, '')
         end
 
         def full_picture

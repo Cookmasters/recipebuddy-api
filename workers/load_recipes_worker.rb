@@ -29,10 +29,9 @@ class LoadRecipesWorker
       LoadRecipesWorker.config
     ).load_several(query.recipes_next_page)[0]
     page_validator = RecipeBuddy::Entity::PageValidator.new(page)
+
     remaining_recipes.each do |recipe|
-      next unless RecipeBuddy::Repository::Recipes.find_origin_id(
-        recipe.origin_id
-      ).nil?
+      next unless check_recipe(recipe)
       recipe.videos = page_validator.recipe_video_loader(
         recipe,
         LoadRecipesWorker.config
@@ -41,10 +40,7 @@ class LoadRecipesWorker
         recipe,
         page.id
       )
-      publish(
-        page.request_id,
-        RecipeBuddy::RecipeRepresenter.new(stored_recipe)
-      )
+      publish(page.request_id, stored_recipe.id)
       puts "Recipe added with #{recipe.videos.count} videos"
     end
     # We rest the page request id
@@ -52,6 +48,11 @@ class LoadRecipesWorker
   end
 
   private
+
+  def check_recipe(post)
+    RecipeBuddy::Entity::RecipeChecker.new(post).recipe? &&
+      RecipeBuddy::Repository::Recipes.find_origin_id(post.origin_id).nil?
+  end
 
   def get_data(request)
     RecipeBuddy::PageRepresenter
