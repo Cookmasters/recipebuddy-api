@@ -19,5 +19,14 @@ module RecipeBuddy
         Left(Result.new(:not_found, 'Could not find stored page'))
       end
     end
+    def self.id_call(input)
+      page = Repository::For[Entity::Page]
+             .pagenamebyid(input[:id])
+      if page
+        Right(Result.new(:ok, page))
+      else
+        Left(Result.new(:not_found, 'Could not find stored page'))
+      end
+    end
   end
 end

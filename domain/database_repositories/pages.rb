@@ -19,6 +19,11 @@ module RecipeBuddy
         Database::PageOrm.first(id: id).try(rebuild_entity)
       end
 
+      def self.pagenamebyid(id)
+        db_record = Database::PageOrm.first(id: id)
+        rebuild_entity(db_record)
+      end
+
       def self.find_origin_id(origin_id)
         db_record = Database::PageOrm.first(origin_id: origin_id)
         rebuild_entity(db_record)

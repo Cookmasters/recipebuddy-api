@@ -10,6 +10,13 @@ module RecipeBuddy
 
     # #{API_ROOT}/page branch
     route('page') do |routing|
+      routing.on Integer do |id|
+        # GET #{API_ROOT}/page/:id request
+        routing.get do
+          find_result = FindDatabasePage.id_call(id: id)
+          represent_response(find_result, PageNameRepresenter)
+        end
+      end
       routing.on String do |pagename|
         # GET #{API_ROOT}/page/:pagename request
         routing.get do
