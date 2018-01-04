@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'recipe_representer'
+require_relative 'page_representer'
 
 # Add Representer to module
 module RecipeBuddy
@@ -8,11 +8,9 @@ module RecipeBuddy
   # USAGE:
   #   page = Repository::Pages.find_id(1)
   #   PageRepresenter.new(page).to_json
-  class PageNameRepresenter < Roar::Decorator
+  class PagesRepresenter < Roar::Decorator
     include Roar::JSON
 
-    property :id
-    property :origin_id
-    property :name
+    collection :pages, extend: PageRepresenter, class: OpenStruct
   end
 end

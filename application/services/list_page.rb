@@ -7,12 +7,12 @@ module RecipeBuddy
   # Usage:
   #   result = FindDatabasePage.call(pagename: 'RecipesAndCookingGuide')
   #   result.success?
-  module FindDatabasePage
+  module ListPage
     extend Dry::Monads::Either::Mixin
 
-    def self.call(input)
+    def self.id_call(input)
       page = Repository::For[Entity::Page]
-             .find_name(input[:pagename])
+             .pagenamebyid(input[:id])
       if page
         Right(Result.new(:ok, page))
       else

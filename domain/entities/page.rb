@@ -12,7 +12,7 @@ module RecipeBuddy
       attribute :origin_id, Types::Strict::String
       attribute :name, Types::Strict::String
       attribute :next, Types::String.optional
-      attribute :recipes, Types::Strict::Array.member(Recipe)
+      attribute :recipes, Types::Array.member(Recipe)
       attribute :request_id, Types::String.optional
     end
   end
