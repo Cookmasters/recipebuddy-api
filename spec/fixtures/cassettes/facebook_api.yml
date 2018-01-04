@@ -6499,4 +6499,308 @@ http_interactions:
         helps you continue seeing my posts! Thank you!","reactions_like":{"data":[],"summary":{"total_count":133}},"reactions_love":{"data":[],"summary":{"total_count":8}},"reactions_wow":{"data":[],"summary":{"total_count":3}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_870236056487687"}],"paging":{"cursors":{"before":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5TXlNell3TVRjeE5UazVNRGsxT0RNNk5qYzNOamt4T0RjNU9UVTJNalF3TmpZAd09BOE1ZAWEJwWDNOMGIzSjVYMmxrRHg4eU16WXdNVGN4TlRrNU1EazFPRE5mT0Rjd05qQXdNek16TVRFM09USTJEd1IwYVcxbEJsby9sc0FC","after":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUYzVNVGd6TVRJMU1ESTFPVEEyTWprNE5UWVBER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM01ESXpOakExTmpRNE56WTROdzhFZAEdsdFpRWmFQc1BRQVE9PQZDZD"},"next":"https:\/\/graph.facebook.com\/v2.10\/236017159909583\/posts?fields=full_picture\u00252Ccreated_time\u00252Cmessage\u00252Creactions.type\u002528LIKE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_like\u002529\u00252Creactions.type\u002528LOVE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_love\u002529\u00252Creactions.type\u002528WOW\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_wow\u002529\u00252Creactions.type\u002528HAHA\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_haha\u002529\u00252Creactions.type\u002528SAD\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_sad\u002529\u00252Creactions.type\u002528ANGRY\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_angry\u002529&limit=10&after=Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUYzVNVGd6TVRJMU1ESTFPVEEyTWprNE5UWVBER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM01ESXpOakExTmpRNE56WTROdzhFZAEdsdFpRWmFQc1BRQVE9PQZDZD"}}'
     http_version: 
   recorded_at: Sun, 24 Dec 2017 13:20:41 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.10/236017159909583/posts?fields=full_picture,created_time,message,reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)&limit=25
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - OAuth <FACEBOOK_TOKEN>
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Etag:
+      - '"61e4be6ca00263ed09d6c13d48cb0e0da3c1a7e1"'
+      Strict-Transport-Security:
+      - max-age=15552000; preload
+      X-Fb-Trace-Id:
+      - GrCon6P0b9O
+      X-Fb-Rev:
+      - '3555641'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - application/json
+      Facebook-Api-Version:
+      - v2.10
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - tnvhHohtGeeK19N4H4azBAbKwIeblFQJnsODzQXyhdBw6/LjuNfLk+1IzePe+g8ENUm5GNyQ9rZ9CYDcefR90g==
+      Date:
+      - Thu, 04 Jan 2018 13:53:14 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167125_875909935920299_521963879419668344_n.jpg?oh=40c4d4553eb59d903beef7aec747944f&oe=5ABD4752","created_time":"2018-01-04T12:00:00+0000","message":"Cherry
+        Cheese Coffee Cake\n\nHave all your favorite desserts at once! Cherry Cheese
+        Coffee Cake is the perfect breakfast treat, or a delicious way to end the
+        day.\n\nCAKE & FILLING:\n2 (8-ounce) pakages refrigerated crescent rolls\n8
+        ounces cream cheese\n\u00bc cup powdered sugar\n\nFull Recipe : http:\/\/www.usrecipe.com\/2017\/07\/cherry-cheese-coffee-cake.html","reactions_like":{"data":[],"summary":{"total_count":52}},"reactions_love":{"data":[],"summary":{"total_count":5}},"reactions_wow":{"data":[],"summary":{"total_count":1}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875910159253610"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-0\/p180x540\/26168070_875913105919982_2775353085367225124_n.jpg?oh=ab077ab0649eace0772978c899065410&oe=5AF9022D","created_time":"2018-01-04T05:30:00+0000","message":"Teriyaki
+        Chicken Wings\n\n2 - 4 pound package of chicken wings\n1 cup dark brown sugar\n1\/2
+        cup white sugar\n1 cup soy sauce\n\nFull Recipe : http:\/\/www.usrecipe.com\/2017\/03\/teriyaki-chicken-wings.html","reactions_like":{"data":[],"summary":{"total_count":196}},"reactions_love":{"data":[],"summary":{"total_count":16}},"reactions_wow":{"data":[],"summary":{"total_count":1}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875913295919963"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167160_875912055920087_1365697879141035726_n.png?oh=95e3bf19ff95e5ca03766f6fcfa6312b&oe=5AF74537","created_time":"2018-01-04T04:30:00+0000","message":"Melted
+        milk chocolate or dark chocolate\nYou need first \n\n3 cups coconut flakes\n1
+        cup condensed milk\n\n***Please remember to like, comment and share to continue
+        seeing my posts. Thank you!*\n\nFull Recipe : http:\/\/www.usrecipe.com\/2017\/07\/melted-milk-chocolate-or-dark-chocolate.html","reactions_like":{"data":[],"summary":{"total_count":121}},"reactions_love":{"data":[],"summary":{"total_count":18}},"reactions_wow":{"data":[],"summary":{"total_count":3}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875912229253403"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-0\/p480x480\/26195987_875910725920220_8861682668805719176_n.jpg?oh=2ac0fd4218551551198dcccb8ae4625d&oe=5AF67113","created_time":"2018-01-04T03:30:00+0000","message":"This
+        looks great. We made a strawberry cake for my hubby\u2019s birthday a few
+        years back, and my mother still talks about it\n\nFresh Strawberry Cake\n\n2
+        cups all purpose flour\n1 teaspoon baking powder\n1\/2 teaspoon baking soda\n1\/8
+        teaspoon salt\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/fresh-strawberry-cake.html\n\n***Please
+        remember to like, comment and share to continue seeing my posts. Thank you!*","reactions_like":{"data":[],"summary":{"total_count":152}},"reactions_love":{"data":[],"summary":{"total_count":17}},"reactions_wow":{"data":[],"summary":{"total_count":0}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875910842586875"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26169812_875933409251285_4214624972374767055_n.jpg?oh=ca62f6e964259b507e1d6cbb30994ae2&oe=5ABB5334","created_time":"2018-01-04T02:25:00+0000","message":"Crock
+        Pot Sausage & Cheese Tortellini\n\nI made this for the first time last night
+        and it was super super yummy! My hubby and son devoured all of it. Then begged
+        for more! ...The response to this recipe has been fantastic\n\nPlease say
+        something when you see the recipe! Saying ANYthing is good, it helps you continue
+        seeing my posts! Thank you!\n\nFull recipe : http:\/\/allneweasyrecipes.blogspot.com\/2016\/05\/crock-pot-sausage-cheese-tortellini.html","reactions_like":{"data":[],"summary":{"total_count":250}},"reactions_love":{"data":[],"summary":{"total_count":23}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875933852584574"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26166606_875932895918003_3881411369354327767_n.png?oh=0988cc7adffdf83c4b4e51784cc25e6f&oe=5AB64788","created_time":"2018-01-04T01:22:00+0000","message":"Chicken
+        Dumpling Casserole\n\n3 boneless chicken breasts, boiled and shredded\n2 c
+        chicken stock (from boiling breasts above)\n1 stick butter\n2 c milk\n1 can
+        cream of chicken soup\n3 tsp wylers chicken granules\n\nPlease say something
+        when you see the recipe! Saying ANYthing is good, it helps you continue seeing
+        my posts! Thank you!\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/03\/chicken-dumpling-casserole.html","reactions_like":{"data":[],"summary":{"total_count":347}},"reactions_love":{"data":[],"summary":{"total_count":25}},"reactions_wow":{"data":[],"summary":{"total_count":6}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875933009251325"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167586_875932522584707_4131792703620506872_n.jpg?oh=969df544722518b557583988592c9a41&oe=5AF1009F","created_time":"2018-01-04T00:21:00+0000","message":"Old
+        Fashioned Banana Cream Pie\n1 (9 inch) pie crusts, baked\n3 cups whole milk\n3\u20444
+        cup white sugar\n1\u20443 cup all-purpose flour\n1\u20444 teaspoon salt\n3
+        egg yolks, slightly beaten\n2 tablespoons butter\n1 teaspoon vanilla\n3 bananas\n\nPLEASE
+        LIKE AND SHARE WITH YOUR FRIENDS\n\nRecipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/01\/old-fashioned-banana-cream-pie.html","reactions_like":{"data":[],"summary":{"total_count":177}},"reactions_love":{"data":[],"summary":{"total_count":22}},"reactions_wow":{"data":[],"summary":{"total_count":3}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875932669251359"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26166532_875915529253073_2932109900200204302_n.jpg?oh=fab42e881f0ee11837c888f0e5ff9d8e&oe=5AF63212","created_time":"2018-01-03T23:30:00+0000","message":"Grandma\u2019s
+        Chocolate Pie\nIngredients :\n\u00bd c. cocoa\n\u00bc cup cornstarch\n3 egg
+        yolks\n1 \u00bd c. sugar\n\u00bc tsp. salt\n2 c. milk\n1 tsp. vanilla\n\nIMPORTANT**
+        Facebook will hide my future posts from your News feed if you don\u2019t \"Like\"
+        \"Share\" or \"Comment\" on my posts\nSHARE to your timeline to find it when
+        you want it. INVITE your\nfriends who love recipes too!\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2015\/12\/grandmas-chocolate-pie.html","reactions_like":{"data":[],"summary":{"total_count":73}},"reactions_love":{"data":[],"summary":{"total_count":16}},"reactions_wow":{"data":[],"summary":{"total_count":1}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875915582586401"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/26169493_875915105919782_7477326626960270369_n.jpg?oh=f3ad19469d46a4339688048e212464ef&oe=5AECC60A","created_time":"2018-01-03T22:12:51+0000","message":"RICE
+        KRISPIE TREAT NO-BAKE CHEESECAKE \u2014 The possibilities are endless!! What
+        a cool idea!!!\n\nThis No Bake Rice Krispy Treat Cheesecake is phenomenal!
+        Light, fluffy and packed with flavor, it''s perfect for any and every die-hard
+        RKT fan!\n\n**Please - We need your help to stay in this social network. Say
+        something about our posts (yes, yum or smile emoticon will do) or we''ll completely
+        disappear from your news feed. Appreciate your help.\n\nFull recipe : http:\/\/cookingsalad4u.blogspot.com\/2017\/02\/rice-krispy-treat-no-bake-cheesecake.html","reactions_like":{"data":[],"summary":{"total_count":926}},"reactions_love":{"data":[],"summary":{"total_count":108}},"reactions_wow":{"data":[],"summary":{"total_count":68}},"reactions_haha":{"data":[],"summary":{"total_count":2}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875915129253113"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26166306_875746182603341_3633488465789991826_n.jpg?oh=d08af2c355e2d9e660d3b127357cbde2&oe=5AC08EA4","created_time":"2018-01-03T20:00:00+0000","message":"Fall-Off-The-Bone
+        Ribs\n\none rack of pork baby back ribs\njuice of one lemon\n1\/4 cup dry
+        rub (your own or my recipe)\n1\/2 cup barbeque sauce (your own or my recipe)\n\nFull
+        Recipe : http:\/\/www.usrecipe.com\/2017\/07\/fall-off-bone-ribs.html","reactions_like":{"data":[],"summary":{"total_count":459}},"reactions_love":{"data":[],"summary":{"total_count":28}},"reactions_wow":{"data":[],"summary":{"total_count":14}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875746242603335"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-0\/p180x540\/26165298_875745905936702_940472037468102647_n.jpg?oh=64e0016f55013ce2e6bf343dfe148a0b&oe=5AC295F9","created_time":"2018-01-03T18:00:00+0000","message":"Italian
+        Macaroni Salad\n\n1 lb. elbow macaroni\n6 oz. can large black olives, sliced
+        (I prefer to slice them myself)\n1 large red bell pepper, chopped\n1 medium
+        yellow onion, chopped\n\nFull Recipe : http:\/\/www.usrecipe.com\/2017\/07\/italian-macaroni-salad.html","reactions_like":{"data":[],"summary":{"total_count":355}},"reactions_love":{"data":[],"summary":{"total_count":21}},"reactions_wow":{"data":[],"summary":{"total_count":0}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875745999270026"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26195666_875780509266575_4529920316087103955_n.jpg?oh=31fd5348b727a730ee87c15be6eaf4ed&oe=5AEB9445","created_time":"2018-01-03T17:04:00+0000","message":"Cajun
+        Cafe`s Bourbon Chicken (From The Mall)\n\n1 pound chicken leg or thigh meat,
+        cut in bite size chunks\n4 ounces soy sauce\n\u00bd cup brown sugar\n\u00bd
+        teaspoon garlic powder\n....\n\n**Please - We need your help to stay in this
+        social network. Say something about our posts (yes, yum or smile emoticon
+        will do) or we''ll completely disappear from your news feed. Appreciate your
+        help.\n\nFull recipe : http:\/\/cookingsalad4u.blogspot.com\/2017\/08\/cajun-cafes-bourbon-chicken.html","reactions_like":{"data":[],"summary":{"total_count":1219}},"reactions_love":{"data":[],"summary":{"total_count":89}},"reactions_wow":{"data":[],"summary":{"total_count":29}},"reactions_haha":{"data":[],"summary":{"total_count":5}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875780602599899"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/p720x720\/26169947_875779219266704_4998804882012102045_n.jpg?oh=b584e8fc6b7a842ee0a67520acfbc0f3&oe=5AC2D896","created_time":"2018-01-03T16:01:00+0000","message":"Homemade
+        lemon Pound Cake with lemon glaze. \ud83c\udf4b\ud83c\udf70\n\nFB is saying
+        it is changing who we see in our newsfeed, again!\nSo, my friends, If you
+        can see this recipe, PLEASE put a comment below. It doesn''t matter what you
+        comment with...anything will work, (Yes or a Smile Face or a heart emoticon
+        will do) just do SOMETHING to show Face Book that you DO want to see all the
+        posts, I am losing the people that click LIKE because of Facebook structure
+        - Thank You all so much!! ** Hugs\n\nFull recipe : https:\/\/cookingsalad4u.blogspot.com\/2017\/06\/homemade-lemon-pound-cake-with-lemon.html","reactions_like":{"data":[],"summary":{"total_count":503}},"reactions_love":{"data":[],"summary":{"total_count":55}},"reactions_wow":{"data":[],"summary":{"total_count":11}},"reactions_haha":{"data":[],"summary":{"total_count":2}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875779365933356"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167357_875740279270598_7927042987434634649_n.jpg?oh=128e375abd3bfbad16610851cf9bf86f&oe=5AF8CCD1","created_time":"2018-01-03T15:00:00+0000","message":"Easy
+        Spicy Southern Chicken Spaghetti\n\n1 lb pasta \u2013 cooked\n1 lb chicken
+        tenders\n2 TBS butter\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2017\/02\/easy-spicy-southern-chicken-spaghetti.html","reactions_like":{"data":[],"summary":{"total_count":356}},"reactions_love":{"data":[],"summary":{"total_count":20}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875740429270583"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/26165922_875286515982641_494121219074827762_n.jpg?oh=dbb26908108d08ca0f8c224488e913e5&oe=5ABF119C","created_time":"2018-01-03T14:00:00+0000","message":"Salisbury
+        Steak with Caramelized Onion Gravy\n\nOnion Gravy\n2 large red onions, thinly
+        sliced\n2 tablespoons unsalted butter\n2 tablespoons all-purpose flour\n\nFull
+        Recipe : http:\/\/www.usrecipe.com\/2017\/06\/salisbury-steak-with-caramelized-onion.html","reactions_like":{"data":[],"summary":{"total_count":296}},"reactions_love":{"data":[],"summary":{"total_count":19}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875286645982628"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/26169178_875284845982808_3499784222592926965_n.jpg?oh=7dd6f1d2fda676f8bf54d2decc2745af&oe=5AF7597B","created_time":"2018-01-03T12:00:00+0000","message":"Strawberry
+        shortcake cheesecake\n\nBottom crust\n22 Golden Oreos Crushed\n5 Tbsp Melted
+        butter\nFilling\n4 8oz packages cream cheese\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/09\/strawberry-shortcake-cheesecake.html","reactions_like":{"data":[],"summary":{"total_count":357}},"reactions_love":{"data":[],"summary":{"total_count":58}},"reactions_wow":{"data":[],"summary":{"total_count":11}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875285082649451"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167032_875284522649507_6233004625721281983_n.png?oh=5fa7b14ad8463b4fe52024f813b82f0d&oe=5AF0400F","created_time":"2018-01-03T05:30:00+0000","message":"Smothered
+        Cube Steak\n\nThis is a delicious meal made with inexpensive cuts of cube
+        steaks. It goes great with mashed potatoes and a salad. The perfect weekday
+        dinner for those on a tight budget. \n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/smothered-cube-steak.html","reactions_like":{"data":[],"summary":{"total_count":276}},"reactions_love":{"data":[],"summary":{"total_count":26}},"reactions_wow":{"data":[],"summary":{"total_count":3}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875284675982825"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26195427_875283732649586_8695842771970267631_n.jpg?oh=ce86518d177461be39fca99b1ccfd04b&oe=5AB3FEC5","created_time":"2018-01-03T04:28:00+0000","message":"Southern
+        Creamy Pralines\n\nThis is a very old family recipe\n3 cups sugar\n1 cup whole
+        fat buttermilk\n1\/4 cup light corn syrup\n\nPlease say something when you
+        see the recipe! Saying ANYthing is good, it helps you continue seeing my posts!
+        Thank you!\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/southern-creamy-pralines.html","reactions_like":{"data":[],"summary":{"total_count":372}},"reactions_love":{"data":[],"summary":{"total_count":20}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875283822649577"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-0\/p180x540\/26113963_875283369316289_4804764212884717174_n.jpg?oh=ad55eaac60c0fa79e3b39d08966c9296&oe=5ABDF28B","created_time":"2018-01-03T03:27:00+0000","message":"Deep
+        Fried Cheese Ravioli with Crawfish\n\n1lb crawfish tails with fat\nFrozen
+        cheese ravioli\nItalian breadcrumbs\nParmesan cheese\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/09\/deep-fried-cheese-ravioli-with-crawfish.html","reactions_like":{"data":[],"summary":{"total_count":466}},"reactions_love":{"data":[],"summary":{"total_count":56}},"reactions_wow":{"data":[],"summary":{"total_count":25}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875283512649608"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26114152_875282215983071_8797663300164496642_n.jpg?oh=09e87834e92dc10d26fb430110dbe16f&oe=5AFF5941","created_time":"2018-01-02T20:00:00+0000","message":"Better
+        Than Take-Out Fried Rice\n\n4 c rice, prepared\n1\/2 lb boneless chicken breast,
+        cooked and cut into bite-size pieces. or same amount of medium-size cooked
+        shrimp.\n1 c peas and carrots, frozen\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/08\/better-than-take-out-fried-rice.html","reactions_like":{"data":[],"summary":{"total_count":537}},"reactions_love":{"data":[],"summary":{"total_count":41}},"reactions_wow":{"data":[],"summary":{"total_count":5}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":1}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875282482649711"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/26166391_875281032649856_2147397974567256288_n.jpg?oh=bd4708ad8945795ba6240882cf0f9d59&oe=5ABFA313","created_time":"2018-01-02T18:00:00+0000","message":"Caramel
+        Apple Cheesecake Bar\n\nCrust:\n2 cups all-purpose flour\n1\/2 cup firmly
+        packed brown sugar\n1 cup (2 sticks) butter, softened\n\nfull recipe : http:\/\/www.usrecipe.com\/2016\/02\/caramel-apple-cheesecake-bars.html","reactions_like":{"data":[],"summary":{"total_count":147}},"reactions_love":{"data":[],"summary":{"total_count":13}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875281679316458"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26165675_875287862649173_9150713100396211438_n.jpg?oh=9a5520537e1e3ee4891706a5f912360c&oe=5AF4A599","created_time":"2018-01-02T17:00:00+0000","message":"Please
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!\n\nThe Greatest Queso That Ever Lived\n\n1
+        block (32 Oz. Block) Velveeta Cheese\n1 package (8 Oz. Package) Cream Cheese\n1
+        can (10 Oz. Can) Rotel\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/02\/the-greatest-queso-that-ever-lived.html","reactions_like":{"data":[],"summary":{"total_count":535}},"reactions_love":{"data":[],"summary":{"total_count":39}},"reactions_wow":{"data":[],"summary":{"total_count":4}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875288082649151"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167161_875279105983382_4318854017924778680_n.jpg?oh=ce4e384886a20646ef04a50cfff8198d&oe=5AB0D2C0","created_time":"2018-01-02T16:09:00+0000","message":"Apple
+        Enchiladas\n\nCherries or peaches can be substituted for apples.\n1 (21 ounce)
+        can apple pie filling\n6 (8 inch) flour tortillas\n\nFull recipe: http:\/\/recipesovertheworld.blogspot.com\/2016\/02\/apple-enchiladas.html\n\nPlease
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!","reactions_like":{"data":[],"summary":{"total_count":234}},"reactions_love":{"data":[],"summary":{"total_count":14}},"reactions_wow":{"data":[],"summary":{"total_count":5}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875279235983369"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26168746_875260999318526_189526602647733961_n.jpg?oh=afc10673087c3db2c322129ebd4a06c2&oe=5AB8E39A","created_time":"2018-01-02T15:18:05+0000","message":"Caramel
+        Apple Cheesecake Bar\n\n2 cups all-purpose flour\n1\/2 cup firmly packed brown
+        sugar\n1 cup (2 sticks) butter, softened\nCheesecake Filling:\n3 (8-ounce)
+        packages cream cheese, softened\n3\/4 cup sugar, plus 2 tablespoons, divided....\n\nFull
+        recipe : http:\/\/cookingsalad4u.blogspot.com\/2016\/01\/caramel-apple-cheesecake-bars.html","reactions_like":{"data":[],"summary":{"total_count":346}},"reactions_love":{"data":[],"summary":{"total_count":27}},"reactions_wow":{"data":[],"summary":{"total_count":10}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875261062651853"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26112269_874876279356998_7182678490030857585_n.jpg?oh=305d0446ab67f8ab39c99daf38b64eca&oe=5AF8FE1A","created_time":"2018-01-02T14:00:00+0000","message":"HAWAIIAN
+        STYLE TERIYAKI CHICKEN\n3 pounds chicken thigh ( boneless, skinless )\n1 cup
+        soy sauce\n1 cup water\n1 cup sugar\n5 clove(s) garlic ( 3-5 cloves, crushed
+        )\n1 ginger root ( 2-3 slices, cut thin and lengthwise )\n\nFull Recipe :
+        http:\/\/www.usrecipe.com\/2016\/08\/hawaiian-style-teriyaki-chicken.html","reactions_like":{"data":[],"summary":{"total_count":297}},"reactions_love":{"data":[],"summary":{"total_count":16}},"reactions_wow":{"data":[],"summary":{"total_count":6}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_874876376023655"}],"paging":{"cursors":{"before":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUSTBNemMxTmpRd05URXhNVE0zT1RNMk1qa1BER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM05Ua3hNREUxT1RJMU16WXhNQThFZAEdsdFpRWmFUaGRBQVE9PQZDZD","after":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUZAzNNalk1T1Rrek9URXlOVEl6TnpVeE5qVVBER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM05EZAzNOak0zTmpBeU16WTFOUThFZAEdsdFpRWmFTNUJnQVE9PQZDZD"},"next":"https:\/\/graph.facebook.com\/v2.10\/236017159909583\/posts?fields=full_picture\u00252Ccreated_time\u00252Cmessage\u00252Creactions.type\u002528LIKE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_like\u002529\u00252Creactions.type\u002528LOVE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_love\u002529\u00252Creactions.type\u002528WOW\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_wow\u002529\u00252Creactions.type\u002528HAHA\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_haha\u002529\u00252Creactions.type\u002528SAD\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_sad\u002529\u00252Creactions.type\u002528ANGRY\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_angry\u002529&limit=25&after=Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUZAzNNalk1T1Rrek9URXlOVEl6TnpVeE5qVVBER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM05EZAzNOak0zTmpBeU16WTFOUThFZAEdsdFpRWmFTNUJnQVE9PQZDZD"}}'
+    http_version: 
+  recorded_at: Thu, 04 Jan 2018 13:53:14 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.10/236017159909583/posts?fields=full_picture,created_time,message,reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)&limit=25
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - OAuth <FACEBOOK_TOKEN>
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Etag:
+      - '"61e4be6ca00263ed09d6c13d48cb0e0da3c1a7e1"'
+      Strict-Transport-Security:
+      - max-age=15552000; preload
+      X-Fb-Trace-Id:
+      - HuGcn2E53EH
+      X-Fb-Rev:
+      - '3555641'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - application/json
+      Facebook-Api-Version:
+      - v2.10
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - 9LkB1az8MQbkSNRqgN72K/0GXcu2kSvRKQsoD4/BvUjQFBd7SAHP26TF5HKsQ2/DjWa4Zr20jbzf2Hmp7dfoeg==
+      Date:
+      - Thu, 04 Jan 2018 13:53:14 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167125_875909935920299_521963879419668344_n.jpg?oh=40c4d4553eb59d903beef7aec747944f&oe=5ABD4752","created_time":"2018-01-04T12:00:00+0000","message":"Cherry
+        Cheese Coffee Cake\n\nHave all your favorite desserts at once! Cherry Cheese
+        Coffee Cake is the perfect breakfast treat, or a delicious way to end the
+        day.\n\nCAKE & FILLING:\n2 (8-ounce) pakages refrigerated crescent rolls\n8
+        ounces cream cheese\n\u00bc cup powdered sugar\n\nFull Recipe : http:\/\/www.usrecipe.com\/2017\/07\/cherry-cheese-coffee-cake.html","reactions_like":{"data":[],"summary":{"total_count":52}},"reactions_love":{"data":[],"summary":{"total_count":5}},"reactions_wow":{"data":[],"summary":{"total_count":1}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875910159253610"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-0\/p180x540\/26168070_875913105919982_2775353085367225124_n.jpg?oh=ab077ab0649eace0772978c899065410&oe=5AF9022D","created_time":"2018-01-04T05:30:00+0000","message":"Teriyaki
+        Chicken Wings\n\n2 - 4 pound package of chicken wings\n1 cup dark brown sugar\n1\/2
+        cup white sugar\n1 cup soy sauce\n\nFull Recipe : http:\/\/www.usrecipe.com\/2017\/03\/teriyaki-chicken-wings.html","reactions_like":{"data":[],"summary":{"total_count":196}},"reactions_love":{"data":[],"summary":{"total_count":16}},"reactions_wow":{"data":[],"summary":{"total_count":1}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875913295919963"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167160_875912055920087_1365697879141035726_n.png?oh=95e3bf19ff95e5ca03766f6fcfa6312b&oe=5AF74537","created_time":"2018-01-04T04:30:00+0000","message":"Melted
+        milk chocolate or dark chocolate\nYou need first \n\n3 cups coconut flakes\n1
+        cup condensed milk\n\n***Please remember to like, comment and share to continue
+        seeing my posts. Thank you!*\n\nFull Recipe : http:\/\/www.usrecipe.com\/2017\/07\/melted-milk-chocolate-or-dark-chocolate.html","reactions_like":{"data":[],"summary":{"total_count":121}},"reactions_love":{"data":[],"summary":{"total_count":18}},"reactions_wow":{"data":[],"summary":{"total_count":3}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875912229253403"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-0\/p480x480\/26195987_875910725920220_8861682668805719176_n.jpg?oh=2ac0fd4218551551198dcccb8ae4625d&oe=5AF67113","created_time":"2018-01-04T03:30:00+0000","message":"This
+        looks great. We made a strawberry cake for my hubby\u2019s birthday a few
+        years back, and my mother still talks about it\n\nFresh Strawberry Cake\n\n2
+        cups all purpose flour\n1 teaspoon baking powder\n1\/2 teaspoon baking soda\n1\/8
+        teaspoon salt\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/fresh-strawberry-cake.html\n\n***Please
+        remember to like, comment and share to continue seeing my posts. Thank you!*","reactions_like":{"data":[],"summary":{"total_count":152}},"reactions_love":{"data":[],"summary":{"total_count":17}},"reactions_wow":{"data":[],"summary":{"total_count":0}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875910842586875"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26169812_875933409251285_4214624972374767055_n.jpg?oh=ca62f6e964259b507e1d6cbb30994ae2&oe=5ABB5334","created_time":"2018-01-04T02:25:00+0000","message":"Crock
+        Pot Sausage & Cheese Tortellini\n\nI made this for the first time last night
+        and it was super super yummy! My hubby and son devoured all of it. Then begged
+        for more! ...The response to this recipe has been fantastic\n\nPlease say
+        something when you see the recipe! Saying ANYthing is good, it helps you continue
+        seeing my posts! Thank you!\n\nFull recipe : http:\/\/allneweasyrecipes.blogspot.com\/2016\/05\/crock-pot-sausage-cheese-tortellini.html","reactions_like":{"data":[],"summary":{"total_count":250}},"reactions_love":{"data":[],"summary":{"total_count":23}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875933852584574"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26166606_875932895918003_3881411369354327767_n.png?oh=0988cc7adffdf83c4b4e51784cc25e6f&oe=5AB64788","created_time":"2018-01-04T01:22:00+0000","message":"Chicken
+        Dumpling Casserole\n\n3 boneless chicken breasts, boiled and shredded\n2 c
+        chicken stock (from boiling breasts above)\n1 stick butter\n2 c milk\n1 can
+        cream of chicken soup\n3 tsp wylers chicken granules\n\nPlease say something
+        when you see the recipe! Saying ANYthing is good, it helps you continue seeing
+        my posts! Thank you!\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/03\/chicken-dumpling-casserole.html","reactions_like":{"data":[],"summary":{"total_count":347}},"reactions_love":{"data":[],"summary":{"total_count":25}},"reactions_wow":{"data":[],"summary":{"total_count":6}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875933009251325"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167586_875932522584707_4131792703620506872_n.jpg?oh=969df544722518b557583988592c9a41&oe=5AF1009F","created_time":"2018-01-04T00:21:00+0000","message":"Old
+        Fashioned Banana Cream Pie\n1 (9 inch) pie crusts, baked\n3 cups whole milk\n3\u20444
+        cup white sugar\n1\u20443 cup all-purpose flour\n1\u20444 teaspoon salt\n3
+        egg yolks, slightly beaten\n2 tablespoons butter\n1 teaspoon vanilla\n3 bananas\n\nPLEASE
+        LIKE AND SHARE WITH YOUR FRIENDS\n\nRecipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/01\/old-fashioned-banana-cream-pie.html","reactions_like":{"data":[],"summary":{"total_count":177}},"reactions_love":{"data":[],"summary":{"total_count":22}},"reactions_wow":{"data":[],"summary":{"total_count":3}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875932669251359"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26166532_875915529253073_2932109900200204302_n.jpg?oh=fab42e881f0ee11837c888f0e5ff9d8e&oe=5AF63212","created_time":"2018-01-03T23:30:00+0000","message":"Grandma\u2019s
+        Chocolate Pie\nIngredients :\n\u00bd c. cocoa\n\u00bc cup cornstarch\n3 egg
+        yolks\n1 \u00bd c. sugar\n\u00bc tsp. salt\n2 c. milk\n1 tsp. vanilla\n\nIMPORTANT**
+        Facebook will hide my future posts from your News feed if you don\u2019t \"Like\"
+        \"Share\" or \"Comment\" on my posts\nSHARE to your timeline to find it when
+        you want it. INVITE your\nfriends who love recipes too!\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2015\/12\/grandmas-chocolate-pie.html","reactions_like":{"data":[],"summary":{"total_count":73}},"reactions_love":{"data":[],"summary":{"total_count":16}},"reactions_wow":{"data":[],"summary":{"total_count":1}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875915582586401"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/26169493_875915105919782_7477326626960270369_n.jpg?oh=f3ad19469d46a4339688048e212464ef&oe=5AECC60A","created_time":"2018-01-03T22:12:51+0000","message":"RICE
+        KRISPIE TREAT NO-BAKE CHEESECAKE \u2014 The possibilities are endless!! What
+        a cool idea!!!\n\nThis No Bake Rice Krispy Treat Cheesecake is phenomenal!
+        Light, fluffy and packed with flavor, it''s perfect for any and every die-hard
+        RKT fan!\n\n**Please - We need your help to stay in this social network. Say
+        something about our posts (yes, yum or smile emoticon will do) or we''ll completely
+        disappear from your news feed. Appreciate your help.\n\nFull recipe : http:\/\/cookingsalad4u.blogspot.com\/2017\/02\/rice-krispy-treat-no-bake-cheesecake.html","reactions_like":{"data":[],"summary":{"total_count":926}},"reactions_love":{"data":[],"summary":{"total_count":108}},"reactions_wow":{"data":[],"summary":{"total_count":68}},"reactions_haha":{"data":[],"summary":{"total_count":2}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875915129253113"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26166306_875746182603341_3633488465789991826_n.jpg?oh=d08af2c355e2d9e660d3b127357cbde2&oe=5AC08EA4","created_time":"2018-01-03T20:00:00+0000","message":"Fall-Off-The-Bone
+        Ribs\n\none rack of pork baby back ribs\njuice of one lemon\n1\/4 cup dry
+        rub (your own or my recipe)\n1\/2 cup barbeque sauce (your own or my recipe)\n\nFull
+        Recipe : http:\/\/www.usrecipe.com\/2017\/07\/fall-off-bone-ribs.html","reactions_like":{"data":[],"summary":{"total_count":459}},"reactions_love":{"data":[],"summary":{"total_count":28}},"reactions_wow":{"data":[],"summary":{"total_count":14}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875746242603335"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-0\/p180x540\/26165298_875745905936702_940472037468102647_n.jpg?oh=64e0016f55013ce2e6bf343dfe148a0b&oe=5AC295F9","created_time":"2018-01-03T18:00:00+0000","message":"Italian
+        Macaroni Salad\n\n1 lb. elbow macaroni\n6 oz. can large black olives, sliced
+        (I prefer to slice them myself)\n1 large red bell pepper, chopped\n1 medium
+        yellow onion, chopped\n\nFull Recipe : http:\/\/www.usrecipe.com\/2017\/07\/italian-macaroni-salad.html","reactions_like":{"data":[],"summary":{"total_count":355}},"reactions_love":{"data":[],"summary":{"total_count":21}},"reactions_wow":{"data":[],"summary":{"total_count":0}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875745999270026"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26195666_875780509266575_4529920316087103955_n.jpg?oh=31fd5348b727a730ee87c15be6eaf4ed&oe=5AEB9445","created_time":"2018-01-03T17:04:00+0000","message":"Cajun
+        Cafe`s Bourbon Chicken (From The Mall)\n\n1 pound chicken leg or thigh meat,
+        cut in bite size chunks\n4 ounces soy sauce\n\u00bd cup brown sugar\n\u00bd
+        teaspoon garlic powder\n....\n\n**Please - We need your help to stay in this
+        social network. Say something about our posts (yes, yum or smile emoticon
+        will do) or we''ll completely disappear from your news feed. Appreciate your
+        help.\n\nFull recipe : http:\/\/cookingsalad4u.blogspot.com\/2017\/08\/cajun-cafes-bourbon-chicken.html","reactions_like":{"data":[],"summary":{"total_count":1219}},"reactions_love":{"data":[],"summary":{"total_count":89}},"reactions_wow":{"data":[],"summary":{"total_count":29}},"reactions_haha":{"data":[],"summary":{"total_count":5}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875780602599899"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/p720x720\/26169947_875779219266704_4998804882012102045_n.jpg?oh=b584e8fc6b7a842ee0a67520acfbc0f3&oe=5AC2D896","created_time":"2018-01-03T16:01:00+0000","message":"Homemade
+        lemon Pound Cake with lemon glaze. \ud83c\udf4b\ud83c\udf70\n\nFB is saying
+        it is changing who we see in our newsfeed, again!\nSo, my friends, If you
+        can see this recipe, PLEASE put a comment below. It doesn''t matter what you
+        comment with...anything will work, (Yes or a Smile Face or a heart emoticon
+        will do) just do SOMETHING to show Face Book that you DO want to see all the
+        posts, I am losing the people that click LIKE because of Facebook structure
+        - Thank You all so much!! ** Hugs\n\nFull recipe : https:\/\/cookingsalad4u.blogspot.com\/2017\/06\/homemade-lemon-pound-cake-with-lemon.html","reactions_like":{"data":[],"summary":{"total_count":503}},"reactions_love":{"data":[],"summary":{"total_count":55}},"reactions_wow":{"data":[],"summary":{"total_count":11}},"reactions_haha":{"data":[],"summary":{"total_count":2}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875779365933356"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167357_875740279270598_7927042987434634649_n.jpg?oh=128e375abd3bfbad16610851cf9bf86f&oe=5AF8CCD1","created_time":"2018-01-03T15:00:00+0000","message":"Easy
+        Spicy Southern Chicken Spaghetti\n\n1 lb pasta \u2013 cooked\n1 lb chicken
+        tenders\n2 TBS butter\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2017\/02\/easy-spicy-southern-chicken-spaghetti.html","reactions_like":{"data":[],"summary":{"total_count":356}},"reactions_love":{"data":[],"summary":{"total_count":20}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875740429270583"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/26165922_875286515982641_494121219074827762_n.jpg?oh=dbb26908108d08ca0f8c224488e913e5&oe=5ABF119C","created_time":"2018-01-03T14:00:00+0000","message":"Salisbury
+        Steak with Caramelized Onion Gravy\n\nOnion Gravy\n2 large red onions, thinly
+        sliced\n2 tablespoons unsalted butter\n2 tablespoons all-purpose flour\n\nFull
+        Recipe : http:\/\/www.usrecipe.com\/2017\/06\/salisbury-steak-with-caramelized-onion.html","reactions_like":{"data":[],"summary":{"total_count":296}},"reactions_love":{"data":[],"summary":{"total_count":19}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875286645982628"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/26169178_875284845982808_3499784222592926965_n.jpg?oh=7dd6f1d2fda676f8bf54d2decc2745af&oe=5AF7597B","created_time":"2018-01-03T12:00:00+0000","message":"Strawberry
+        shortcake cheesecake\n\nBottom crust\n22 Golden Oreos Crushed\n5 Tbsp Melted
+        butter\nFilling\n4 8oz packages cream cheese\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/09\/strawberry-shortcake-cheesecake.html","reactions_like":{"data":[],"summary":{"total_count":357}},"reactions_love":{"data":[],"summary":{"total_count":58}},"reactions_wow":{"data":[],"summary":{"total_count":11}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875285082649451"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167032_875284522649507_6233004625721281983_n.png?oh=5fa7b14ad8463b4fe52024f813b82f0d&oe=5AF0400F","created_time":"2018-01-03T05:30:00+0000","message":"Smothered
+        Cube Steak\n\nThis is a delicious meal made with inexpensive cuts of cube
+        steaks. It goes great with mashed potatoes and a salad. The perfect weekday
+        dinner for those on a tight budget. \n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/smothered-cube-steak.html","reactions_like":{"data":[],"summary":{"total_count":276}},"reactions_love":{"data":[],"summary":{"total_count":26}},"reactions_wow":{"data":[],"summary":{"total_count":3}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875284675982825"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26195427_875283732649586_8695842771970267631_n.jpg?oh=ce86518d177461be39fca99b1ccfd04b&oe=5AB3FEC5","created_time":"2018-01-03T04:28:00+0000","message":"Southern
+        Creamy Pralines\n\nThis is a very old family recipe\n3 cups sugar\n1 cup whole
+        fat buttermilk\n1\/4 cup light corn syrup\n\nPlease say something when you
+        see the recipe! Saying ANYthing is good, it helps you continue seeing my posts!
+        Thank you!\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/03\/southern-creamy-pralines.html","reactions_like":{"data":[],"summary":{"total_count":372}},"reactions_love":{"data":[],"summary":{"total_count":20}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875283822649577"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-0\/p180x540\/26113963_875283369316289_4804764212884717174_n.jpg?oh=ad55eaac60c0fa79e3b39d08966c9296&oe=5ABDF28B","created_time":"2018-01-03T03:27:00+0000","message":"Deep
+        Fried Cheese Ravioli with Crawfish\n\n1lb crawfish tails with fat\nFrozen
+        cheese ravioli\nItalian breadcrumbs\nParmesan cheese\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/09\/deep-fried-cheese-ravioli-with-crawfish.html","reactions_like":{"data":[],"summary":{"total_count":466}},"reactions_love":{"data":[],"summary":{"total_count":56}},"reactions_wow":{"data":[],"summary":{"total_count":25}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875283512649608"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26114152_875282215983071_8797663300164496642_n.jpg?oh=09e87834e92dc10d26fb430110dbe16f&oe=5AFF5941","created_time":"2018-01-02T20:00:00+0000","message":"Better
+        Than Take-Out Fried Rice\n\n4 c rice, prepared\n1\/2 lb boneless chicken breast,
+        cooked and cut into bite-size pieces. or same amount of medium-size cooked
+        shrimp.\n1 c peas and carrots, frozen\n\nFull Recipe : http:\/\/www.usrecipe.com\/2016\/08\/better-than-take-out-fried-rice.html","reactions_like":{"data":[],"summary":{"total_count":537}},"reactions_love":{"data":[],"summary":{"total_count":41}},"reactions_wow":{"data":[],"summary":{"total_count":5}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":1}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875282482649711"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/26166391_875281032649856_2147397974567256288_n.jpg?oh=bd4708ad8945795ba6240882cf0f9d59&oe=5ABFA313","created_time":"2018-01-02T18:00:00+0000","message":"Caramel
+        Apple Cheesecake Bar\n\nCrust:\n2 cups all-purpose flour\n1\/2 cup firmly
+        packed brown sugar\n1 cup (2 sticks) butter, softened\n\nfull recipe : http:\/\/www.usrecipe.com\/2016\/02\/caramel-apple-cheesecake-bars.html","reactions_like":{"data":[],"summary":{"total_count":147}},"reactions_love":{"data":[],"summary":{"total_count":13}},"reactions_wow":{"data":[],"summary":{"total_count":2}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875281679316458"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26165675_875287862649173_9150713100396211438_n.jpg?oh=9a5520537e1e3ee4891706a5f912360c&oe=5AF4A599","created_time":"2018-01-02T17:00:00+0000","message":"Please
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!\n\nThe Greatest Queso That Ever Lived\n\n1
+        block (32 Oz. Block) Velveeta Cheese\n1 package (8 Oz. Package) Cream Cheese\n1
+        can (10 Oz. Can) Rotel\n\nFull recipe : http:\/\/recipesovertheworld.blogspot.com\/2016\/02\/the-greatest-queso-that-ever-lived.html","reactions_like":{"data":[],"summary":{"total_count":535}},"reactions_love":{"data":[],"summary":{"total_count":39}},"reactions_wow":{"data":[],"summary":{"total_count":4}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875288082649151"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26167161_875279105983382_4318854017924778680_n.jpg?oh=ce4e384886a20646ef04a50cfff8198d&oe=5AB0D2C0","created_time":"2018-01-02T16:09:00+0000","message":"Apple
+        Enchiladas\n\nCherries or peaches can be substituted for apples.\n1 (21 ounce)
+        can apple pie filling\n6 (8 inch) flour tortillas\n\nFull recipe: http:\/\/recipesovertheworld.blogspot.com\/2016\/02\/apple-enchiladas.html\n\nPlease
+        say something when you see the recipe! Saying ANYthing is good, it helps you
+        continue seeing my posts! Thank you!","reactions_like":{"data":[],"summary":{"total_count":234}},"reactions_love":{"data":[],"summary":{"total_count":14}},"reactions_wow":{"data":[],"summary":{"total_count":5}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875279235983369"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26168746_875260999318526_189526602647733961_n.jpg?oh=afc10673087c3db2c322129ebd4a06c2&oe=5AB8E39A","created_time":"2018-01-02T15:18:05+0000","message":"Caramel
+        Apple Cheesecake Bar\n\n2 cups all-purpose flour\n1\/2 cup firmly packed brown
+        sugar\n1 cup (2 sticks) butter, softened\nCheesecake Filling:\n3 (8-ounce)
+        packages cream cheese, softened\n3\/4 cup sugar, plus 2 tablespoons, divided....\n\nFull
+        recipe : http:\/\/cookingsalad4u.blogspot.com\/2016\/01\/caramel-apple-cheesecake-bars.html","reactions_like":{"data":[],"summary":{"total_count":346}},"reactions_love":{"data":[],"summary":{"total_count":27}},"reactions_wow":{"data":[],"summary":{"total_count":10}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_875261062651853"},{"full_picture":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/26112269_874876279356998_7182678490030857585_n.jpg?oh=305d0446ab67f8ab39c99daf38b64eca&oe=5AF8FE1A","created_time":"2018-01-02T14:00:00+0000","message":"HAWAIIAN
+        STYLE TERIYAKI CHICKEN\n3 pounds chicken thigh ( boneless, skinless )\n1 cup
+        soy sauce\n1 cup water\n1 cup sugar\n5 clove(s) garlic ( 3-5 cloves, crushed
+        )\n1 ginger root ( 2-3 slices, cut thin and lengthwise )\n\nFull Recipe :
+        http:\/\/www.usrecipe.com\/2016\/08\/hawaiian-style-teriyaki-chicken.html","reactions_like":{"data":[],"summary":{"total_count":297}},"reactions_love":{"data":[],"summary":{"total_count":16}},"reactions_wow":{"data":[],"summary":{"total_count":6}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_874876376023655"}],"paging":{"cursors":{"before":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUSTBNemMxTmpRd05URXhNVE0zT1RNMk1qa1BER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM05Ua3hNREUxT1RJMU16WXhNQThFZAEdsdFpRWmFUaGRBQVE9PQZDZD","after":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUZAzNNalk1T1Rrek9URXlOVEl6TnpVeE5qVVBER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM05EZAzNOak0zTmpBeU16WTFOUThFZAEdsdFpRWmFTNUJnQVE9PQZDZD"},"next":"https:\/\/graph.facebook.com\/v2.10\/236017159909583\/posts?fields=full_picture\u00252Ccreated_time\u00252Cmessage\u00252Creactions.type\u002528LIKE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_like\u002529\u00252Creactions.type\u002528LOVE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_love\u002529\u00252Creactions.type\u002528WOW\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_wow\u002529\u00252Creactions.type\u002528HAHA\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_haha\u002529\u00252Creactions.type\u002528SAD\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_sad\u002529\u00252Creactions.type\u002528ANGRY\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_angry\u002529&limit=25&after=Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUZAzNNalk1T1Rrek9URXlOVEl6TnpVeE5qVVBER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM05EZAzNOak0zTmpBeU16WTFOUThFZAEdsdFpRWmFTNUJnQVE9PQZDZD"}}'
+    http_version: 
+  recorded_at: Thu, 04 Jan 2018 13:53:14 GMT
 recorded_with: VCR 3.0.3

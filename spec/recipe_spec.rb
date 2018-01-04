@@ -83,15 +83,9 @@ describe 'Tests Facebook API library' do
       _(recipe.full_picture).must_match %r{https?:\/\/[\S]+}
     end
 
-    # it 'HAPPY: should identify owner page' do
-    #   recipe = @page.recipes[0]
-    #   _(recipe.from.id).wont_be_nil
-    #   _(recipe.from.name).must_equal CORRECT['name']
-    # end
-
     it 'HAPPY: should check recipes' do
       recipes = @page.recipes
-      _(recipes.count).must_equal 10
+      _(recipes.count).must_be :<=, 25
     end
   end
 end
