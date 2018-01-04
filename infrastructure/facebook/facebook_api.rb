@@ -39,21 +39,21 @@ module RecipeBuddy
         end
 
         def recipes_reactions_positive_url
-          ',reactions.type(LIKE).limit(0).summary(total_count)'\
-          '.as(reactions_like)'\
-          ',reactions.type(LOVE).limit(0).summary(total_count)'\
-          '.as(reactions_love)'\
-          ',reactions.type(WOW).limit(0).summary(total_count)'\
-          '.as(reactions_wow)'\
-          ',reactions.type(HAHA).limit(0).summary(total_count)'\
-          '.as(reactions_haha)'
+          positive_reaction_types = %w[LIKE LOVE WOW HAHA]
+          positive_reaction_types.map! do |reaction|
+            ",reactions.type(#{reaction}).limit(0).summary(total_count)"\
+            ".as(reactions_#{reaction.downcase})"
+          end
+          positive_reaction_types.join
         end
 
         def recipes_reactions_negative_url
-          ',reactions.type(SAD).limit(0).summary(total_count)'\
-          '.as(reactions_sad)'\
-          ',reactions.type(ANGRY).limit(0).summary(total_count)'\
-          '.as(reactions_angry)'
+          negative_reaction_types = %w[SAD ANGRY]
+          negative_reaction_types.map! do |reaction|
+            ",reactions.type(#{reaction}).limit(0).summary(total_count)"\
+            ".as(reactions_#{reaction.downcase})"
+          end
+          negative_reaction_types.join
         end
 
         def recipes_next_url
