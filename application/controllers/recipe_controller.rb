@@ -28,8 +28,8 @@ module RecipeBuddy
       routing.on Integer do |id|
         # GET #{API_ROOT}/recipe/:id request
         routing.get do
-          recipe = Repository::For[Entity::Recipe].find_id(id)
-          RecipeRepresenter.new(recipe).to_json
+          find_result = FindDatabaseRecipe.call(id: id)
+          represent_response(find_result, RecipeRepresenter)
         end
       end
 
