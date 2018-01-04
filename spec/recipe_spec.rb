@@ -91,7 +91,7 @@ describe 'Tests Facebook API library' do
 
     it 'HAPPY: should check recipes' do
       recipes = @page.recipes
-      _(recipes.count).must_equal 10
+      _(recipes.count).must_equal 25
     end
   end
 end
