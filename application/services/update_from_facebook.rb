@@ -32,10 +32,10 @@ module RecipeBuddy
       load_page_request = PageRepresenter.new(stored_page)
       LoadRecipesWorker.perform_async(load_page_request.to_json)
       Right(Result.new(:created, stored_page))
-    # rescue StandardError => e
-    #   puts e
-    #   Left(Result.new(:internal_error,
-    #                   'Could not store page fetched from Facebook'))
+    rescue StandardError => e
+      puts e
+      Left(Result.new(:internal_error,
+                      'Could not store page fetched from Facebook'))
     end
   end
 end
