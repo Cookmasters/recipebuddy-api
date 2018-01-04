@@ -16,7 +16,12 @@ module RecipeBuddy
       end
 
       def self.find_id(id)
-        Database::PageOrm.first(id: id).try(rebuild_entity)
+        db_page = Database::PageOrm.first(id: id)
+        rebuild_entity(db_page)
+      end
+
+      def self.all
+        Database::PageOrm.all.map { |db_page| rebuild_entity(db_page) }
       end
 
       def self.find_origin_id(origin_id)
@@ -31,10 +36,6 @@ module RecipeBuddy
           db.add_recipe(recipe)
         end
         rebuild_entity(db)
-      end
-
-      def self.all
-        Database::PageOrm.all.map { |db_page| rebuild_entity(db_page) }
       end
 
       def self.create(entity)
@@ -72,6 +73,10 @@ module RecipeBuddy
 
       def self.reset_request(page_id)
         Database::PageOrm.where(id: page_id).update(request_id: nil)
+      end
+
+      def self.update_request(page_id, request_id)
+        Database::PageOrm.where(id: page_id).update(request_id: request_id)
       end
     end
   end

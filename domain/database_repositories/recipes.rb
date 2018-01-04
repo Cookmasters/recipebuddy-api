@@ -21,6 +21,10 @@ module RecipeBuddy
         best_recipes.map { |db_recipe| rebuild_entity(db_recipe) }
       end
 
+      def self.delete_by_page(page_id)
+        Database::RecipeOrm.where(page_id: page_id).delete
+      end
+
       def self.find_id(id)
         db_record = Database::RecipeOrm.first(id: id)
         rebuild_entity(db_record)

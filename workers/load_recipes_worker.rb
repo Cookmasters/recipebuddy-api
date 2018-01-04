@@ -11,7 +11,7 @@ class LoadRecipesWorker
   Econfig.env = ENV['RACK_ENV'] || 'development'
   Econfig.root = File.expand_path('..', File.dirname(__FILE__))
 
-  require_relative 'test_helper' if ENV['RACK_ENV'] == 'test'
+  # require_relative 'test_helper' if ENV['RACK_ENV'] == 'test'
 
   Shoryuken.sqs_client = Aws::SQS::Client.new(
     access_key_id: LoadRecipesWorker.config.AWS_ACCESS_KEY_ID,

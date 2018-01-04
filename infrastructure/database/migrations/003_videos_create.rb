@@ -7,7 +7,7 @@ Sequel.migration do
     create_table(:videos) do
       primary_key :id
       String :origin_id, unique: true
-      foreign_key :recipe_id, :recipes
+      foreign_key :recipe_id, :recipes, {on_delete: :cascade}
 
       String :title
       DateTime :published_at
