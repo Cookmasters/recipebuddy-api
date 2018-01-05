@@ -72,7 +72,7 @@ module RecipeBuddy
       end
 
       def self.reset_request(page_id)
-        Database::PageOrm.where(id: page_id).update(request_id: nil)
+        Database::PageOrm.where(id: page_id).update(next: nil, request_id: nil)
       end
 
       def self.update_request(page_id, request_id)

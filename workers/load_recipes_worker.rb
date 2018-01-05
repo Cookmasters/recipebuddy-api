@@ -23,45 +23,68 @@ class LoadRecipesWorker
   shoryuken_options queue: config.WORKER_QUEUE_URL, auto_delete: true
 
   def perform(_sqs_msg, worker_request)
-    page = get_data(worker_request)
-    query = RecipeBuddy::Facebook::Api::Query.new(page.origin_id)
-    remaining_recipes = RecipeBuddy::Facebook::RecipeMapper.new(
-      LoadRecipesWorker.config
-    ).load_several(query.recipes_next_page)[0]
-    page_validator = RecipeBuddy::Entity::PageValidator.new(page)
+    page = parse_worker_request(worker_request)
+    query = RecipeBuddy::Facebook::Api::Query.new(page.origin_id, page.next)
 
-    remaining_recipes.each do |recipe|
-      next unless check_recipe(recipe)
-      recipe.videos = page_validator.recipe_video_loader(
-        recipe,
-        LoadRecipesWorker.config
-      )
+    # Get remaining recipes
+    url = get_recipes_url(page, query)
+
+    recipes = fetch_recipes(url)
+
+    # Parse and save the recipes
+    parse_and_save_recipes(page, recipes)
+
+    # We reset the page request id
+    RecipeBuddy::Repository::Pages.reset_request(page.id)
+  end
+
+  private
+
+  def get_recipes_url(page, query)
+    puts "Token: #{page.next}"
+    page.next ? query.recipes_next_page : query.recipes_with_limit_url(100)
+  end
+
+  def fetch_recipes(query, config = LoadRecipesWorker.config)
+    puts "Query: #{query}"
+    RecipeBuddy::Facebook::RecipeMapper.new(config).load_several(query)[0]
+  end
+
+  def parse_and_save_recipes(page, recipes)
+    parsed_recipes = parse_recipes(recipes)
+    save_recipes(page, parsed_recipes)
+  end
+
+  def parse_recipes(recipes)
+    recipes.delete_if { |recipe| true unless check_recipe(recipe) }
+    recipes
+  end
+
+  def save_recipes(page, recipes, config = LoadRecipesWorker.config)
+    page_validator = RecipeBuddy::Entity::PageValidator.new(page)
+    recipes.each do |recipe|
+      recipe.videos = page_validator.recipe_video_loader(recipe, config)
       stored_recipe = RecipeBuddy::Repository::Recipes.find_or_create(
         recipe,
         page.id
       )
       publish(page.request_id, stored_recipe.id)
-      puts "Recipe added with #{recipe.videos.count} videos"
     end
-    # We rest the page request id
-    RecipeBuddy::Repository::Pages.reset_request(page.id)
   end
-
-  private
 
   def check_recipe(post)
     RecipeBuddy::Entity::RecipeChecker.new(post).recipe? &&
       RecipeBuddy::Repository::Recipes.find_origin_id(post.origin_id).nil?
   end
 
-  def get_data(request)
+  def parse_worker_request(request)
     RecipeBuddy::PageRepresenter
       .new(OpenStruct.new)
       .from_json request
   end
 
   def publish(channel, message)
-    puts 'Posting a recipe'
+    puts "Posting a recipe with ID: #{message}"
     HTTP.headers(content_type: 'application/json')
         .post(
           "#{LoadRecipesWorker.config.API_URL}/faye",
