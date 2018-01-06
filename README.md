@@ -22,7 +22,7 @@ This is our Service Oriented Architecture project API and aims to aggregate reci
 
 - GET `api/v0.1/recipe/all`: returns a json of all the recipes already saved in the database
 - GET `api/v0.1/recipe/best`: returns a json of the best 150 recipes ordered by the number of positive reactions on Facebook(like, love, wow, haha)
-- GET `api/v0.1/recipe/[id]`: returns a json the recipe
+- GET `api/v0.1/recipe/[id]`: returns a json of the recipe
 
 
 ## Install
