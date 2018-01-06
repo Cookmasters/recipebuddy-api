@@ -6,18 +6,37 @@ module RecipeBuddy
     class RecipeChecker
       def initialize(post)
         @post = post
+        @title = post.title
       end
 
       def recipe?
         content = @post.content
         return false unless content
-        count_is_recipe = 0
-        content.each_line do |line|
-          count_is_recipe = 0 unless numeric?(line[0])
-          count_is_recipe += 1 if numeric?(line[0])
-          break if count_is_recipe >= 3
+        count_ingredient_lines(content) >= 3
+      end
+
+      def count_ingredient_lines(content)
+        ingredients_count = 0
+        content.each_line.with_index do |line, index|
+          next if line == "\n"
+          is_ingredient = numeric?(line[0])
+          @title = get_title(line, index, @title, is_ingredient)
+          ingredients_count = 0 unless is_ingredient
+          ingredients_count += 1 if is_ingredient
+          break if ingredients_count >= 3
         end
-        count_is_recipe >= 3
+        ingredients_count
+      end
+
+      def get_title(line, index, previous_title, is_ingredient)
+        return line if index.zero?
+        return line if !is_ingredient &&
+                       !line.downcase.start_with?('ingredient')
+        previous_title
+      end
+
+      def recipe_title
+        @title
       end
 
       def numeric?(str)

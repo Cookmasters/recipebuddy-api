@@ -35,12 +35,12 @@ module RecipeBuddy
       page = input[:page]
       page_validator = Entity::PageValidator.new(page)
       if page_validator.recipes_page?
+        page = page_validator.load_videos(input[:config])
+        Right(page: page, id: input[:id])
+      else
         Left(Result.new(:bad_request,
                         'This Facebook page does not contain enough recipes
                         to be added in our system! Please try another one.'))
-      else
-        page = page_validator.load_videos(input[:config])
-        Right(page: page, id: input[:id])
       end
     end
 
@@ -51,7 +51,8 @@ module RecipeBuddy
       load_page_request = PageRepresenter.new(stored_page)
       LoadRecipesWorker.perform_async(load_page_request.to_json)
       Right(Result.new(:created, stored_page))
-    rescue StandardError
+    rescue StandardError => e
+      puts e
       Left(Result.new(:internal_error,
                       'Could not store page fetched from Facebook'))
     end

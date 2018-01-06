@@ -41,12 +41,10 @@ class LoadRecipesWorker
   private
 
   def get_recipes_url(page, query)
-    puts "Token: #{page.next}"
     page.next ? query.recipes_next_page : query.recipes_with_limit_url(100)
   end
 
   def fetch_recipes(query, config = LoadRecipesWorker.config)
-    puts "Query: #{query}"
     RecipeBuddy::Facebook::RecipeMapper.new(config).load_several(query)[0]
   end
 
@@ -57,6 +55,11 @@ class LoadRecipesWorker
 
   def parse_recipes(recipes)
     recipes.delete_if { |recipe| true unless check_recipe(recipe) }
+    recipes.each do |recipe|
+      checker = RecipeBuddy::Entity::RecipeChecker.new(recipe)
+      checker.recipe?
+      recipe.title = checker.recipe_title
+    end
     recipes
   end
 

@@ -14,12 +14,17 @@ module RecipeBuddy
       def recipes_page?
         posts_count = @page.recipes.count
         filter_recipes
-        ((@page.recipes.count * 1.0) / posts_count) <= 0.5
+        ((@page.recipes.count * 1.0) / posts_count) >= 0.5
       end
 
       def filter_recipes
         @page.recipes.delete_if do |post|
           true unless RecipeChecker.new(post).recipe?
+        end
+        @page.recipes.each do |recipe|
+          checker = RecipeChecker.new(recipe)
+          checker.recipe?
+          recipe.title = checker.recipe_title
         end
       end
 
