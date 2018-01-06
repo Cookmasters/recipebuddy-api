@@ -10,14 +10,16 @@ module RecipeBuddy
 
     # #{API_ROOT}/page branch
     route('page') do |routing|
-      # GET #{API_ROOT}/page/all request
+      # #{API_ROOT}/page/all branch
       routing.on 'all' do
+        # GET #{API_ROOT}/page/all request
         routing.get do
           pages = Repository::For[Entity::Page].all
           PagesRepresenter.new(Pages.new(pages)).to_json
         end
       end
 
+      # #{API_ROOT}/page/:pagename branch
       routing.on String do |pagename|
         # GET #{API_ROOT}/page/:pagename request
         routing.get do
@@ -25,7 +27,7 @@ module RecipeBuddy
           represent_response(find_result, PageRepresenter)
         end
 
-        # GET #{API_ROOT}/page/:pagename request
+        # PUT #{API_ROOT}/page/:pagename request
         routing.put do
           request_id = [request.env, request.path, Time.now.to_f].hash
           load_result = UpdateFromFacebook.new.call(

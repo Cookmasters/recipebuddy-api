@@ -25,6 +25,7 @@ module RecipeBuddy
         end
       end
 
+      # #{API_ROOT}/recipe/:id branch
       routing.on Integer do |id|
         # GET #{API_ROOT}/recipe/:id request
         routing.get do
