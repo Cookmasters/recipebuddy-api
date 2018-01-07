@@ -25,6 +25,14 @@ module RecipeBuddy
         end
       end
 
+      # GET #{API_ROOT}/recipe/search/:keyword request
+      routing.on 'search' do
+        routing.get String do |keyword|
+          recipes = Repository::For[Entity::Recipe].search(keyword)
+          RecipesRepresenter.new(Recipes.new(recipes)).to_json
+        end
+      end
+
       # #{API_ROOT}/recipe/:id branch
       routing.on Integer do |id|
         # GET #{API_ROOT}/recipe/:id request

@@ -21,6 +21,18 @@ module RecipeBuddy
         best_recipes.map { |db_recipe| rebuild_entity(db_recipe) }
       end
 
+      def self.search(keyword)
+        results = Database::RecipeOrm.where(Sequel.ilike(:title, "%#{keyword}%"))
+                                     .order(Sequel.desc(:reactions_like),
+                                            Sequel.desc(:reactions_love),
+                                            Sequel.desc(:reactions_wow),
+                                            Sequel.desc(:reactions_haha),
+                                            Sequel.asc(:reactions_angry),
+                                            Sequel.asc(:reactions_sad))
+                                     .limit(50)
+        results.map { |db_recipe| rebuild_entity(db_recipe) }
+      end
+
       def self.delete_by_page(page_id)
         Database::RecipeOrm.where(page_id: page_id).delete
       end
