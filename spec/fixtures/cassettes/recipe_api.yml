@@ -30015,4 +30015,2994 @@ http_interactions:
         http:\/\/www.usrecipe.com\/2016\/08\/hawaiian-style-teriyaki-chicken.html","reactions_like":{"data":[],"summary":{"total_count":297}},"reactions_love":{"data":[],"summary":{"total_count":16}},"reactions_wow":{"data":[],"summary":{"total_count":6}},"reactions_haha":{"data":[],"summary":{"total_count":0}},"reactions_sad":{"data":[],"summary":{"total_count":0}},"reactions_angry":{"data":[],"summary":{"total_count":0}},"id":"236017159909583_874876376023655"}],"paging":{"cursors":{"before":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUSTBNemMxTmpRd05URXhNVE0zT1RNMk1qa1BER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM05Ua3hNREUxT1RJMU16WXhNQThFZAEdsdFpRWmFUaGRBQVE9PQZDZD","after":"Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUZAzNNalk1T1Rrek9URXlOVEl6TnpVeE5qVVBER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM05EZAzNOak0zTmpBeU16WTFOUThFZAEdsdFpRWmFTNUJnQVE9PQZDZD"},"next":"https:\/\/graph.facebook.com\/v2.10\/236017159909583\/posts?fields=full_picture\u00252Ccreated_time\u00252Cmessage\u00252Creactions.type\u002528LIKE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_like\u002529\u00252Creactions.type\u002528LOVE\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_love\u002529\u00252Creactions.type\u002528WOW\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_wow\u002529\u00252Creactions.type\u002528HAHA\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_haha\u002529\u00252Creactions.type\u002528SAD\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_sad\u002529\u00252Creactions.type\u002528ANGRY\u002529.limit\u0025280\u002529.summary\u002528total_count\u002529.as\u002528reactions_angry\u002529&limit=25&after=Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5UXlNell3TVRjeE5UazVNRGsxT0RNNkxUZAzNNalk1T1Rrek9URXlOVEl6TnpVeE5qVVBER0ZA3YVY5emRHOXllVjlwWkE4ZAk1qTTJNREUzTVRVNU9UQTVOVGd6WHpnM05EZAzNOak0zTmpBeU16WTFOUThFZAEdsdFpRWmFTNUJnQVE9PQZDZD"}}'
     http_version: 
   recorded_at: Thu, 04 Jan 2018 13:54:15 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Crust:%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/PBqYJUveLGNy6p8PFgmG_B6Uq5c"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5522'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/PBqYJUveLGNy6p8PFgmG_B6Uq5c\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 916990,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/Gl5IrocZGNYPHxVaJ_SLv-f5NV0\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "N9ncfAsmiSg"
+           },
+           "snippet": {
+            "publishedAt": "2012-11-26T05:49:17.000Z",
+            "channelId": "UC2r7cNNJXTNDzCCKdMR_uxw",
+            "title": "Inside the Earth | IkenEdu",
+            "description": "This topic explains the inner layers of the earth's crust and how the earth looks like on both the inside and the outside. This is a product of Mexus Education Pvt. Ltd., an education innovations...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/N9ncfAsmiSg/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/N9ncfAsmiSg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/N9ncfAsmiSg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Iken Edu",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/gAcO43dLbzZRLXivUHj4eaXgOvg\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "gt8LflOyyhs"
+           },
+           "snippet": {
+            "publishedAt": "2016-09-07T17:00:06.000Z",
+            "channelId": "UCUZzyuAlhHNP3oiuMjn7RfQ",
+            "title": "'Thin Crust Pizza' Actually Has Massive Crusts - Kitchen Nightmares",
+            "description": "Pantaleone's claim to serve the best pizza in Denver. Looks like someone is in denial... If you liked this clip check out the rest of Gordon's channels: http://www.youtube.com/gordonramsay...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/gt8LflOyyhs/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/gt8LflOyyhs/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/gt8LflOyyhs/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Kitchen Nightmares",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/XkXF7ZJCNgQ5LI5DEjGC4jmAaBw\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "TCLhORct09g"
+           },
+           "snippet": {
+            "publishedAt": "2016-10-01T21:00:00.000Z",
+            "channelId": "UC8gKWMFvVenlVjgysNojYQg",
+            "title": "SML Short: No Crust!",
+            "description": "Chef Pee Pee cuts the crust off Junior's sandwich. Sorry guys for the short video! I am currently on a week long vacation cruise! I will be back Friday October 7th! I have pre-filmed some...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/TCLhORct09g/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/TCLhORct09g/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/TCLhORct09g/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "SuperMarioLogan",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/GA_PSf53yCmS_kEF_vUaEB2GrLU\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "ceOmeLXW4oE"
+           },
+           "snippet": {
+            "publishedAt": "2013-06-07T03:47:24.000Z",
+            "channelId": "UC68StuguWSV29uX28kJYnhA",
+            "title": "DOOM - 25 Years of Crust",
+            "description": "01. Agree To Differ 0:00 02. Antisocial 4:32 03. Can't Smell The Coffee 9:09 04. Carnivore Christian 12:16 05. Choice 14:49 06. Deathlock 15:35 07. Exploitation 17:20 08. Means To An End -...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/ceOmeLXW4oE/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/ceOmeLXW4oE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/ceOmeLXW4oE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "6DISTRUST6",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/mMvjPy2Fu9yPkrkpOa59tyJiqYQ\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "cHRAPW5KTxc"
+           },
+           "snippet": {
+            "publishedAt": "2013-01-10T13:00:15.000Z",
+            "channelId": "UC4tAgeVdaNB5vD_mBoxg50w",
+            "title": "How to Make Delicious Pie Crust",
+            "description": "Get the recipe @ http://allrecipes.com/recipe/pie-crust-iv/detail.aspx See how to make a delicious pie crust from scratch. This recipe yields a light and flaky crust; the trick is to use ice...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/cHRAPW5KTxc/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/cHRAPW5KTxc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/cHRAPW5KTxc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Allrecipes",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Onion%20Gravy%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/lc2yQ5lPVNNj7Gk5Pe9O8nxDDHU"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5369'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/lc2yQ5lPVNNj7Gk5Pe9O8nxDDHU\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 1000000,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/8rHZihuXqQfqhve8k9b4-yxWc0g\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "myxMo-VCGTQ"
+           },
+           "snippet": {
+            "publishedAt": "2011-11-24T18:05:38.000Z",
+            "channelId": "UCP3g_gJylIDMMEZIDACxjCQ",
+            "title": "How to make brown onion gravy",
+            "description": "Chef David Bishop teaching how to prepare \"Brown Onion Gravy\" This is a great gravy with beef and pork dishes. Pleace visit my website at http://www.fromthecheftoyou.com for this recipe...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/myxMo-VCGTQ/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/myxMo-VCGTQ/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/myxMo-VCGTQ/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "David Bishop",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/GHHv-8VxAqa4zfJEopF_8GWozS0\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "T-rAx_4sR9E"
+           },
+           "snippet": {
+            "publishedAt": "2015-01-11T18:39:39.000Z",
+            "channelId": "UCPnRDbp7FtIW_WTf82keBUQ",
+            "title": "How to Make Onion Gravy",
+            "description": "Onion gravy is easy to make, tastes delicious and goes with lots of savoury dishes. Making onion gravy is incredibly easy - you just need an onion, some beef stock made from bouillon cubes,...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/T-rAx_4sR9E/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/T-rAx_4sR9E/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/T-rAx_4sR9E/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "KeefCooks",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/Lbb22AFd8Z3ZL2vtwGpsc2d2SQw\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "Vx3yaSAh8bU"
+           },
+           "snippet": {
+            "publishedAt": "2014-01-15T21:36:27.000Z",
+            "channelId": "UC8VCp2sQwxBlXbrXZ33rTyA",
+            "title": "Gravy How to make Onion Gravy simple recipe",
+            "description": "My recipes: http://www.youtube.com/OriginalNakedChef How to make a simple and tasty onion gravy ideal to have with your beef joint, steak, bangers and mash or when ever you fancy a tasty onion...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/Vx3yaSAh8bU/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/Vx3yaSAh8bU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/Vx3yaSAh8bU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Original Naked Chef",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/54Bs5jvN3w7-zPTOWhWSA44Hofs\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "_y0S2nQApdI"
+           },
+           "snippet": {
+            "publishedAt": "2015-01-05T15:04:27.000Z",
+            "channelId": "UCsYwjeII1w6oWd4eHP29SuQ",
+            "title": "Sausages with Onion Gravy and Mash",
+            "description": "Music by https://soundcloud.com/ultraultraultra/",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/_y0S2nQApdI/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/_y0S2nQApdI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/_y0S2nQApdI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Cool Ghosts",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/c0iWbh-Ohhl6NaOggcJ_fbefViY\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "XmxJeptDDlY"
+           },
+           "snippet": {
+            "publishedAt": "2013-12-14T00:00:01.000Z",
+            "channelId": "UCpSgg_ECBj25s9moCDfSTsA",
+            "title": "Jamie’s Stress-free Gravy",
+            "description": "Take gravy off the to-do list this Christmas Day with this time saving recipe. Flavoured with chicken wings, bacon, celery, carrots and onion; it can be made the day before or up to two weeks...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/XmxJeptDDlY/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/XmxJeptDDlY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/XmxJeptDDlY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Jamie Oliver",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Easy%20Spicy%20Southern%20Chicken%20Spaghetti%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/AbuGmWCiuN2mMPbuDV4Z_EIzrfA"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '4894'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/AbuGmWCiuN2mMPbuDV4Z_EIzrfA\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 313719,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/BQF0xq2hL3li4WbXyJnfFM-6nrY\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "tN5sevpg-Rs"
+           },
+           "snippet": {
+            "publishedAt": "2016-09-18T21:47:40.000Z",
+            "channelId": "UCpbFXTxz-KuRewZlBvHFCeg",
+            "title": "Chicken Spaghetti  Casserole",
+            "description": "Hey guys here is another quick simple meal to make for your family.",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/tN5sevpg-Rs/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/tN5sevpg-Rs/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/tN5sevpg-Rs/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "BeautyforYou",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/UqPpd48XK4XPM0vPvC4l40Pg5go\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "PNMLq7gEtBM"
+           },
+           "snippet": {
+            "publishedAt": "2016-07-21T23:32:07.000Z",
+            "channelId": "UCBbVVTSQkXMwrCKtStfDhgA",
+            "title": "How to make: Chicken Spaghetti",
+            "description": "The recipe that has gone viral on The Country Cook! It is *an original* recipe that you won't find anywhere else and it is getting RAVE reviews! Grab the FULL recipe and a FREE printable recipe...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/PNMLq7gEtBM/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/PNMLq7gEtBM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/PNMLq7gEtBM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "The Country Cook",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/pTYvwOnL7yKF39bJwDmUPI-ty8Y\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "ppzDMScRS1c"
+           },
+           "snippet": {
+            "publishedAt": "2014-02-01T14:50:37.000Z",
+            "channelId": "UCvwPPtKgQyGWfYcD2cn7Wrg",
+            "title": "Cheesy Chicken Spaghetti",
+            "description": "Cheesy Chicken Spaghetti.",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/ppzDMScRS1c/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/ppzDMScRS1c/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/ppzDMScRS1c/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Southern Coastal Cooking ™",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/7FxpdpziliHzAT07F2Nn__EMAoc\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "ThreAZKt3sQ"
+           },
+           "snippet": {
+            "publishedAt": "2013-03-11T13:18:17.000Z",
+            "channelId": "UCUoa9Lj-ogAQ4QgQoBWQxqg",
+            "title": "How To Make Chicken Spaghetti",
+            "description": "Follow me on IG @not2_modest_bee.",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/ThreAZKt3sQ/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/ThreAZKt3sQ/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/ThreAZKt3sQ/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "NaturalCreoleSista",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/fTf-lSAO5DBTw4vWHiWKGJiAjfw\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "Om_5CUvconY"
+           },
+           "snippet": {
+            "publishedAt": "2014-06-23T20:05:39.000Z",
+            "channelId": "UCECRFioepCiq9EHUyQRsEbQ",
+            "title": "Recipe: Chicken Tetrazzini/Chicken Spaghetti",
+            "description": "",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/Om_5CUvconY/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/Om_5CUvconY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/Om_5CUvconY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Joshua Emanuel",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Better%20Than%20Take-Out%20Fried%20Rice%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/ghYeFqZ-WA8bzZUAJJENLHWkLK0"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5691'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/ghYeFqZ-WA8bzZUAJJENLHWkLK0\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 1000000,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/KQ2XNB0R9YGDgvFTqLnFiZZl8NI\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "7AxydboW8v8"
+           },
+           "snippet": {
+            "publishedAt": "2017-06-23T11:04:03.000Z",
+            "channelId": "UC3HjB3X8jeENm46HCkI0Inw",
+            "title": "BETTER THAN TAKEOUT AND EASY! Chinese Chicken Fried Rice Recipe",
+            "description": "This chicken fried rice recipe takes 15 minutes to make. It's absolutely delicious and everybody loves it- no doubt about that. Sometimes maybe you don't know what to cook for dinner, this...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/7AxydboW8v8/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/7AxydboW8v8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/7AxydboW8v8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Souped Up Recipes",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/6kItlx_8121uHG1WGfoooWCMNck\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "IDM-j4lIimg"
+           },
+           "snippet": {
+            "publishedAt": "2017-01-12T02:39:58.000Z",
+            "channelId": "UCfverUzOfmQVaKkUwZV_lpQ",
+            "title": "Easy Homemade Shrimp and Chicken Fried Rice Recipe |BETTER THAN TAKE-OUT |Cooking With Carolyn",
+            "description": "Shrimp and Chicken Fried Rice RECIPE LINK | http://bit.ly/2jFR7y6 Chicken Tetrazzini VIDEO LINK | https://youtu.be/LutI0FzACxI Five Cheese Crock Pot Macaroni & Cheese VIDEO LINK | https://youtu.b...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/IDM-j4lIimg/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/IDM-j4lIimg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/IDM-j4lIimg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "CookingWithCarolyn",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/C4LgulLWnM_g7jov3uDvZVKof8g\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "LhfmijhNfqY"
+           },
+           "snippet": {
+            "publishedAt": "2017-07-21T06:52:54.000Z",
+            "channelId": "UC3HjB3X8jeENm46HCkI0Inw",
+            "title": "BETTER THAN TAKEOUT - Chicken Chow Mein (Chinese Stir Fry Noodles)",
+            "description": "Dai pai dong (from Cantonese 大 排 檔) is a type of open-air food stall in Hong Kong and Guangzhou. Usually gets very busy at night. And this chow mien is one of those dishes that every...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/LhfmijhNfqY/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/LhfmijhNfqY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/LhfmijhNfqY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Souped Up Recipes",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/IfOFJ9bfyj2K2LiKWcDF0Wxwi1o\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "n1DyOKsI6Bo"
+           },
+           "snippet": {
+            "publishedAt": "2017-01-01T16:00:03.000Z",
+            "channelId": "UCaoZpR4BP_aUvtZ7dgF67wQ",
+            "title": "Better than Takeout Fried Rice",
+            "description": "My propensity for speed means weeknight meals that are quick, simple and delicious—like this easy fried rice recipe—get a gold star from me. Get the recipe on my blog: http://spaceshipsandlase...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/n1DyOKsI6Bo/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/n1DyOKsI6Bo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/n1DyOKsI6Bo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Spaceships and Laser Beams",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/Q-peD6FWQWQzQJSIeEOmItJ4rGw\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "RF8aP0CWXKc"
+           },
+           "snippet": {
+            "publishedAt": "2017-04-01T15:37:25.000Z",
+            "channelId": "UC3HjB3X8jeENm46HCkI0Inw",
+            "title": "BETTER THAN TAKEOUT Kung Pao Chicken Recipe",
+            "description": "Is Kung Pao chicken a staple in your house? Why not learn how to cook it? My Kung Pao chicken recipe is going to be better than your local restaurant AND it's made the traditional way! It...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/RF8aP0CWXKc/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/RF8aP0CWXKc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/RF8aP0CWXKc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Souped Up Recipes",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=The%20Greatest%20Queso%20That%20Ever%20Lived%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/gykis6jq8sA19yAQVzq2NFq0H6s"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5610'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/gykis6jq8sA19yAQVzq2NFq0H6s\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 452368,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/8MSG6aCs_kLUt1-oHFMRTwSaqUk\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "HIClezMl_iE"
+           },
+           "snippet": {
+            "publishedAt": "2014-01-01T08:07:28.000Z",
+            "channelId": "UCqYl6x-l6ELUdcHCXjLn-vQ",
+            "title": "The best Queso Dip You Will Ever Put In Your Mouth!",
+            "description": "Today, I made my favorite game day queso dip, queso fundido del grito with homemade elk chorizo! This delicious cheese dip will knock your socks off. Ingredients - elk chorizo, Queso Quesadilla...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/HIClezMl_iE/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/HIClezMl_iE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/HIClezMl_iE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Todd Toven",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/t9xys5U5U1aJ-ND2NTl8hKIcano\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "EXBQ8SVElr4"
+           },
+           "snippet": {
+            "publishedAt": "2016-04-14T14:00:01.000Z",
+            "channelId": "UCRzPUBhXUZHclB7B5bURFXw",
+            "title": "How the Best Queso Got Its Name — The Meat Show",
+            "description": "On this episode of The Meat Show, host and professional carnivore Nick Solares visits Matt's Rancho Martinez, a Tex-Mex joint in Dallas, Texas famous for a meaty, cheesy, guacamole-spiked...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/EXBQ8SVElr4/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/EXBQ8SVElr4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/EXBQ8SVElr4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Eater",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/GmsYfMQCL3fkrHMSMz928Tvqd4w\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "w2eqM50c-SY"
+           },
+           "snippet": {
+            "publishedAt": "2016-02-07T19:00:00.000Z",
+            "channelId": "UCkk2vs5EXLFUMuVyhy7oOMQ",
+            "title": "How to Make Chili's Chile Con Queso Dip | Get the Dish",
+            "description": "What's one of the best parts about getting a group of friends and heading to Chili's for dinner? The appetizers, of course! An all-time favorite has to be the skillet queso dip. We've whipped...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/w2eqM50c-SY/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/w2eqM50c-SY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/w2eqM50c-SY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "POPSUGAR",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/ONHDeda6YBPqhHntHZsnr5lmZ18\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "wTP2RUD_cL0"
+           },
+           "snippet": {
+            "publishedAt": "2010-02-23T17:28:56.000Z",
+            "channelId": "UCc4o6gJBS8VQto3ZR5Z_wcw",
+            "title": "Dire Straits - Money For Nothing",
+            "description": "Discover more about this Dire Straits hit here: http://www.udiscovermusic.com/stories/dire-straits-get-money-for-everything Listen to more from Dire Straits: http://direstraits.lnk.to/essentials...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/wTP2RUD_cL0/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/wTP2RUD_cL0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/wTP2RUD_cL0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "DireStraitsVEVO",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/AMYVOcSV0WgMRdzhcK_AE7_OAA4\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "K6Sjc4EK2iM"
+           },
+           "snippet": {
+            "publishedAt": "2014-11-03T15:01:13.000Z",
+            "channelId": "UCbNF3nemgJUHJuVRgH7V0YQ",
+            "title": "How to Make Homemade Queso Fresco for the Best Mexican Ever",
+            "description": "Creamy and soft queso fresco is a wonderful Mexican cheese that you can enjoy as a topping on tacos, a mix-in for soup, or as a crumble atop salads. With our tips, your homemade cheese will...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/K6Sjc4EK2iM/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/K6Sjc4EK2iM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/K6Sjc4EK2iM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Better Homes and Gardens",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=HAWAIIAN%20STYLE%20TERIYAKI%20CHICKEN%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/oZLwMS8ySogv-6VS_g1bXjB0Fu8"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5681'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/oZLwMS8ySogv-6VS_g1bXjB0Fu8\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 85661,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/2LyrFEOCHy1_S_QAEr4qHoakOmU\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "RsZ9hN51IMM"
+           },
+           "snippet": {
+            "publishedAt": "2014-09-10T06:23:26.000Z",
+            "channelId": "UCiWRDrjXg7cmM3Tl19OQ_og",
+            "title": "Pinterest Finds: Best Hawaiian BBQ Marinade Recipe",
+            "description": "Aloha Friends! I found this recipe on Pinterest and I will have the recipe below with the original owner that I saw it from to give her/him credit. It was absolutely delicious! Mahalo Hawaiian...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/RsZ9hN51IMM/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/RsZ9hN51IMM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/RsZ9hN51IMM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "ASimplySimpleLife",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/2u446vCHBgCGi-hvxcHAOSgYtR4\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "Qi_PvCZlyXw"
+           },
+           "snippet": {
+            "publishedAt": "2014-01-12T22:27:43.000Z",
+            "channelId": "UCdDuocDtIRcfy70OX9ObxQw",
+            "title": "How To Cook \"CHICKEN TERIYAKI\"/ Luweeh's Kitchen",
+            "description": "A Japanese Original Dish..Let's Cook in Japanese Method although i have my version too.. for more details follow the link.. http://luweehskitchentokyo.blogspot.jp/2014/01/paano-lutuin-ang-...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/Qi_PvCZlyXw/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/Qi_PvCZlyXw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/Qi_PvCZlyXw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Luweeh's Kitchen",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/Ez-Cq6nx1IqrrSWFSvPn7rcTj1A\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "uCPSxbFG2QU"
+           },
+           "snippet": {
+            "publishedAt": "2016-01-31T01:15:04.000Z",
+            "channelId": "UChvfV9ExASPRJ_MSwBivFxg",
+            "title": "Hawaiian Style Charbroiled Chicken Thigh with Teriyaki Sauce and Pineapple",
+            "description": "An easy recipe to turn our Hawaiian Chicken dish into a delicious meal for all to enjoy :) For more videos please subscribe to our channel - https://goo.gl/iEmi9x Or visit our Facebook page...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/uCPSxbFG2QU/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/uCPSxbFG2QU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/uCPSxbFG2QU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Naples Kitchen",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/kt6NC-npFFkHNL7c1Tm71uSA-Ls\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "2nJuf4LuIQQ"
+           },
+           "snippet": {
+            "publishedAt": "2016-04-14T07:00:00.000Z",
+            "channelId": "UC5jwUeGcxpCdvs9dkTnaP4A",
+            "title": "Hawai`ian Style Teriyaki Sauce Recipe - Heaven on Earth - Episode #14",
+            "description": "Bonjour my friends! In this episode I'll show you how to make my Hawaiian-Style Teriyaki Sauce recipe. Visit http://clubfoody.com/recipe/sausalito-smoked-salmon-dip/ for ingredient amounts...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/2nJuf4LuIQQ/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/2nJuf4LuIQQ/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/2nJuf4LuIQQ/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "clubfoody.com",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/-kf066emnoc3aN_aUrySXufYRsI\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "Knk0XWoU-ow"
+           },
+           "snippet": {
+            "publishedAt": "2014-04-12T04:57:04.000Z",
+            "channelId": "UCwzPyAbM-mBHg5ISpmkQ3Ow",
+            "title": "Shoyu Chicken - Hawaiian Style Soy Sauce Chicken - PoorMansGourmet",
+            "description": "Recipes can be found at http://poormansgourmetkitchen.com/ Official Twitter Page: https://twitter.com/PMGKcooking Official Facebook Page: https://www.facebook.com/PoorMansGourmetKitchen...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/Knk0XWoU-ow/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/Knk0XWoU-ow/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/Knk0XWoU-ow/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Poor Man's Gourmet Kitchen",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Italian%20Macaroni%20Salad%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/rptEYn-87jxR1_qVuvHIftRMr1Y"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5674'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/rptEYn-87jxR1_qVuvHIftRMr1Y\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 1000000,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/DOyldM7n3klF4eCZUYjcQEQkvTE\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "KIN0u64VS-Q"
+           },
+           "snippet": {
+            "publishedAt": "2015-06-10T23:00:01.000Z",
+            "channelId": "UC1dzkIaMDJzv3ZuS0DdEWoA",
+            "title": "The BEST Creamy Italian Pasta Salad Recipe - I Heart Recipes",
+            "description": "SUBSCRIBE http://goo.gl/uE0vOi for more How to Cook videos. Get the recipe here http://www.iheartrecipes.com/the-best-creamy-italian-pasta-salad/ My recipe for the BEST Creamy Italian Pasta...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/KIN0u64VS-Q/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/KIN0u64VS-Q/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/KIN0u64VS-Q/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "I Heart Recipes",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/N9jalqtgO9Yp1MfymwbcsuwRLtg\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "GvDu_0ktsJ0"
+           },
+           "snippet": {
+            "publishedAt": "2013-03-09T04:28:49.000Z",
+            "channelId": "UCHXDzdSM13jdx5kNLbTMWhg",
+            "title": "Italian Dressing Pasta Salad - Healthy Dish How to Make Pasta Salad",
+            "description": "Pasta Salad, how to make Pasta Salad, Italian Dressing Pasta Salad. In this Video, Chef Remy shows us how to make Pasta Salad, it's a very easy dish to make and anyone can make it in less than...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/GvDu_0ktsJ0/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/GvDu_0ktsJ0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/GvDu_0ktsJ0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Cooking1OnOne",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/leCvDGhG5bZe_VAltaiWaw3TfZg\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "Tw3Zyvq0hH8"
+           },
+           "snippet": {
+            "publishedAt": "2016-08-26T13:36:14.000Z",
+            "channelId": "UC9ORxqKBywaO7fgflFJzHRw",
+            "title": "Easy Italian Pasta Salad",
+            "description": "World's Easiest Pasta Salad - a summer classic that everyone loves! with pasta, tomatoes, cheese, salami, fresh parsley, olives, and easy Italian dressing. Sponsored by DeLallo. Full recipe:...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/Tw3Zyvq0hH8/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/Tw3Zyvq0hH8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/Tw3Zyvq0hH8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Pinch of Yum",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/hlaK7ja0TD9-2fIwIKyj4UJFSKo\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "cCAct_Q8QTw"
+           },
+           "snippet": {
+            "publishedAt": "2016-03-05T05:43:26.000Z",
+            "channelId": "UCAqhObB9blM3mgPng2-8V5A",
+            "title": "Creamy Pasta Salad Recipe From Italian Cuisine By Sameer Goyal @ ekunji.com",
+            "description": "Print how to make pasta salad @ http://goo.gl/FUy6cG . Watch how to make pasta salad in Hindi @ https://goo.gl/wv4o6r . Watch creamy pasta salad recipe from italian cuisine by Sameer Goyal....",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/cCAct_Q8QTw/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/cCAct_Q8QTw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/cCAct_Q8QTw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "ekunji",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/-6hxVBcwNK2SJzB_8dQIOqgr19M\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "xGIhv6U1UMw"
+           },
+           "snippet": {
+            "publishedAt": "2016-05-11T13:34:18.000Z",
+            "channelId": "UCaq50ebQFmdXdZA2aGuUgUA",
+            "title": "How To Make Zesty Italian Dressing Pasta Salad: Classic Italian Pasta Salad Recipe",
+            "description": "Italian Pasta Salad Recipe Ingredients 12oz Packaged Tri-Color Rotini Noodles 1 Large Cucumber, chopped 1 Cup Frozen Broccoli, chopped 10 Grape Tomatoes (5 whole, 5 sliced) 1/2 Tomato, chopped...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/xGIhv6U1UMw/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/xGIhv6U1UMw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/xGIhv6U1UMw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "PBJVintageCookingVidz2",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Caramel%20Apple%20Cheesecake%20Bar%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/0b-Xze8cA6sbrx9SFK1lCdYuZn4"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5378'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/0b-Xze8cA6sbrx9SFK1lCdYuZn4\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 409762,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/blh1I-UyUTEsb3sbap8DQYdZywc\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "3c1w2_MQ5D4"
+           },
+           "snippet": {
+            "publishedAt": "2015-01-27T14:04:56.000Z",
+            "channelId": "UCemXyN0MvApSEEtGvAsdo3g",
+            "title": "Caramel Apple Cheesecake Bars Recipe",
+            "description": "Apple Cheesecake Bars - just imagine, buttery crust topped with creamy cheese and tender apples and streusel topping made with rolled oats and almonds. And that is not all...everything is drizzled...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/3c1w2_MQ5D4/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/3c1w2_MQ5D4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/3c1w2_MQ5D4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Home Cooking Adventure",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/sdJE2PdPG24O4uZCbNqUicv3LMc\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "R-XUf-2b_Ng"
+           },
+           "snippet": {
+            "publishedAt": "2017-09-26T15:36:17.000Z",
+            "channelId": "UCWMl6Xw3M37ti_C964vmYvg",
+            "title": "Caramel Apple Cheesecake Bars | Delish",
+            "description": "Get the full recipe here: http://www.delish.com/cooking/recipe-ideas/recipes/a55418/caramel-apple-cheesecake-bars-recipe/ INGREDIENTS FOR THE CRUST 2 c. all-purpose flour 1/2 c. firmly packed...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/R-XUf-2b_Ng/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/R-XUf-2b_Ng/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/R-XUf-2b_Ng/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Delish",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/Rj9_alE2CyFacWoU0HuplON3tks\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "giOhJtw_Hx8"
+           },
+           "snippet": {
+            "publishedAt": "2014-10-27T14:36:08.000Z",
+            "channelId": "UCW4gXUEypFeI3xgoQ27LFBA",
+            "title": "How to Make Caramel Apple Cheesecake Bars",
+            "description": "David's Recipes - Cheesecake - David Venable puts a twist on this classic fall dessert! If you love caramel apples, you will absolutely love this recipe that combines caramel apples and cheesecake!...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/giOhJtw_Hx8/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/giOhJtw_Hx8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/giOhJtw_Hx8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "QVCtv",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/Nbt5yOf7f_JROR3jluEGaHZRjMY\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "LNKR8viq7Vg"
+           },
+           "snippet": {
+            "publishedAt": "2011-10-18T04:06:23.000Z",
+            "channelId": "UCubwl8dqXbXc-rYE8MOSUnQ",
+            "title": "Caramel Apple Crisp Cheesecake Bars Recipe (Haaave Mercy!)",
+            "description": "If you love apple desserts like apple crisp, apple pie, apple bread and so forth then this recipe may quickly become your favorite apple dessert. Let me introduce you to my little friends,...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/LNKR8viq7Vg/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/LNKR8viq7Vg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/LNKR8viq7Vg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Divas Can Cook",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/cvX3PfP2ApaoBpOJ49TiWe9eXf0\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "-DoYWz2D8uA"
+           },
+           "snippet": {
+            "publishedAt": "2015-09-29T23:01:07.000Z",
+            "channelId": "UCT_nxTl3JZuu88APqz9mgQA",
+            "title": "Caramel apple cheesecake bars",
+            "description": "",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/-DoYWz2D8uA/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/-DoYWz2D8uA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/-DoYWz2D8uA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "XoXoLilliBeauty",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Fresh%20Strawberry%20Cake%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/l804E5jQuxZE8XWeL3IJayzUUio"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5608'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/l804E5jQuxZE8XWeL3IJayzUUio\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 1000000,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/pdliUAGjkAxfGLfHsuZ5Qs4IHow\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "m6i9FVgkc0c"
+           },
+           "snippet": {
+            "publishedAt": "2016-09-07T16:43:29.000Z",
+            "channelId": "UC-pC1xsFPzcrL09DaW4jlBA",
+            "title": "Dessert: Fresh Strawberry Cake - Natasha's Kitchen",
+            "description": "This fresh strawberry cake is definitely a reader favorite! Completely charming, not overly sweet and tastes bakery quality. Video tutorial makes it easy! Click to watch how to make Sponge...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/m6i9FVgkc0c/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/m6i9FVgkc0c/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/m6i9FVgkc0c/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Natashas Kitchen",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/7jpsn3-7w3JlZLTSGeajoJwnY1E\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "YsEg8cmiR6s"
+           },
+           "snippet": {
+            "publishedAt": "2017-06-02T17:02:39.000Z",
+            "channelId": "UCgmOd6sRQRK7QoSazOfaIjQ",
+            "title": "Strawberry Cake Recipe with Fresh Strawberry Filling",
+            "description": "This simple yet stunning strawberry cake is packed with strawberry flavour from fresh strawberries and homemade strawberry filling. In the video, I show you how to make every element from scratch,...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/YsEg8cmiR6s/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/YsEg8cmiR6s/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/YsEg8cmiR6s/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Emma's Goodies",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/fgoQgy1sIYErtKij8bljLmjsrbM\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "UVnRjtcVmAk"
+           },
+           "snippet": {
+            "publishedAt": "2017-02-13T03:03:19.000Z",
+            "channelId": "UCCL_8986mQNfIlKNGhSwOgg",
+            "title": "How to make homemade fresh strawberry cake Recipe in Hindi",
+            "description": "This homemade strawberry cake uses fresh strawberries.Top of this strawberry cake is garnished with fresh strawberries to hint at the flavor of this pretty pink recipe.",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/UVnRjtcVmAk/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/UVnRjtcVmAk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/UVnRjtcVmAk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "A V N I",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/HqUILowWrGsViuVtbFoSCqlcTsA\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "tiKNcuVBOW0"
+           },
+           "snippet": {
+            "publishedAt": "2017-05-16T02:31:18.000Z",
+            "channelId": "UCRZ3pnaCBIVw3ANBRhdGMIA",
+            "title": "Easy Fresh Strawberry Cake",
+            "description": "Easy Fresh Strawberry Cake ~ Starts with a Boxed Mix and is Dressed Up Fresh Strawberries and Iced with a Fresh Strawberry Frosting! RECIPE HERE -- http://www.julieseatsandtreats.com/strawberry-cake/",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/tiKNcuVBOW0/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/tiKNcuVBOW0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/tiKNcuVBOW0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Julie Evink",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/Saxruva2meUav1CVpTCM39Lc2Ak\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "vjGgKl17LD0"
+           },
+           "snippet": {
+            "publishedAt": "2016-05-24T22:00:02.000Z",
+            "channelId": "UCFp--BDbZy6v-KkoR_A5LUA",
+            "title": "CAKE/BEST STRAWBERRY CAKE/STRAWBERRY FROSTING RECIPE/CHERYLS HOME COOKING/EPISODE 447",
+            "description": "In this video I show you how I make my Home Made Strawberry Cake with Home Made Strawberry Frosting.This recipe is so simple to make.The frosting is out of this world \"AWESOME\". A hit with...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/vjGgKl17LD0/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/vjGgKl17LD0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/vjGgKl17LD0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Cheryl K",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Teriyaki%20Chicken%20Wings%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/C10qOhRogntx-oTL5ACX5oMw42o"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5530'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/C10qOhRogntx-oTL5ACX5oMw42o\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 594636,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/G1iygsQz_D9SPx6ZWg-4EcD1NVU\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "wHdiPk83Z5E"
+           },
+           "snippet": {
+            "publishedAt": "2017-03-01T16:59:51.000Z",
+            "channelId": "UCkrdI6_uNjgw4LUbE6JCxmQ",
+            "title": "The Best Teriyaki Chicken Wings",
+            "description": "FULL RECIPE HERE: http://tatyanaseverydayfood.com/recipe-items/teriyaki-chicken-wings/ The one and only recipe you'll ever need for teriyaki chicken party wings! This recipe yields the juiciest,...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/wHdiPk83Z5E/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/wHdiPk83Z5E/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/wHdiPk83Z5E/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "TatyanasEverydayFood",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/59SNZL8K2A9b2NX8P1HSRZw8sHI\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "MccuASs5Ey4"
+           },
+           "snippet": {
+            "publishedAt": "2015-04-16T18:05:09.000Z",
+            "channelId": "UCNbngWUqL2eqRw12yAwcICg",
+            "title": "Baked Honey Teriyaki Wings Recipe - Laura Vitale - Laura in the Kitchen Episode 904",
+            "description": "To get this complete recipe with instructions and measurements, check out my website: http://www.LauraintheKitchen.com Instagram: http://www.instagram.com/mrsvitale Official Facebook Page:...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/MccuASs5Ey4/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/MccuASs5Ey4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/MccuASs5Ey4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Laura in the Kitchen",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/_DGaYPaI8gtRJB6dvrN8MjJtOIY\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "_d9zGHDPd7o"
+           },
+           "snippet": {
+            "publishedAt": "2013-03-23T14:32:44.000Z",
+            "channelId": "UCnJm8wC-ABOvOn2piAt2WYg",
+            "title": "Teriyaki Chicken Wings - Chicken Teriyaki Recipe",
+            "description": "Chicken wings are a staple food at The Wolfe Pit! Deep fried, grilled, smoked, BBQ'd, pan fried, broiled, baked, you name it! The key to great wings is a crispy skin and a good sauce. Hot,...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/_d9zGHDPd7o/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/_d9zGHDPd7o/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/_d9zGHDPd7o/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "TheWolfePit",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/vrWBze2DKLD7aT-c-ge-ySUa3rQ\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "D_YGIeVM3FE"
+           },
+           "snippet": {
+            "publishedAt": "2017-05-02T22:00:17.000Z",
+            "channelId": "UCJFp8uSYCjXOMnkUyb3CQ3Q",
+            "title": "Chicken Wings 7 Ways",
+            "description": "Check us out on Facebook! - facebook.com/buzzfeedtasty Credits: https://www.buzzfeed.com/bfmp/videos/15557 MUSIC Spanish Wine Mcm_Reduced Licensed via Warner Chappell Production Music Inc.",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/D_YGIeVM3FE/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/D_YGIeVM3FE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/D_YGIeVM3FE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Tasty",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/D2nXGXu8aDozH0gMSSTYuhvN1pE\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "a5h66rT_sfk"
+           },
+           "snippet": {
+            "publishedAt": "2015-10-02T21:22:59.000Z",
+            "channelId": "UCaemoH2t2Jy03JY2seLaGew",
+            "title": "Teriyaki chicken wings recipe easy",
+            "description": "Subscribe for more new cooking recipes Join me on Facebook https://www.facebook.com/ChefColton Follow me on Twitter https://twitter.com/ChefColton ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/a5h66rT_sfk/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/a5h66rT_sfk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/a5h66rT_sfk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Chef Colton",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Chicken%20Dumpling%20Casserole%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/89nuGeX2hjBw7zLqX4dk0RwtJXU"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5649'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/89nuGeX2hjBw7zLqX4dk0RwtJXU\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 526223,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/8aHaZwN0a7Av_x7M8EFzNh4o4_A\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "HU86p0yaY-w"
+           },
+           "snippet": {
+            "publishedAt": "2014-03-27T09:11:12.000Z",
+            "channelId": "UClupEyinl74temfKuiID9eg",
+            "title": "Chicken & Dumpling Casserole, an easy Family Favorite recipe",
+            "description": "I look for quick, easy and delicious recipes to feed my hubby or take to family gatherings, and this one fits the bill nicely. Plus I'm half southern, being as my mom was from Tennessee. :)...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/HU86p0yaY-w/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/HU86p0yaY-w/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/HU86p0yaY-w/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Anna's Kitchen",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/IUrkLEjmbkWlLi4n2B2F7G_Kt90\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "BVkDISakwBg"
+           },
+           "snippet": {
+            "publishedAt": "2015-07-27T23:39:28.000Z",
+            "channelId": "UC9gTYxmSL9vdleWEenTfpAg",
+            "title": "Recipe for Baked Chicken and Dumpling Casserole - Easy and Quick Entree",
+            "description": "In this dinner entree, Chicken and Dumpling Casserole, you can use a rotisserie chicken, canned chicken or baked or boiled chicken. This is one dish that I will definitely make over and over...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/BVkDISakwBg/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/BVkDISakwBg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/BVkDISakwBg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Debbie FoodPrepping",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/BZYs_uU5cX8kXM1SZbMQCsTp_iM\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "wnOEiSdErZA"
+           },
+           "snippet": {
+            "publishedAt": "2017-03-01T12:42:22.000Z",
+            "channelId": "UCu41XMEGBUSr7k_d5oDZ84w",
+            "title": "Betty's Chicken & Dumpling Casserole",
+            "description": "Betty demonstrates how to make Chicken and Dumpling Casserole. This is a quick and easy entrée that tastes fantastic. Chicken and Dumpling Casserole 3 cups cooked boneless, skinless chicken...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/wnOEiSdErZA/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/wnOEiSdErZA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/wnOEiSdErZA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Betty's Kitchen",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/6brg4NXmo2jxdbi6-rVtsB9pguE\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "0RAThFdIyAA"
+           },
+           "snippet": {
+            "publishedAt": "2017-09-06T03:33:21.000Z",
+            "channelId": "UCW7dkv716GTmq_e1NXL0NvA",
+            "title": "Chicken & Dumpling Casserole",
+            "description": "Music by: https://www.bensound.com/royalty-free-music To support me on Patreon: https://www.patreon.com/SimplySara Visit Cooking with Avoir for a taste of the world's cuisine. https://www.youtube...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/0RAThFdIyAA/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/0RAThFdIyAA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/0RAThFdIyAA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Simply Sara Kitchen",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/4NiXl-m2yCW70BWtMlL1PTmorcM\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "eqE-mjbhGqQ"
+           },
+           "snippet": {
+            "publishedAt": "2016-02-27T00:32:42.000Z",
+            "channelId": "UCSbgQOPHnLhKMus6O4lFM2A",
+            "title": "Beth's Chicken and Biscuit Casserole Dinner| ENTERTAINING WITH BETH",
+            "description": "Learn how to make my chicken and biscuit casserole dinner. One of my easy dinner recipes for a fantastic Sunday Night Dinner! Makes for great leftovers too! SUBSCRIBE for more easy recipes!...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/eqE-mjbhGqQ/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/eqE-mjbhGqQ/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/eqE-mjbhGqQ/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Entertaining With Beth",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=Old%20Fashioned%20Banana%20Cream%20Pie%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:37 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/UomHKKjYKJTuSnErA7KXqippYeU"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5585'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/UomHKKjYKJTuSnErA7KXqippYeU\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 201796,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/jsUv6-WMH7knodquKEWxwDsXgsI\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "gf7qYj9ulbM"
+           },
+           "snippet": {
+            "publishedAt": "2014-03-30T02:41:34.000Z",
+            "channelId": "UCs9MqrsC3XI47q5uEhyS4ig",
+            "title": "Old-Fashion Banana Cream Pie With Meringue Topping",
+            "description": "This pie is very rich just like my mother made. Here are the ingredients: Pie Crust: 1 1/3 cups all-purpose flour 1/2 teaspoon salt 1 egg yolk 3-4 tablespoons ice water 1/2 cup Crisco shortening...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/gf7qYj9ulbM/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/gf7qYj9ulbM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/gf7qYj9ulbM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Phyllis Stokes",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/lJte6wbD0DUXhkAMsIjw6-9T0vI\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "2kC-n93fg0c"
+           },
+           "snippet": {
+            "publishedAt": "2015-11-14T23:21:21.000Z",
+            "channelId": "UCFuPSIZ-o3FeI7lG62LLmSg",
+            "title": "Home Made Banana Cream Pie Recipe!",
+            "description": "This Home Made Banana Cream Pie turned out PERFECT! You could not ask for a better tasting, sweet, thick, banana cream pie! Enjoy! ↓↓↓↓↓↓ CLICK TO SEE MORE ↓↓↓↓↓↓↓↓...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/2kC-n93fg0c/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/2kC-n93fg0c/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/2kC-n93fg0c/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Pins and Things",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/F3KZ78QNtUSyclbKuXaoqYUfpA4\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "GW_JNVO-duc"
+           },
+           "snippet": {
+            "publishedAt": "2009-03-13T18:32:32.000Z",
+            "channelId": "UC6JBm9OAkpI6NUBV_NsLxTA",
+            "title": "Banana Cream Pie - Part 1 ⎢Jim Cramer ⎢Martha Stewart",
+            "description": "Martha and Jim Cramer of CNBC's \"Mad Money\" bake a delicious banana cream pie adapted from \"Martha Stewart's Baking Handbook.\" Part 1. Brought to you by Martha Stewart: http://www.marthastewart.co...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/GW_JNVO-duc/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/GW_JNVO-duc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/GW_JNVO-duc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Martha Stewart",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/2zhNAJwU-NPBCl9YEyE8Z1gOBYc\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "6sDzAOPYWXA"
+           },
+           "snippet": {
+            "publishedAt": "2012-08-16T12:00:35.000Z",
+            "channelId": "UC4tAgeVdaNB5vD_mBoxg50w",
+            "title": "How to Make Banana Cream Pie",
+            "description": "Get the recipe @ http://allrecipes.com/recipe/banana-cream-pie-i/detail.aspx Nothing's better than banana cream pie. In this video, you'll see how to make a 5-star cream pie that's packed...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/6sDzAOPYWXA/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/6sDzAOPYWXA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/6sDzAOPYWXA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Allrecipes",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/NICl25sJVvWoLSiSnfI2vahL8Y4\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "CWp6Rz4WxH0"
+           },
+           "snippet": {
+            "publishedAt": "2016-02-15T14:07:43.000Z",
+            "channelId": "UCYvtticiiWTBzgTnkS0dlvw",
+            "title": "Old Fashioned Banana Cream Pie",
+            "description": "In this video I show you how to make Old Fashioned Banana Cream Pie. This pie is so delicious. It's not overly sweet. I was able to get two pies from this recipe, but the ingredients are actually...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/CWp6Rz4WxH0/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/CWp6Rz4WxH0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/CWp6Rz4WxH0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Emily TheCountryCook",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?chart=mostPopular&key=<YOUTUBE_TOKEN>&maxResults=5&part=snippet&q=This%20is%20a%20very%20old%20family%20recipe%0A&type=video
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 07 Jan 2018 05:49:42 GMT
+      Date:
+      - Sun, 07 Jan 2018 05:49:42 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"S8kisgyDEblalhHF9ooXPiFFrkc/eTmvj3chFagLbMuXIr4pyLH6LII"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5554'
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/eTmvj3chFagLbMuXIr4pyLH6LII\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 1000000,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/CjQAJzJ1JE-qj1Cyv6x6SNVMHq4\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "AHCL27xzSdk"
+           },
+           "snippet": {
+            "publishedAt": "2017-12-10T19:41:49.000Z",
+            "channelId": "UC0UPLkKVX3qyiQ8MqQgYw8Q",
+            "title": "Cuban Ropa Veija ~ Old Family Recipe",
+            "description": "Cuban Ropa Veija We are very appreciative for your support and your support is huge in us continuing to grow this channel and giving you better content : https://www.paypal.me/SmokyRibs ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/AHCL27xzSdk/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/AHCL27xzSdk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/AHCL27xzSdk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Smoky Ribs BBQ & Southern Cuisine",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/lXx77exWISX3om_UEBcpTcgPRbM\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "ynh9lpYQV_o"
+           },
+           "snippet": {
+            "publishedAt": "2013-03-31T05:59:20.000Z",
+            "channelId": "UClCBm2yT81QYvF7UUFHEWGQ",
+            "title": "Old Fashioned Buttermilk Pie.. VERY OLD RECIPE",
+            "description": "ღஐƸ̵̡Ӝ̵̨̄Ʒஐღ\ufeff · ♥ ♥ Show Some Cajun Luv by Subbing. ♥ ♥ ·ღஐƸ̵̡Ӝ̵̨̄Ʒஐღ\ufeff This is one of our family recipes that is over 100 years old and...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/ynh9lpYQV_o/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/ynh9lpYQV_o/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/ynh9lpYQV_o/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Sherry Ann's - Crazy Cajun Living",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/Dq5gnTdWXeKKy3stqvaDrSI7afU\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "6_mx5Mb5SKM"
+           },
+           "snippet": {
+            "publishedAt": "2016-06-10T00:26:14.000Z",
+            "channelId": "UCkWr6cHgZoPIOdO5QJ2HOEw",
+            "title": "Spinach Salad Dressing Old Family Recipe",
+            "description": "Betty prepares a spinach salad for a luncheon. The dressing is an old (100+ years) family recipe from a friend.",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/6_mx5Mb5SKM/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/6_mx5Mb5SKM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/6_mx5Mb5SKM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Betty Bannerman Busciglio",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/yDrSa9CuLh44cRD6SmRzJkPVWt0\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "KULBBvy5GQs"
+           },
+           "snippet": {
+            "publishedAt": "2016-02-06T23:00:00.000Z",
+            "channelId": "UCpko_-a4wgz2u_DgDgd9fqA",
+            "title": "Italian Chef Reveals Secret Family Recipe",
+            "description": "What does a chef cook on his day off? THANKS TO: Grassroots Natural Market & Kitchen (link: http://www.grassrootsnmk.com/) Check Out BuzzFeed On SnapChat Discover! - http://bit.ly/1NG8LV3...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/KULBBvy5GQs/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/KULBBvy5GQs/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/KULBBvy5GQs/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "BuzzFeedVideo",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"S8kisgyDEblalhHF9ooXPiFFrkc/QWjFzFxa4-f6DQ7xDG2q-eu5RYU\"",
+           "id": {
+            "kind": "youtube#video",
+            "videoId": "HRT1RtV0Hco"
+           },
+           "snippet": {
+            "publishedAt": "2015-11-13T16:48:15.000Z",
+            "channelId": "UCKn_LffvKGYpo4Ee--j-1bw",
+            "title": "How To Make Sugar Cookies + Baking Tips - Old Family Recipe You Will Love!",
+            "description": "Looking for a tried & true vanilla sugar cookie recipe? Let's bake! It is easy too. Enjoy =) ***RECIPE BELOW*** +++++++++++++++++++++++++++++++++++++++++++++++ Connect with me on social...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/HRT1RtV0Hco/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/HRT1RtV0Hco/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/HRT1RtV0Hco/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "YayOrNayNicole",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 07 Jan 2018 05:49:42 GMT
 recorded_with: VCR 3.0.3
