@@ -27,15 +27,19 @@ class LoadRecipesWorker
     query = RecipeBuddy::Facebook::Api::Query.new(page.origin_id, page.next)
 
     # Get remaining recipes
-    url = get_recipes_url(page, query)
-
-    recipes = fetch_recipes(url)
+    recipes = remaining_recipes(page, query)
 
     # Parse and save the recipes
     parse_and_save_recipes(page, recipes)
 
     # We reset the page request id
     RecipeBuddy::Repository::Pages.reset_request(page.id)
+  end
+
+  def remaining_recipes(page, query)
+    url = get_recipes_url(page, query)
+    recipes = fetch_recipes(url)
+    recipes
   end
 
   private
@@ -56,23 +60,31 @@ class LoadRecipesWorker
   def parse_recipes(recipes)
     recipes.delete_if { |recipe| true unless check_recipe(recipe) }
     recipes.each do |recipe|
-      checker = RecipeBuddy::Entity::RecipeChecker.new(recipe)
-      checker.recipe?
-      recipe.title = checker.recipe_title
+      recipe.title = recipe_title(recipe)
     end
     recipes
+  end
+
+  def recipe_title(recipe)
+    checker = RecipeBuddy::Entity::RecipeChecker.new(recipe)
+    checker.recipe?
+    checker.recipe_title
   end
 
   def save_recipes(page, recipes, config = LoadRecipesWorker.config)
     page_validator = RecipeBuddy::Entity::PageValidator.new(page)
     recipes.each do |recipe|
       recipe.videos = page_validator.recipe_video_loader(recipe, config)
-      stored_recipe = RecipeBuddy::Repository::Recipes.find_or_create(
-        recipe,
-        page.id
-      )
+      stored_recipe = stored_to_save_recipe(recipe, page)
       publish(page.request_id, stored_recipe.id)
     end
+  end
+
+  def stored_to_save_recipe(recipe, page)
+    RecipeBuddy::Repository::Recipes.find_or_create(
+      recipe,
+      page.id
+    )
   end
 
   def check_recipe(post)
